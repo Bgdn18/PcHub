@@ -21,7 +21,7 @@ namespace PCHUB
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
-        Library PcHub = new Library();
+        _list list = new _list();
 
 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,60 +36,60 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PcHub.build();
+            list.build();
         }
 
         private void TxtWriter_Click(object sender, EventArgs e)
         {
-            PcHub.writer();
+            list.writer();
 
         }
 
         private void RESOURCEMONITOR_Click(object sender, EventArgs e)
         {
-            Process.Start("taskmgr.exe");
+            list.taskmgr();
         }
 
         private void EXPLORER_Click(object sender, EventArgs e)
         {
-            PcHub.fileexplorer();
+            list.fileexplorer();
         }
 
         private void CONTROLPANEL_Click(object sender, EventArgs e)
         {
-            Process.Start("control.exe");
+            list.controlpanel();
         }
 
         private void REGEDIT_Click(object sender, EventArgs e)
         {
-            Process.Start("regedit.exe");
+            list.regedit();
         }
 
         private void CMD_Click(object sender, EventArgs e)
         {
-            PcHub.cmd();
+            list.cmd();
         }
 
 
 
         private void ExplorerPP_Click(object sender, EventArgs e)
         {
-            PcHub.explorerpp();
+            list.explorerpp();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PcHub.procceshacker();
+            list.procceshacker();
         }
 
         private void IObitUnlocker_Click(object sender, EventArgs e)
         {
-            PcHub.unlocker();
+            list.unlocker();
         }
 
         public void LocalUser_Click(object? sender, EventArgs e)
         {
-            PcHub.localuser();
+            list.localuser();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace PCHUB
 
         private void TaskMgrUnlocker_Click(object sender, EventArgs e)
         {
-            PcHub.taskmgrunlocker();
+            list.taskmgrunlocker();
         }
     }
 }

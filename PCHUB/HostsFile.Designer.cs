@@ -32,6 +32,7 @@
             btnReset = new Button();
             txtHosts = new TextBox();
             Save = new Button();
+            OpenFolder = new Button();
             SuspendLayout();
             // 
             // btnReset
@@ -39,7 +40,7 @@
             btnReset.Font = new Font("Consolas", 9F);
             btnReset.Location = new Point(12, 415);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(388, 23);
+            btnReset.Size = new Size(250, 25);
             btnReset.TabIndex = 0;
             btnReset.Text = "Reset hosts file";
             btnReset.UseVisualStyleBackColor = true;
@@ -52,25 +53,37 @@
             txtHosts.Multiline = true;
             txtHosts.Name = "txtHosts";
             txtHosts.ScrollBars = ScrollBars.Both;
-            txtHosts.Size = new Size(782, 397);
+            txtHosts.Size = new Size(762, 397);
             txtHosts.TabIndex = 1;
             // 
             // Save
             // 
             Save.Font = new Font("Consolas", 9F);
-            Save.Location = new Point(406, 415);
+            Save.Location = new Point(268, 415);
             Save.Name = "Save";
-            Save.Size = new Size(388, 23);
+            Save.Size = new Size(250, 25);
             Save.TabIndex = 2;
             Save.Text = "Save";
             Save.UseVisualStyleBackColor = true;
             Save.Click += Save_Click;
             // 
+            // OpenFolder
+            // 
+            OpenFolder.Font = new Font("Consolas", 9F);
+            OpenFolder.Location = new Point(524, 415);
+            OpenFolder.Name = "OpenFolder";
+            OpenFolder.Size = new Size(250, 25);
+            OpenFolder.TabIndex = 3;
+            OpenFolder.Text = "Open Folder";
+            OpenFolder.UseVisualStyleBackColor = true;
+            OpenFolder.Click += OpenFolder_Click;
+            // 
             // HostsFile
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(808, 450);
+            ClientSize = new Size(787, 450);
+            Controls.Add(OpenFolder);
             Controls.Add(Save);
             Controls.Add(txtHosts);
             Controls.Add(btnReset);
@@ -89,5 +102,6 @@
         private Button btnReset;
         private TextBox txtHosts;
         private Button Save;
+        private Button OpenFolder;
     }
 }

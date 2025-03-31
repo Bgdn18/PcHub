@@ -10,21 +10,21 @@
             this.MaximizeBox = false;
         }
 
-        //Library объявление
-        Library PcHub = new Library();
+        //List объявление
+        _list list = new _list();
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PcHub.build(); //билд
+            list.build(); // информация о программме
         }
 
-        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void whiteToolStripMenuItem_Click(object sender, EventArgs e) // белая тема
         {
             this.BackColor = Color.White;
             menuStrip1.BackColor = Color.Silver;
         }
 
-        private void purpleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void purpleToolStripMenuItem_Click(object sender, EventArgs e) // фиолетовая тема
         {
             this.BackColor = Color.BlueViolet;
             menuStrip1.BackColor = Color.Purple;
@@ -32,82 +32,81 @@
 
         private void Library_Click(object sender, EventArgs e)
         {
-            PcHub.library();
+            list.library();
         }
 
         private void TxtWriter_Click(object sender, EventArgs e)
         {
-            TextFileCreator txt = new TextFileCreator();
-            txt.Show();
+            list.writer();
         }
 
         private void ADMIN_Click(object sender, EventArgs e)
         {
-            PcHub.tools();
+            list.tools();
         }
 
         private void LocalUser_Click(object sender, EventArgs e)
         {
-            PcHub.localuser();
+            list.localuser();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PcHub.quit();
+            list.quit();
         }
 
         private void Taskkiller_Click(object sender, EventArgs e)
         {
-            PcHub.taskkill();
+            list.taskkill();
         }
 
         private void build_Click(object sender, EventArgs e)
         {
-            PcHub.build();
+            list.build();
         }
 
         private void ADDTXTFILE_TEXT_Click(object sender, EventArgs e)
         {
-            PcHub.writer();
+            list.writer();
         }
 
         private void PowerManagement_Click(object sender, EventArgs e)
         {
-            PcHub.powermgr();
+            list.powermgr();
         }
         public void aDDToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PcHub.addtostartup();
+            list.addtostartup();
         }
 
         public void dELETEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PcHub.removefromstartup();
+            list.removefromstartup();
         }
 
         private void CMD_Click(object sender, EventArgs e)
         {
-            PcHub.cmd();
+            list.cmd();
         }
 
         private void IOBitUnlocker_Click(object sender, EventArgs e)
         {
-            PcHub.unlocker();
+            list.unlocker();
         }
 
         private void WindowsSettings_Click(object sender, EventArgs e)
         {
-            PcHub.settings();
+            list.settings();
         }
 
         private void ExplorerPP_Click(object sender, EventArgs e)
         {
-            PcHub.explorerpp();
+            list.explorerpp();
         }
 
         private void fileexplorer_Click(object sender, EventArgs e)
         {
-            PcHub.fileexplorer();
+            list.fileexplorer();
         }
     }
 }

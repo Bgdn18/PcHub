@@ -17,9 +17,14 @@ namespace PCHUB
         {
             InitializeComponent();
             LoadHostsContent();
+
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
-        // Загрузка содержимого файла hosts
+        _list list = new _list();
+
+        // Подгрузка файла hosts
         private void LoadHostsContent()
         {
             try
@@ -39,7 +44,7 @@ namespace PCHUB
             }
         }
 
-        // Кнопка сброса
+        // Сброс
         private void btnReset_Click(object sender, EventArgs e)
         {
             try
@@ -77,7 +82,7 @@ namespace PCHUB
             try
             {
                 // Проверка прав администратора
-                if (!IsAdmin())
+                if (!list.isadmin())
                 {
                     MessageBox.Show("Administrator rights required!");
                     return;
@@ -100,7 +105,7 @@ namespace PCHUB
                 MessageBox.Show($"Saving error: {ex.Message}", "Error",
                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            }
+        }
 
         // Создание резервной копии
         private void CreateBackup()
@@ -120,11 +125,39 @@ namespace PCHUB
             })?.WaitForExit();
         }
 
-        // Проверка прав администратора
-        private bool IsAdmin()
+        private void OpenFolder_Click(object sender, EventArgs e)
         {
-            return new WindowsPrincipal(WindowsIdentity.GetCurrent())
-                .IsInRole(WindowsBuiltInRole.Administrator);
+            string path = Path.Combine(
+            Environment.SystemDirectory,
+            "drivers\\etc\\hosts");
+
+            if (string.IsNullOrEmpty(path))
+            {
+                MessageBox.Show("Enter the path in the text field");
+                return;
+            }
+
+            try
+            {
+                if (File.Exists(path))
+                {
+                    // Открыть проводник с выделенным файлом
+                    Process.Start("explorer.exe", $"/select, \"{path}\"");
+                }
+                else if (Directory.Exists(path))
+                {
+                    // Открыть проводник в указанной папке
+                    Process.Start("explorer.exe", path);
+                }
+                else
+                {
+                    MessageBox.Show("The specified path does not exist");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+            }
         }
     }
 }

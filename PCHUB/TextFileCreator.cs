@@ -16,16 +16,11 @@ namespace PCHUB
         public TextFileCreator()
         {
             InitializeComponent();
-            ConfigureInitialUI();
-        }
-        Library PcHub = new Library();
 
-        private void ConfigureInitialUI()
-        {
-            this.BackColor = Color.White;
-            menuStrip1.BackColor = Color.Silver;
-            lblStatus.ForeColor = Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
+        _list list = new _list();
 
         private void btnCreateFile_Click(object sender, EventArgs e)
         {
@@ -126,7 +121,7 @@ namespace PCHUB
 
         private void UpdateUIOnSuccess(string path)
         {
-            lblStatus.Text = $"Файл создан: {Path.GetFileName(path)}";
+            lblStatus.Text = $"File created: {Path.GetFileName(path)}";
             lblStatus.ForeColor = Color.Green;
             lblStatus.BackColor = Color.LightGreen;
         }
@@ -145,13 +140,9 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new About().ShowDialog();
+            list.build();
         }
 
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
         private void lblStatus_Click(object sender, EventArgs e)
         {
             string path = txtFilePath.Text.Trim();
@@ -181,13 +172,13 @@ namespace PCHUB
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
 
         private void FileExplorer_Click(object sender, EventArgs e)
         {
-            PcHub.writer();
+            list.fileexplorer();
         }
     }
 }

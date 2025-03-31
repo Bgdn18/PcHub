@@ -19,7 +19,7 @@
     <Compile Update="TaskMgrControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Browsers\Browse.cs">
+    <Compile Update="_Browsers Forms\Browse.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="LocalUser.cs">
@@ -40,7 +40,7 @@
     <Compile Update="TextFileCreator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Browsers\YouTube.cs">
+    <Compile Update="_Browsers Forms\YouTube.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
