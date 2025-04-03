@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -19,9 +20,11 @@ namespace PCHUB
             InitializeComponent();
         }
 
+        _list list = new _list();
+
         private void btnKillProcess_Click(object sender, EventArgs e)
         {
-            string processName = txtProcessName.Text; // Получаем имя процесса из текстового поля
+            string processName = txtProcessName.Text; // текстовое имя
 
             try
             {
@@ -51,14 +54,11 @@ namespace PCHUB
             }
         }
 
-        //WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE 
         private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
         }
-        //WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE 
 
-        //PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE 
         private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.BackColor = Color.BlueViolet;
@@ -71,14 +71,12 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About(); // Создаем новый экземпляр Form2
-            about.Show(); // Открываем Form2 как независимую форму
+            list.build();
         }
 
         private void quitToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
-        //PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE 
     }
 }

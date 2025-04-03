@@ -9,11 +9,11 @@ using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar;
 using static PCHUB.Library;
 
-namespace PCHUB
+namespace PCHUB.Main
 {
     internal class _list
     {
-
+        public string? buildinfo = ("build: 4/3/2025");
 
         // Ниже все функции которые используются в других формах ⏬⏬⏬
 
@@ -343,11 +343,9 @@ namespace PCHUB
         public void regedit()
         {
             if (!isadmin()) //если не админ
-            {
                 MessageBox.Show("Before using the program, you MUST run it as administrator.: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
             else
-            {
                 try
                 {
                     Process.Start("regedit.exe"); // пробуем открыть
@@ -356,7 +354,6 @@ namespace PCHUB
                 {
                     MessageBox.Show("Error opening RegEdit: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //ошибка
                 }
-            }
         }
         public void controlpanel()
         {

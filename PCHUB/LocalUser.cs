@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -19,6 +20,7 @@ namespace PCHUB
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
+        _list list = new _list();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -214,8 +216,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About();
-            about.Show();
+            list.build();
         }
 
         private void ViewFolder_Click(object sender, EventArgs e)
@@ -243,16 +244,14 @@ namespace PCHUB
 
         private void btnOpenSettings_Click(object sender, EventArgs e)
         {
-            // URI для вкладки "Family & other users"
             string settingsUri = "ms-settings:otherusers";
 
             try
             {
-                // Запуск процесса
                 Process.Start(new ProcessStartInfo
                 {
                     FileName = settingsUri,
-                    UseShellExecute = true // Обязательно!
+                    UseShellExecute = true
                 });
             }
             catch (Exception ex)

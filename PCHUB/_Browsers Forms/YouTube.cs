@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -20,17 +21,11 @@ namespace PCHUB
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
+        _list list = new _list();
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("explorer.exe", "ms-settings:");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка при открытии параметров: " + ex.Message);
-            }
+            list.settings();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -51,35 +46,22 @@ namespace PCHUB
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка при открытии браузера: " + ex.Message);
+                    MessageBox.Show("Error opening browser: " + ex.Message);
                 }
             }
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            About about = new About(); // Создаем новый экземпляр Form2
-            about.Show(); // Открываем Form2 как независимую форму
+            list.build();
         }
 
-        //WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE 
+
         private void whiteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
         }
-        //WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE WHITE 
 
-        //PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE 
         private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.BackColor = Color.BlueViolet;
@@ -98,10 +80,9 @@ namespace PCHUB
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка при открытии браузера: " + ex.Message);
+                    MessageBox.Show("Error opening browser: " + ex.Message);
                 }
             }
-            //PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE PURPLE 
         }
     }
 }

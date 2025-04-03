@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using PCHUB.Main;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 namespace PCHUB
 {
@@ -13,25 +14,25 @@ namespace PCHUB
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+
+            BuildLabel.Text = list.buildinfo;
         }
 
-        //EASTER EGGEASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG 
+        _list list = new _list();
+
         private void label2_Click(object sender, EventArgs e)
         {
-            this.Text = ("About kostyan edition");
+            this.Text = ("About kostyan edition"); // меняю название формы
 
             Random rand = new Random();
 
-                this.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                ABOUTTEXT.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                PCHUB.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                label2.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            this.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            ABOUTTEXT.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            label2.BackColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
 
-                ABOUTTEXT.ForeColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                PCHUB.ForeColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
-                label2.ForeColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            ABOUTTEXT.ForeColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+            label2.ForeColor = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
 
         }
-        //EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG EASTER EGG
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -13,12 +14,12 @@ namespace PCHUB
             ConfigureForm();
         }
 
+        _list list = new _list();
+
         private void ConfigureForm()
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Text = "PowerShell Policy Manager";
-            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         // Проверка текущей политики
@@ -88,5 +89,17 @@ namespace PCHUB
 
         // Кнопка проверки текущей политики
         private void btnCheck_Click(object sender, EventArgs e) => CheckCurrentPolicy();
+
+
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            list.build();
+        }
     }
 }

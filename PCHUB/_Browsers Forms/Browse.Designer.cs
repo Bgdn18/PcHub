@@ -53,7 +53,6 @@
             txtSearch.Size = new Size(628, 132);
             txtSearch.TabIndex = 0;
             txtSearch.Text = "google.com";
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnSearch
             // 

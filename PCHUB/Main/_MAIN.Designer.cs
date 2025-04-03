@@ -41,7 +41,7 @@
             toolStripMenuItem1 = new ToolStripMenuItem();
             aDDToolStripMenuItem = new ToolStripMenuItem();
             dELETEToolStripMenuItem = new ToolStripMenuItem();
-            build = new Label();
+            BuildLabel = new Label();
             btnALL = new Button();
             btnTxtWriter = new Button();
             btnWindowsSettings = new Button();
@@ -69,7 +69,7 @@
             // btnADMIN
             // 
             btnADMIN.Cursor = Cursors.Hand;
-            btnADMIN.Font = new Font("Consolas", 9F);
+            btnADMIN.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnADMIN.Location = new Point(284, 233);
             btnADMIN.Margin = new Padding(4, 3, 4, 3);
             btnADMIN.Name = "btnADMIN";
@@ -106,78 +106,84 @@
             // themeToolStripMenuItem
             // 
             themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
+            themeToolStripMenuItem.Font = new Font("Consolas", 9F);
             themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            themeToolStripMenuItem.Size = new Size(55, 20);
+            themeToolStripMenuItem.Size = new Size(54, 20);
             themeToolStripMenuItem.Text = "Theme";
             // 
             // whiteToolStripMenuItem
             // 
             whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(180, 22);
+            whiteToolStripMenuItem.Size = new Size(116, 22);
             whiteToolStripMenuItem.Text = "White";
             whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
             // 
             // purpleToolStripMenuItem
             // 
             purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
-            purpleToolStripMenuItem.Size = new Size(180, 22);
+            purpleToolStripMenuItem.Size = new Size(116, 22);
             purpleToolStripMenuItem.Text = "Purple";
             purpleToolStripMenuItem.Click += purpleToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
+            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Size = new Size(54, 20);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(42, 20);
+            quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { aDDToolStripMenuItem, dELETEToolStripMenuItem });
+            toolStripMenuItem1.Font = new Font("Consolas", 9F);
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(98, 20);
+            toolStripMenuItem1.Size = new Size(117, 20);
             toolStripMenuItem1.Text = "Add To StartUp";
             // 
             // aDDToolStripMenuItem
             // 
+            aDDToolStripMenuItem.Font = new Font("Consolas", 9F);
             aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            aDDToolStripMenuItem.Size = new Size(112, 22);
+            aDDToolStripMenuItem.Size = new Size(180, 22);
             aDDToolStripMenuItem.Text = "ADD";
             aDDToolStripMenuItem.Click += aDDToolStripMenuItem_Click;
             // 
             // dELETEToolStripMenuItem
             // 
+            dELETEToolStripMenuItem.Font = new Font("Consolas", 9F);
             dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            dELETEToolStripMenuItem.Size = new Size(112, 22);
+            dELETEToolStripMenuItem.Size = new Size(180, 22);
             dELETEToolStripMenuItem.Text = "DELETE";
             dELETEToolStripMenuItem.Click += dELETEToolStripMenuItem_Click;
             // 
-            // build
+            // BuildLabel
             // 
-            build.AutoSize = true;
-            build.BackColor = Color.Gray;
-            build.Cursor = Cursors.Hand;
-            build.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            build.ForeColor = Color.White;
-            build.Location = new Point(0, 414);
-            build.Margin = new Padding(4, 0, 4, 0);
-            build.Name = "build";
-            build.Size = new Size(126, 20);
-            build.TabIndex = 10;
-            build.Text = "BUILD: 3/29/2025";
-            build.Click += build_Click;
+            BuildLabel.AutoSize = true;
+            BuildLabel.BackColor = Color.Gray;
+            BuildLabel.Cursor = Cursors.Hand;
+            BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BuildLabel.ForeColor = Color.White;
+            BuildLabel.Location = new Point(0, 414);
+            BuildLabel.Margin = new Padding(4, 0, 4, 0);
+            BuildLabel.Name = "BuildLabel";
+            BuildLabel.Size = new Size(35, 20);
+            BuildLabel.TabIndex = 10;
+            BuildLabel.Text = "null";
+            BuildLabel.Click += build_Click;
             // 
             // btnALL
             // 
             btnALL.Cursor = Cursors.Hand;
-            btnALL.Font = new Font("Consolas", 9F);
+            btnALL.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnALL.Location = new Point(284, 292);
             btnALL.Margin = new Padding(4, 3, 4, 3);
             btnALL.Name = "btnALL";
@@ -272,7 +278,7 @@
             btnfileexplorer.UseVisualStyleBackColor = true;
             btnfileexplorer.Click += fileexplorer_Click;
             // 
-            // MAIN
+            // _MAIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -286,7 +292,7 @@
             Controls.Add(btnWindowsSettings);
             Controls.Add(btnTxtWriter);
             Controls.Add(btnALL);
-            Controls.Add(build);
+            Controls.Add(BuildLabel);
             Controls.Add(btnCMD);
             Controls.Add(btnADMIN);
             Controls.Add(btnPowerManagement);
@@ -294,7 +300,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "MAIN";
+            Name = "_MAIN";
             Text = "PcHub for Windows 10/11";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -313,7 +319,7 @@
         private ToolStripMenuItem purpleToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private Label build;
+        private Label BuildLabel;
         private Button btnALL;
         private Button btnTxtWriter;
         private Button btnWindowsSettings;

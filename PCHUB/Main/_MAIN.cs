@@ -1,4 +1,6 @@
-﻿namespace PCHUB
+﻿using PCHUB.Main;
+
+namespace PCHUB
 {
     public partial class _MAIN : Form
     {
@@ -8,6 +10,8 @@
 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+
+            BuildLabel.Text = list.buildinfo;
         }
 
         //List объявление

@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -29,13 +30,6 @@ namespace PCHUB
         private void Restart_Click(object sender, EventArgs e)
         {
             Process.Start("shutdown", "/r /t 0");
-        }
-
-        private void toHubToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _MAIN ToHub = new _MAIN(); // Создаем новый экземпляр Form2
-            ToHub.Show(); // Открываем Form2 как независимую форму
-            this.Hide(); // Скрываем текущую форму (Form1), а не закрываем её
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

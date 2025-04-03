@@ -16,7 +16,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.pdb
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.genruntimeconfig.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\ref\PCHUB.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.TextFileCreator.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.MAIN.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PowerManagement.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.AdminApps.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Browse.resources
@@ -55,3 +54,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.LocalUs
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.TaskMgrControl.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PowerShellPolicyReset.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB._MAIN.resources

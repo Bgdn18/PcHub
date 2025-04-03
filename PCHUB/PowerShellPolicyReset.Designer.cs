@@ -38,22 +38,26 @@
             btnRestricted = new Button();
             btnBypass = new Button();
             btnUndefined = new Button();
+            menuStrip1 = new MenuStrip();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // lblCurrentPolicy
             // 
             lblCurrentPolicy.AutoSize = true;
-            lblCurrentPolicy.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCurrentPolicy.Location = new Point(12, 9);
+            lblCurrentPolicy.Font = new Font("Consolas", 9F);
+            lblCurrentPolicy.Location = new Point(12, 32);
             lblCurrentPolicy.Name = "lblCurrentPolicy";
-            lblCurrentPolicy.Size = new Size(240, 22);
+            lblCurrentPolicy.Size = new Size(168, 14);
             lblCurrentPolicy.TabIndex = 0;
             lblCurrentPolicy.Text = "Current policy: Unknown";
             // 
             // btnResetPolicy
             // 
             btnResetPolicy.Font = new Font("Consolas", 9F);
-            btnResetPolicy.Location = new Point(12, 106);
+            btnResetPolicy.Location = new Point(12, 110);
             btnResetPolicy.Name = "btnResetPolicy";
             btnResetPolicy.Size = new Size(268, 55);
             btnResetPolicy.TabIndex = 1;
@@ -64,7 +68,7 @@
             // btnCheck
             // 
             btnCheck.Font = new Font("Consolas", 9F);
-            btnCheck.Location = new Point(12, 45);
+            btnCheck.Location = new Point(12, 49);
             btnCheck.Name = "btnCheck";
             btnCheck.Size = new Size(268, 55);
             btnCheck.TabIndex = 2;
@@ -75,7 +79,7 @@
             // btnUnrestricted
             // 
             btnUnrestricted.Font = new Font("Consolas", 9F);
-            btnUnrestricted.Location = new Point(304, 106);
+            btnUnrestricted.Location = new Point(304, 110);
             btnUnrestricted.Name = "btnUnrestricted";
             btnUnrestricted.Size = new Size(136, 55);
             btnUnrestricted.TabIndex = 3;
@@ -86,7 +90,7 @@
             // btnRemoteSigned
             // 
             btnRemoteSigned.Font = new Font("Consolas", 9F);
-            btnRemoteSigned.Location = new Point(446, 106);
+            btnRemoteSigned.Location = new Point(446, 110);
             btnRemoteSigned.Name = "btnRemoteSigned";
             btnRemoteSigned.Size = new Size(136, 55);
             btnRemoteSigned.TabIndex = 4;
@@ -97,7 +101,7 @@
             // btnAllSigned
             // 
             btnAllSigned.Font = new Font("Consolas", 9F);
-            btnAllSigned.Location = new Point(588, 106);
+            btnAllSigned.Location = new Point(588, 110);
             btnAllSigned.Name = "btnAllSigned";
             btnAllSigned.Size = new Size(136, 55);
             btnAllSigned.TabIndex = 5;
@@ -108,7 +112,7 @@
             // btnRestricted
             // 
             btnRestricted.Font = new Font("Consolas", 9F);
-            btnRestricted.Location = new Point(588, 45);
+            btnRestricted.Location = new Point(588, 49);
             btnRestricted.Name = "btnRestricted";
             btnRestricted.Size = new Size(136, 55);
             btnRestricted.TabIndex = 6;
@@ -119,7 +123,7 @@
             // btnBypass
             // 
             btnBypass.Font = new Font("Consolas", 9F);
-            btnBypass.Location = new Point(446, 45);
+            btnBypass.Location = new Point(446, 49);
             btnBypass.Name = "btnBypass";
             btnBypass.Size = new Size(136, 55);
             btnBypass.TabIndex = 7;
@@ -130,13 +134,40 @@
             // btnUndefined
             // 
             btnUndefined.Font = new Font("Consolas", 9F);
-            btnUndefined.Location = new Point(304, 45);
+            btnUndefined.Location = new Point(304, 49);
             btnUndefined.Name = "btnUndefined";
             btnUndefined.Size = new Size(136, 55);
             btnUndefined.TabIndex = 8;
             btnUndefined.Text = "Set Undefined";
             btnUndefined.UseVisualStyleBackColor = true;
             btnUndefined.Click += btnUndefined_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.Silver;
+            menuStrip1.Font = new Font("Consolas", 9F);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(736, 24);
+            menuStrip1.TabIndex = 9;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(54, 20);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(47, 20);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
             // PowerShellPolicyReset
             // 
@@ -152,11 +183,15 @@
             Controls.Add(btnCheck);
             Controls.Add(btnResetPolicy);
             Controls.Add(lblCurrentPolicy);
+            Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PowerShellPolicyReset";
             Text = "PowerShell Policy Manager";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,5 +207,8 @@
         private Button btnRestricted;
         private Button btnBypass;
         private Button btnUndefined;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

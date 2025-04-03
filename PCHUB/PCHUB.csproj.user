@@ -25,7 +25,7 @@
     <Compile Update="LocalUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_MAIN.cs">
+    <Compile Update="Main\_MAIN.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Library.cs">

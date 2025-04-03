@@ -30,59 +30,58 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About));
             ABOUTTEXT = new Label();
-            PCHUB = new Label();
-            build = new Label();
+            BuildLabel = new Label();
             label2 = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // ABOUTTEXT
             // 
             ABOUTTEXT.AutoSize = true;
-            ABOUTTEXT.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ABOUTTEXT.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ABOUTTEXT.ForeColor = Color.FromArgb(64, 0, 64);
             ABOUTTEXT.Location = new Point(12, 9);
             ABOUTTEXT.Name = "ABOUTTEXT";
-            ABOUTTEXT.Size = new Size(297, 23);
+            ABOUTTEXT.Size = new Size(306, 19);
             ABOUTTEXT.TabIndex = 0;
             ABOUTTEXT.Text = "Сделано \"Bogodan\" для Nedohackers";
             // 
-            // PCHUB
+            // BuildLabel
             // 
-            PCHUB.AutoSize = true;
-            PCHUB.Cursor = Cursors.Hand;
-            PCHUB.Font = new Font("Constantia", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            PCHUB.ForeColor = Color.Purple;
-            PCHUB.Location = new Point(12, 157);
-            PCHUB.Name = "PCHUB";
-            PCHUB.Size = new Size(149, 45);
-            PCHUB.TabIndex = 1;
-            PCHUB.Text = "PCHUB";
-            PCHUB.Click += label2_Click;
-            // 
-            // build
-            // 
-            build.AutoSize = true;
-            build.BackColor = Color.Gray;
-            build.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            build.ForeColor = Color.White;
-            build.Location = new Point(459, 182);
-            build.Name = "build";
-            build.Size = new Size(126, 20);
-            build.TabIndex = 2;
-            build.Text = "BUILD: 3/29/2025";
+            BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            BuildLabel.AutoSize = true;
+            BuildLabel.BackColor = Color.Gray;
+            BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BuildLabel.ForeColor = Color.White;
+            BuildLabel.Location = new Point(12, 182);
+            BuildLabel.Name = "BuildLabel";
+            BuildLabel.Size = new Size(35, 20);
+            BuildLabel.TabIndex = 2;
+            BuildLabel.Text = "null";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Constantia", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Consolas", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Purple;
-            label2.Location = new Point(427, 9);
+            label2.Location = new Point(369, 9);
             label2.Name = "label2";
-            label2.Size = new Size(149, 45);
+            label2.Size = new Size(207, 75);
             label2.TabIndex = 4;
             label2.Text = "PCHUB";
             label2.Click += label2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Consolas", 9F);
+            label1.ForeColor = Color.FromArgb(64, 0, 64);
+            label1.Location = new Point(427, 188);
+            label1.Name = "label1";
+            label1.Size = new Size(154, 14);
+            label1.TabIndex = 5;
+            label1.Text = "Все права не защищены";
             // 
             // About
             // 
@@ -90,9 +89,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(588, 211);
+            Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(build);
-            Controls.Add(PCHUB);
+            Controls.Add(BuildLabel);
             Controls.Add(ABOUTTEXT);
             ForeColor = SystemColors.ControlLight;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -107,8 +106,8 @@
         #endregion
 
         private Label ABOUTTEXT;
-        private Label PCHUB;
-        private Label build;
+        private Label BuildLabel;
         private Label label2;
+        private Label label1;
     }
 }

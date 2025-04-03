@@ -76,7 +76,6 @@
             txtSearch.PlaceholderText = "Browse in your YouTube!";
             txtSearch.Size = new Size(628, 132);
             txtSearch.TabIndex = 3;
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // Settings
             // 

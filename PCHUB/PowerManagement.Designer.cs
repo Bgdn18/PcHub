@@ -32,7 +32,6 @@
             Shutdown = new Button();
             Restart = new Button();
             menuStrip1 = new MenuStrip();
-            toHubToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -40,7 +39,7 @@
             // Shutdown
             // 
             Shutdown.Cursor = Cursors.Hand;
-            Shutdown.Font = new Font("Consolas", 9.75F);
+            Shutdown.Font = new Font("Consolas", 9F);
             Shutdown.Location = new Point(12, 27);
             Shutdown.Name = "Shutdown";
             Shutdown.Size = new Size(193, 58);
@@ -52,7 +51,7 @@
             // Restart
             // 
             Restart.Cursor = Cursors.Hand;
-            Restart.Font = new Font("Consolas", 9.75F);
+            Restart.Font = new Font("Consolas", 9F);
             Restart.Location = new Point(216, 27);
             Restart.Name = "Restart";
             Restart.Size = new Size(193, 58);
@@ -63,24 +62,18 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toHubToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(419, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
-            // toHubToolStripMenuItem
-            // 
-            toHubToolStripMenuItem.Name = "toHubToolStripMenuItem";
-            toHubToolStripMenuItem.Size = new Size(57, 20);
-            toHubToolStripMenuItem.Text = "To Hub";
-            toHubToolStripMenuItem.Click += toHubToolStripMenuItem_Click;
-            // 
             // quitToolStripMenuItem
             // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(42, 20);
+            quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -110,7 +103,6 @@
         private Button Shutdown;
         private Button Restart;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem toHubToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

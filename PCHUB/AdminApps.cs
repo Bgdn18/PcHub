@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -20,6 +21,8 @@ namespace PCHUB
 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+
+            BuildLabel.Text = list.buildinfo;
         }
         _list list = new _list();
 
@@ -100,6 +103,11 @@ namespace PCHUB
         private void TaskMgrUnlocker_Click(object sender, EventArgs e)
         {
             list.taskmgrunlocker();
+        }
+
+        private void BuildLabel_Click(object sender, EventArgs e)
+        {
+            list.build();
         }
     }
 }

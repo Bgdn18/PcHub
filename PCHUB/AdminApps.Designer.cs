@@ -46,6 +46,7 @@
             IoBitUnlocker = new Button();
             AddLocalUser = new Button();
             TaskMgrControl = new Button();
+            BuildLabel = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -123,6 +124,8 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.Gray;
+            menuStrip1.Font = new Font("Consolas", 9F);
             menuStrip1.Items.AddRange(new ToolStripItem[] { themesToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -134,34 +137,34 @@
             // 
             themesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
             themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            themesToolStripMenuItem.Size = new Size(60, 20);
+            themesToolStripMenuItem.Size = new Size(61, 20);
             themesToolStripMenuItem.Text = "Themes";
             // 
             // whiteToolStripMenuItem
             // 
             whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(108, 22);
+            whiteToolStripMenuItem.Size = new Size(116, 22);
             whiteToolStripMenuItem.Text = "White";
             whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
             // 
             // purpleToolStripMenuItem
             // 
             purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
-            purpleToolStripMenuItem.Size = new Size(108, 22);
+            purpleToolStripMenuItem.Size = new Size(116, 22);
             purpleToolStripMenuItem.Text = "Purple";
             purpleToolStripMenuItem.Click += purpleToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Size = new Size(54, 20);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(42, 20);
+            quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -224,11 +227,28 @@
             TaskMgrControl.UseVisualStyleBackColor = true;
             TaskMgrControl.Click += TaskMgrUnlocker_Click;
             // 
+            // BuildLabel
+            // 
+            BuildLabel.AutoSize = true;
+            BuildLabel.BackColor = Color.Gray;
+            BuildLabel.Cursor = Cursors.Hand;
+            BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BuildLabel.ForeColor = Color.White;
+            BuildLabel.Location = new Point(13, 340);
+            BuildLabel.Margin = new Padding(4, 0, 4, 0);
+            BuildLabel.Name = "BuildLabel";
+            BuildLabel.Size = new Size(35, 20);
+            BuildLabel.TabIndex = 28;
+            BuildLabel.Text = "null";
+            BuildLabel.Click += BuildLabel_Click;
+            // 
             // AdminApps
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(689, 369);
+            Controls.Add(BuildLabel);
             Controls.Add(TaskMgrControl);
             Controls.Add(AddLocalUser);
             Controls.Add(IoBitUnlocker);
@@ -273,5 +293,6 @@
         private Button AddLocalUser;
         private ToolStripMenuItem quitToolStripMenuItem;
         private Button TaskMgrControl;
+        private Label BuildLabel;
     }
 }

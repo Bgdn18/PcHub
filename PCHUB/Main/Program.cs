@@ -1,4 +1,4 @@
-namespace PCHUB
+namespace PCHUB.Main
 {
     internal static class Program
     {

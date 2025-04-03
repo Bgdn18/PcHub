@@ -50,7 +50,7 @@
             btnAddLocalUser = new Button();
             btnExplorerPP = new Button();
             btnWindowsSettings = new Button();
-            buildhelp = new Label();
+            BuildLabel = new Label();
             btnPowerMgr = new Button();
             btnTaskMgrControl = new Button();
             btnHostsFile = new Button();
@@ -72,7 +72,7 @@
             btnZAPRET.Name = "btnZAPRET";
             btnZAPRET.Size = new Size(124, 35);
             btnZAPRET.TabIndex = 0;
-            btnZAPRET.Text = "ZAPRET for Russia";
+            btnZAPRET.Text = "ZAPRET 🐱‍👤";
             btnZAPRET.UseVisualStyleBackColor = true;
             btnZAPRET.Click += ZAPRET_Click;
             // 
@@ -182,14 +182,14 @@
             // addToolStripMenuItem
             // 
             addToolStripMenuItem.Name = "addToolStripMenuItem";
-            addToolStripMenuItem.Size = new Size(180, 22);
+            addToolStripMenuItem.Size = new Size(116, 22);
             addToolStripMenuItem.Text = "Add";
             addToolStripMenuItem.Click += addToolStripMenuItem_Click;
             // 
             // deleteToolStripMenuItem
             // 
             deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            deleteToolStripMenuItem.Size = new Size(180, 22);
+            deleteToolStripMenuItem.Size = new Size(116, 22);
             deleteToolStripMenuItem.Text = "Delete";
             deleteToolStripMenuItem.Click += deleteToolStripMenuItem_Click;
             // 
@@ -278,20 +278,20 @@
             btnWindowsSettings.UseVisualStyleBackColor = true;
             btnWindowsSettings.Click += btnWindowsSettings_Click;
             // 
-            // buildhelp
+            // BuildLabel
             // 
-            buildhelp.AutoSize = true;
-            buildhelp.BackColor = Color.Gray;
-            buildhelp.Cursor = Cursors.Hand;
-            buildhelp.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buildhelp.ForeColor = Color.White;
-            buildhelp.Location = new Point(0, 417);
-            buildhelp.Margin = new Padding(4, 0, 4, 0);
-            buildhelp.Name = "buildhelp";
-            buildhelp.Size = new Size(126, 20);
-            buildhelp.TabIndex = 36;
-            buildhelp.Text = "BUILD: 3/29/2025";
-            buildhelp.Click += btnbuildhelp_Click;
+            BuildLabel.AutoSize = true;
+            BuildLabel.BackColor = Color.Gray;
+            BuildLabel.Cursor = Cursors.Hand;
+            BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            BuildLabel.ForeColor = Color.White;
+            BuildLabel.Location = new Point(0, 417);
+            BuildLabel.Margin = new Padding(4, 0, 4, 0);
+            BuildLabel.Name = "BuildLabel";
+            BuildLabel.Size = new Size(35, 20);
+            BuildLabel.TabIndex = 36;
+            BuildLabel.Text = "null";
+            BuildLabel.Click += btnbuildhelp_Click;
             // 
             // btnPowerMgr
             // 
@@ -433,7 +433,7 @@
             Controls.Add(btnHostsFile);
             Controls.Add(btnTaskMgrControl);
             Controls.Add(btnPowerMgr);
-            Controls.Add(buildhelp);
+            Controls.Add(BuildLabel);
             Controls.Add(btnWindowsSettings);
             Controls.Add(btnExplorerPP);
             Controls.Add(btnAddLocalUser);
@@ -478,7 +478,7 @@
         private Button btnAddLocalUser;
         private Button btnExplorerPP;
         private Button btnWindowsSettings;
-        private Label buildhelp;
+        private Label BuildLabel;
         private Button btnPowerMgr;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;

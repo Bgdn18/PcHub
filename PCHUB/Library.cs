@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.Win32;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -11,6 +12,8 @@ namespace PCHUB
 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+
+            BuildLabel.Text = list.buildinfo;
         }
         _list list = new _list();
 
