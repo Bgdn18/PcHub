@@ -61,16 +61,6 @@ namespace PCHUB
             list.regedit();
         }
 
-        public void whiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White; // белая тема
-        }
-
-        public void purpleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = Color.RebeccaPurple; // фиолетовая тема
-        }
-
         private void TaskManager_Click(object sender, EventArgs e)
         {
             list.taskmgr(); // откроется диспетчер задач
@@ -174,11 +164,6 @@ namespace PCHUB
         private void btnTools_Click(object sender, EventArgs e)
         {
             list.tools();
-        }
-
-        private void btnLibrary_Click(object sender, EventArgs e)
-        {
-            list.library();
         }
     }
 }

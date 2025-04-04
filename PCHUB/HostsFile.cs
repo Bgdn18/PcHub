@@ -36,7 +36,7 @@ namespace PCHUB
                 }
                 else
                 {
-                    txtHosts.Text = "Файл hosts не найден!";
+                    txtHosts.Text = "Hosts file not found";
                 }
             }
             catch (Exception ex)
@@ -157,8 +157,18 @@ namespace PCHUB
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}");
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            list.build();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

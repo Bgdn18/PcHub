@@ -124,7 +124,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Gray;
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Font = new Font("Consolas", 9F);
             menuStrip1.Items.AddRange(new ToolStripItem[] { themesToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -136,6 +136,7 @@
             // themesToolStripMenuItem
             // 
             themesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
+            themesToolStripMenuItem.Font = new Font("Consolas", 9F);
             themesToolStripMenuItem.Name = "themesToolStripMenuItem";
             themesToolStripMenuItem.Size = new Size(61, 20);
             themesToolStripMenuItem.Text = "Themes";
@@ -156,6 +157,7 @@
             // 
             // aboutToolStripMenuItem
             // 
+            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             aboutToolStripMenuItem.Size = new Size(54, 20);
             aboutToolStripMenuItem.Text = "About";
@@ -163,6 +165,7 @@
             // 
             // quitToolStripMenuItem
             // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
@@ -267,6 +270,7 @@
             MinimizeBox = false;
             Name = "AdminApps";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Tools";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

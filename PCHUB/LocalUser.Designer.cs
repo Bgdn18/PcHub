@@ -75,7 +75,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = SystemColors.ButtonShadow;
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -149,6 +149,7 @@
             MinimizeBox = false;
             Name = "LocalUser";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LocalUser Manager";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

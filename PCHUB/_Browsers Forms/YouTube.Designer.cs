@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YouTube));
-            label1 = new Label();
+            defoultbrowserlabelyoutube = new Label();
             btnSearch = new Button();
             txtSearch = new TextBox();
             Settings = new Button();
@@ -41,22 +41,22 @@
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // defoultbrowserlabelyoutube
             // 
-            label1.AutoSize = true;
-            label1.Cursor = Cursors.Help;
-            label1.Font = new Font("Consolas", 9F);
-            label1.Location = new Point(306, 282);
-            label1.Name = "label1";
-            label1.Size = new Size(203, 14);
-            label1.TabIndex = 5;
-            label1.Text = "Set up your defoult browser:";
-            label1.Click += label1_Click;
+            defoultbrowserlabelyoutube.AutoSize = true;
+            defoultbrowserlabelyoutube.Cursor = Cursors.Help;
+            defoultbrowserlabelyoutube.Font = new Font("Consolas", 9F);
+            defoultbrowserlabelyoutube.Location = new Point(306, 282);
+            defoultbrowserlabelyoutube.Name = "defoultbrowserlabelyoutube";
+            defoultbrowserlabelyoutube.Size = new Size(203, 14);
+            defoultbrowserlabelyoutube.TabIndex = 5;
+            defoultbrowserlabelyoutube.Text = "Set up your defoult browser:";
+            defoultbrowserlabelyoutube.Click += rickroll_Click;
             // 
             // btnSearch
             // 
             btnSearch.Cursor = Cursors.Hand;
-            btnSearch.Font = new Font("Consolas", 9F);
+            btnSearch.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
             btnSearch.Location = new Point(12, 179);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(628, 65);
@@ -69,13 +69,14 @@
             // 
             txtSearch.AccessibleDescription = "";
             txtSearch.Cursor = Cursors.IBeam;
-            txtSearch.Font = new Font("Consolas", 9F);
+            txtSearch.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
             txtSearch.Location = new Point(12, 41);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Browse in your YouTube!";
             txtSearch.Size = new Size(628, 132);
             txtSearch.TabIndex = 3;
+            txtSearch.Text = "Bogdan Khorolsky";
             // 
             // Settings
             // 
@@ -91,6 +92,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Items.AddRange(new ToolStripItem[] { themeToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -130,16 +132,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(653, 325);
             Controls.Add(menuStrip1);
             Controls.Add(Settings);
-            Controls.Add(label1);
+            Controls.Add(defoultbrowserlabelyoutube);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "YouTube";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "YouTube";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -149,7 +153,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label defoultbrowserlabelyoutube;
         private Button btnSearch;
         private TextBox txtSearch;
         private Button Settings;

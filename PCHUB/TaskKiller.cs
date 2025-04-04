@@ -54,21 +54,6 @@ namespace PCHUB
             }
         }
 
-        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White;
-        }
-
-        private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.BackColor = Color.BlueViolet;
-        }
-
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             list.build();

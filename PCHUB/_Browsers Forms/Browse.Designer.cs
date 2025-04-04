@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browse));
             txtSearch = new TextBox();
             btnSearch = new Button();
-            label1 = new Label();
+            defoultbrowserlabel = new Label();
             Settings = new Button();
             menuStrip1 = new MenuStrip();
             themeToolStripMenuItem = new ToolStripMenuItem();
@@ -45,7 +45,7 @@
             // 
             txtSearch.AccessibleDescription = "";
             txtSearch.Cursor = Cursors.IBeam;
-            txtSearch.Font = new Font("Consolas", 9F);
+            txtSearch.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
             txtSearch.Location = new Point(12, 41);
             txtSearch.Multiline = true;
             txtSearch.Name = "txtSearch";
@@ -57,7 +57,7 @@
             // btnSearch
             // 
             btnSearch.Cursor = Cursors.Hand;
-            btnSearch.Font = new Font("Consolas", 9F);
+            btnSearch.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
             btnSearch.Location = new Point(12, 179);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(628, 65);
@@ -66,15 +66,15 @@
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += btnSearch_Click;
             // 
-            // label1
+            // defoultbrowserlabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 9F);
-            label1.Location = new Point(306, 282);
-            label1.Name = "label1";
-            label1.Size = new Size(203, 14);
-            label1.TabIndex = 2;
-            label1.Text = "Set up your defoult browser:";
+            defoultbrowserlabel.AutoSize = true;
+            defoultbrowserlabel.Font = new Font("Consolas", 9F);
+            defoultbrowserlabel.Location = new Point(306, 282);
+            defoultbrowserlabel.Name = "defoultbrowserlabel";
+            defoultbrowserlabel.Size = new Size(203, 14);
+            defoultbrowserlabel.TabIndex = 2;
+            defoultbrowserlabel.Text = "Set up your defoult browser:";
             // 
             // Settings
             // 
@@ -90,6 +90,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Items.AddRange(new ToolStripItem[] { themeToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -133,7 +134,7 @@
             BackColor = Color.White;
             ClientSize = new Size(653, 325);
             Controls.Add(Settings);
-            Controls.Add(label1);
+            Controls.Add(defoultbrowserlabel);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
             Controls.Add(menuStrip1);
@@ -143,6 +144,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Browse";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Browse";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -154,7 +156,7 @@
 
         private TextBox txtSearch;
         private Button btnSearch;
-        private Label label1;
+        private Label defoultbrowserlabel;
         private Button Settings;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem themeToolStripMenuItem;

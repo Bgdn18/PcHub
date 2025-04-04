@@ -13,7 +13,10 @@ namespace PCHUB.Main
 {
     internal class _list
     {
+        // Информация о билде!!!
         public string? buildinfo = ("build: 4/3/2025");
+
+
 
         // Ниже все функции которые используются в других формах ⏬⏬⏬
 
@@ -103,13 +106,13 @@ namespace PCHUB.Main
 
         public void unlocker() // Открывает IObit unlocker
         {
-            string hubDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string hubDirectory = AppDomain.CurrentDomain.BaseDirectory; // путь испольняемого файла
 
-            string customCmdDirectory = Path.Combine(hubDirectory, "IObit");
+            string customCmdDirectory = Path.Combine(hubDirectory, "IObit"); //путь папки
 
-            string IoBit = Path.Combine(customCmdDirectory, "IObit Unlocker");
+            string IoBit = Path.Combine(customCmdDirectory, "IObit Unlocker"); // Iobit
 
-            string IoBitUnlockerExe = Path.Combine(IoBit, "IObitUnlocker.exe");
+            string IoBitUnlockerExe = Path.Combine(IoBit, "IObitUnlocker.exe"); // исполняемый файл IoBit Unlocker
             try
             {
                 Process.Start(IoBitUnlockerExe);
@@ -176,7 +179,7 @@ namespace PCHUB.Main
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"error opening About: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"error opening Build Info: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -321,7 +324,7 @@ namespace PCHUB.Main
             }
         }
 
-        public void cmd()
+        public void cmd() // открывает командную строку
         {
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
@@ -340,11 +343,11 @@ namespace PCHUB.Main
             }
         }
 
-        public void regedit()
+        public void regedit() // открывает реестер
         {
             if (!isadmin()) //если не админ
                 MessageBox.Show("Before using the program, you MUST run it as administrator.: ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+
             else
                 try
                 {
@@ -355,7 +358,7 @@ namespace PCHUB.Main
                     MessageBox.Show("Error opening RegEdit: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); //ошибка
                 }
         }
-        public void controlpanel()
+        public void controlpanel() // открывает панель задач
         {
             try
             {
@@ -367,7 +370,7 @@ namespace PCHUB.Main
             }
         }
 
-        public bool isadmin()
+        public bool isadmin() // проверка на то является ли пользователь админом
         {
             return new WindowsPrincipal(WindowsIdentity.GetCurrent())
                 .IsInRole(WindowsBuiltInRole.Administrator);

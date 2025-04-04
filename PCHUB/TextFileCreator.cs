@@ -127,22 +127,12 @@ namespace PCHUB
             lblStatus.BackColor = Color.LightGreen;
         }
 
-        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White;
-            menuStrip1.BackColor = Color.Silver;
-        }
-
-        private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.BackColor = Color.RebeccaPurple;
-            menuStrip1.BackColor = Color.MediumPurple;
-        }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             list.build();
         }
+
 
         private void lblStatus_Click(object sender, EventArgs e)
         {

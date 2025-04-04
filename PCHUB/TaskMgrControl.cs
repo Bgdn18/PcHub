@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.Win32;
+using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -16,23 +17,26 @@ namespace PCHUB
             this.MaximizeBox = false;
         }
 
+        _list list = new _list();
+
+
         // Проверка текущего статуса
         private void CheckStatus()
         {
             try
             {
-                using (RegistryKey key = Registry.LocalMachine.OpenSubKey(RegistryPath))
+                using (RegistryKey? key = Registry.LocalMachine.OpenSubKey(RegistryPath))
                 {
                     int value = (int?)key?.GetValue(ValueName, 0) ?? 0;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка проверки: {ex.Message}");
+                MessageBox.Show($"Verification error: {ex.Message}");
             }
         }
 
-        // Кнопка "Разблокировать"
+        // Кнопка Разблокировать
         private void btnUnlock_Click(object sender, EventArgs e)
         {
             try
@@ -40,7 +44,7 @@ namespace PCHUB
 
                 SetTaskManagerAccess(0);
 
-                using (RegistryKey ?key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
+                using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(RegistryPath, true))
                 {
 
                     key?.SetValue(ValueName, 0, RegistryValueKind.DWord);
@@ -54,7 +58,7 @@ namespace PCHUB
             }
         }
 
-        // Кнопка "Заблокировать"
+        // Кнопка Заблокировать
         private void btnLock_Click(object sender, EventArgs e)
         {
             SetTaskManagerAccess(1);
@@ -106,7 +110,7 @@ namespace PCHUB
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}\nЗапустите от администратора!");
+                MessageBox.Show($"Error: {ex.Message}\nRun as administrator");
             }
         }
 
@@ -114,6 +118,16 @@ namespace PCHUB
         {
             MessageBox.Show($"Error: {ex.Message}\n\nRun the program as administrator!",
                             "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            list.build();
         }
     }
 }

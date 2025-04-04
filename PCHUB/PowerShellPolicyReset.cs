@@ -11,16 +11,12 @@ namespace PCHUB
         {
             InitializeComponent();
             CheckCurrentPolicy();
-            ConfigureForm();
-        }
 
-        _list list = new _list();
-
-        private void ConfigureForm()
-        {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
+
+        _list list = new _list();
 
         // Проверка текущей политики
         private void CheckCurrentPolicy()

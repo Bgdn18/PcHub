@@ -33,9 +33,6 @@
             btnADMIN = new Button();
             btnCMD = new Button();
             menuStrip1 = new MenuStrip();
-            themeToolStripMenuItem = new ToolStripMenuItem();
-            whiteToolStripMenuItem = new ToolStripMenuItem();
-            purpleToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
@@ -70,7 +67,7 @@
             // 
             btnADMIN.Cursor = Cursors.Hand;
             btnADMIN.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnADMIN.Location = new Point(284, 233);
+            btnADMIN.Location = new Point(284, 292);
             btnADMIN.Margin = new Padding(4, 3, 4, 3);
             btnADMIN.Name = "btnADMIN";
             btnADMIN.Size = new Size(178, 53);
@@ -94,36 +91,14 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Silver;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { themeToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.System;
             menuStrip1.Size = new Size(475, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // themeToolStripMenuItem
-            // 
-            themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
-            themeToolStripMenuItem.Font = new Font("Consolas", 9F);
-            themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            themeToolStripMenuItem.Size = new Size(54, 20);
-            themeToolStripMenuItem.Text = "Theme";
-            // 
-            // whiteToolStripMenuItem
-            // 
-            whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(116, 22);
-            whiteToolStripMenuItem.Text = "White";
-            whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
-            // 
-            // purpleToolStripMenuItem
-            // 
-            purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
-            purpleToolStripMenuItem.Size = new Size(116, 22);
-            purpleToolStripMenuItem.Text = "Purple";
-            purpleToolStripMenuItem.Click += purpleToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
@@ -153,7 +128,7 @@
             // 
             aDDToolStripMenuItem.Font = new Font("Consolas", 9F);
             aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            aDDToolStripMenuItem.Size = new Size(180, 22);
+            aDDToolStripMenuItem.Size = new Size(116, 22);
             aDDToolStripMenuItem.Text = "ADD";
             aDDToolStripMenuItem.Click += aDDToolStripMenuItem_Click;
             // 
@@ -161,7 +136,7 @@
             // 
             dELETEToolStripMenuItem.Font = new Font("Consolas", 9F);
             dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            dELETEToolStripMenuItem.Size = new Size(180, 22);
+            dELETEToolStripMenuItem.Size = new Size(116, 22);
             dELETEToolStripMenuItem.Text = "DELETE";
             dELETEToolStripMenuItem.Click += dELETEToolStripMenuItem_Click;
             // 
@@ -184,10 +159,10 @@
             // 
             btnALL.Cursor = Cursors.Hand;
             btnALL.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnALL.Location = new Point(284, 292);
+            btnALL.Location = new Point(284, 351);
             btnALL.Margin = new Padding(4, 3, 4, 3);
             btnALL.Name = "btnALL";
-            btnALL.Size = new Size(178, 112);
+            btnALL.Size = new Size(178, 53);
             btnALL.TabIndex = 11;
             btnALL.Text = "Library...";
             btnALL.UseVisualStyleBackColor = true;
@@ -228,7 +203,7 @@
             btnTaskkiller.Name = "btnTaskkiller";
             btnTaskkiller.Size = new Size(178, 53);
             btnTaskkiller.TabIndex = 17;
-            btnTaskkiller.Text = "TaskKill";
+            btnTaskkiller.Text = "TaskKill 💀";
             btnTaskkiller.UseVisualStyleBackColor = true;
             btnTaskkiller.Click += Taskkiller_Click;
             // 
@@ -252,7 +227,7 @@
             btnIOBitUnlocker.Name = "btnIOBitUnlocker";
             btnIOBitUnlocker.Size = new Size(178, 53);
             btnIOBitUnlocker.TabIndex = 20;
-            btnIOBitUnlocker.Text = "Unlocker";
+            btnIOBitUnlocker.Text = "IObit Unlocker 🗝";
             btnIOBitUnlocker.UseVisualStyleBackColor = true;
             btnIOBitUnlocker.Click += IOBitUnlocker_Click;
             // 
@@ -301,7 +276,8 @@
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 3, 4, 3);
             Name = "_MAIN";
-            Text = "PcHub for Windows 10/11";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "PcHub";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -314,9 +290,6 @@
         private Button btnADMIN;
         private Button btnCMD;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem themeToolStripMenuItem;
-        private ToolStripMenuItem whiteToolStripMenuItem;
-        private ToolStripMenuItem purpleToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
         private Label BuildLabel;

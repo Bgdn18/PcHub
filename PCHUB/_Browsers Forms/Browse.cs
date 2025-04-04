@@ -31,18 +31,15 @@ namespace PCHUB
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Получаем текст из текстового поля
             string query = txtSearch.Text;
 
-            // Проверяем, что текстовое поле не пустое
             if (!string.IsNullOrWhiteSpace(query))
             {
-                // Формируем URL для поиска
+
                 string url = "https://" +  Uri.EscapeDataString(query);
 
                 try
                 {
-                    // Открытие браузера по умолчанию
                     Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
                 }
                 catch (Exception ex)

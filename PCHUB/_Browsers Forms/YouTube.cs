@@ -30,23 +30,19 @@ namespace PCHUB
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            // Получаем текст из текстового поля
             string query = txtSearch.Text;
 
-            // Проверяем, что текстовое поле не пустое
             if (!string.IsNullOrWhiteSpace(query))
             {
-                // Формируем URL для поиска
                 string url = "https://www.youtube.com/results?search_query=" + Uri.EscapeDataString(query);
 
                 try
                 {
-                    // Открытие браузера по умолчанию
                     Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error opening browser: " + ex.Message);
+                    MessageBox.Show("Error opening youtube: " + ex.Message);
                 }
             }
         }
@@ -67,20 +63,18 @@ namespace PCHUB
             this.BackColor = Color.BlueViolet;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void rickroll_Click(object sender, EventArgs e)
         {
             {
-                // Формируем URL для поиска
                 string url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
                 try
                 {
-                    // Открытие браузера по умолчанию
                     Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error opening browser: " + ex.Message);
+                    MessageBox.Show("Error opening youtube: " + ex.Message);
                 }
             }
         }

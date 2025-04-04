@@ -35,10 +35,8 @@
             txtFileName = new TextBox();
             txtFileContent = new TextBox();
             menuStrip1 = new MenuStrip();
-            themesToolStripMenuItem = new ToolStripMenuItem();
-            whiteToolStripMenuItem = new ToolStripMenuItem();
-            purpleToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
+            quitToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             txtExtension = new TextBox();
             textBox1 = new TextBox();
@@ -108,35 +106,13 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Silver;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { themesToolStripMenuItem, aboutToolStripMenuItem });
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(736, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // themesToolStripMenuItem
-            // 
-            themesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
-            themesToolStripMenuItem.Font = new Font("Consolas", 9F);
-            themesToolStripMenuItem.Name = "themesToolStripMenuItem";
-            themesToolStripMenuItem.Size = new Size(61, 20);
-            themesToolStripMenuItem.Text = "Themes";
-            // 
-            // whiteToolStripMenuItem
-            // 
-            whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(116, 22);
-            whiteToolStripMenuItem.Text = "White";
-            whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
-            // 
-            // purpleToolStripMenuItem
-            // 
-            purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
-            purpleToolStripMenuItem.Size = new Size(116, 22);
-            purpleToolStripMenuItem.Text = "Purple";
-            purpleToolStripMenuItem.Click += purpleToolStripMenuItem_Click_1;
             // 
             // aboutToolStripMenuItem
             // 
@@ -145,6 +121,13 @@
             aboutToolStripMenuItem.Size = new Size(54, 20);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(47, 20);
+            quitToolStripMenuItem.Text = "Quit";
             // 
             // label1
             // 
@@ -226,6 +209,7 @@
             MinimizeBox = false;
             Name = "TextFileCreator";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "TextFileCreator";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -241,14 +225,12 @@
         private TextBox txtFileName;
         private TextBox txtFileContent;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem themesToolStripMenuItem;
-        private ToolStripMenuItem whiteToolStripMenuItem;
-        private ToolStripMenuItem purpleToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Label label1;
         private TextBox txtExtension;
         private TextBox textBox1;
         private TextBox textBox2;
         private Button FileExplorer;
+        private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

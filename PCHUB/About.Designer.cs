@@ -32,64 +32,83 @@
             ABOUTTEXT = new Label();
             BuildLabel = new Label();
             label2 = new Label();
-            label1 = new Label();
+            TelegrammChannel = new PictureBox();
+            GitHub = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)TelegrammChannel).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)GitHub).BeginInit();
             SuspendLayout();
             // 
             // ABOUTTEXT
             // 
             ABOUTTEXT.AutoSize = true;
-            ABOUTTEXT.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ABOUTTEXT.ForeColor = Color.FromArgb(64, 0, 64);
+            ABOUTTEXT.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ABOUTTEXT.ForeColor = Color.Black;
             ABOUTTEXT.Location = new Point(12, 9);
             ABOUTTEXT.Name = "ABOUTTEXT";
-            ABOUTTEXT.Size = new Size(306, 19);
+            ABOUTTEXT.Size = new Size(238, 56);
             ABOUTTEXT.TabIndex = 0;
-            ABOUTTEXT.Text = "Сделано \"Bogodan\" для Nedohackers";
+            ABOUTTEXT.Text = "Сделано Bogdan Khorolsky\r\nСделал для ввостановления системы\r\nИсходные файлы программы доступны\r\nНа GitHub.";
             // 
             // BuildLabel
             // 
             BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BuildLabel.AutoSize = true;
             BuildLabel.BackColor = Color.Gray;
+            BuildLabel.Cursor = Cursors.Help;
             BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BuildLabel.ForeColor = Color.White;
-            BuildLabel.Location = new Point(12, 182);
+            BuildLabel.Location = new Point(12, 179);
             BuildLabel.Name = "BuildLabel";
             BuildLabel.Size = new Size(35, 20);
             BuildLabel.TabIndex = 2;
             BuildLabel.Text = "null";
+            BuildLabel.Click += BuildLabel_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Cursor = Cursors.Hand;
-            label2.Font = new Font("Consolas", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Purple;
-            label2.Location = new Point(369, 9);
+            label2.Font = new Font("Consolas", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(356, 9);
             label2.Name = "label2";
-            label2.Size = new Size(207, 75);
+            label2.Size = new Size(89, 32);
             label2.TabIndex = 4;
             label2.Text = "PCHUB";
-            label2.Click += label2_Click;
+            label2.Click += PCHUBlabel_Click;
             // 
-            // label1
+            // TelegrammChannel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 9F);
-            label1.ForeColor = Color.FromArgb(64, 0, 64);
-            label1.Location = new Point(427, 188);
-            label1.Name = "label1";
-            label1.Size = new Size(154, 14);
-            label1.TabIndex = 5;
-            label1.Text = "Все права не защищены";
+            TelegrammChannel.Cursor = Cursors.Hand;
+            TelegrammChannel.Image = Properties.Resources.telegramm_icon;
+            TelegrammChannel.Location = new Point(395, 149);
+            TelegrammChannel.Name = "TelegrammChannel";
+            TelegrammChannel.Size = new Size(50, 50);
+            TelegrammChannel.SizeMode = PictureBoxSizeMode.Zoom;
+            TelegrammChannel.TabIndex = 6;
+            TelegrammChannel.TabStop = false;
+            TelegrammChannel.Click += TelegrammChannel_Click;
+            // 
+            // GitHub
+            // 
+            GitHub.Cursor = Cursors.Hand;
+            GitHub.Image = Properties.Resources.github;
+            GitHub.Location = new Point(339, 149);
+            GitHub.Name = "GitHub";
+            GitHub.Size = new Size(50, 50);
+            GitHub.SizeMode = PictureBoxSizeMode.Zoom;
+            GitHub.TabIndex = 7;
+            GitHub.TabStop = false;
+            GitHub.Click += GitHub_Click;
             // 
             // About
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(588, 211);
-            Controls.Add(label1);
+            ClientSize = new Size(454, 211);
+            Controls.Add(GitHub);
+            Controls.Add(TelegrammChannel);
             Controls.Add(label2);
             Controls.Add(BuildLabel);
             Controls.Add(ABOUTTEXT);
@@ -98,7 +117,10 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "About";
-            Text = "About";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "About PcHub";
+            ((System.ComponentModel.ISupportInitialize)TelegrammChannel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)GitHub).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -108,6 +130,7 @@
         private Label ABOUTTEXT;
         private Label BuildLabel;
         private Label label2;
-        private Label label1;
+        private PictureBox TelegrammChannel;
+        private PictureBox GitHub;
     }
 }

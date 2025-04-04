@@ -144,7 +144,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.Silver;
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Font = new Font("Consolas", 9F);
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -189,6 +189,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PowerShellPolicyReset";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PowerShell Policy Manager";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

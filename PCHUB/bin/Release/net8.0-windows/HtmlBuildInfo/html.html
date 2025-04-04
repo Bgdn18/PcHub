@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История изменений - MyApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px;
+            background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .build-info {
+            margin-bottom: 30px;
+        }
+
+        .build-date {
+            font-size: 2.5em;
+            color: #ffddf9;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgb(189, 13, 189);
+        }
+
+        .changes-list {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+        }
+
+        .change-item {
+            padding: 15px;
+            margin: 15px 0;
+            background: #363636;
+            border-left: 4px solid #3d3d3d;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        .change-item:hover {
+            transform: translateX(10px);
+        }
+
+        .change-item i {
+            margin-right: 10px;
+            color: #c96cff;
+        }
+
+        .social-links {
+            
+
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social-links a {
+            color: #fa67ff73;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #c300ff;
+        }
+
+        h3 {
+            color: #c96cff;
+            margin: 25px 0 15px;
+        }
+
+        .version-number {
+            font-size: 0.8em;
+            color: #888;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="build-date">Build 4/4/2025</h1>
+            <h6>mm_dd_yyyy</h6>
+        </div>
+
+        <div class="changes-list">
+            <h3><i class="fas fa-plus"></i>Добавлено:</h3>
+            
+            <div class="change-item">
+                <i class="fas fa-code"></i>
+                <strong>1. Улучшение кода</strong>
+                <p>Оптимизация основных алгоритмов и структур данных</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-code"></i>
+                <strong>2. Дополнительные улучшения кода</strong>
+                <p>Рефакторинг модуля обработки данных</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-share-alt"></i>
+                <strong>3. Ссылки на социальные сети</strong>
+                <p>Добавлена интеграция с основными социальными платформами</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-info-circle"></i>
+                <strong>4. Улучшенное отображение информации о сборке</strong>
+                <p>Новая система визуализации метаданных приложения</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-paint-brush"></i>
+                <strong>5. Обновленный дизайн приложения</strong>
+                <p>Полностью переработанный пользовательский интерфейс</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-file-code"></i>
+                <strong>6. Новый .cs файл с методами</strong>
+                <p>Вынесение основных методов в отдельный модуль</p>
+            </div>
+
+            <div class="change-item">
+                <i class="fas fa-comments"></i>
+                <strong>7. Улучшенные комментарии в коде</strong>
+                <p>Детализированная документация основных функций</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+
+            <a href="https://github.com/Bgdn18" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://t.me/bgdnchannel" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@BogdanKhorolsky" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>        
+    </div>
+</body>
+</html>

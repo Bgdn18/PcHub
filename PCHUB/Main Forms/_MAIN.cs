@@ -22,18 +22,6 @@ namespace PCHUB
             list.build(); // информация о программме
         }
 
-        private void whiteToolStripMenuItem_Click(object sender, EventArgs e) // белая тема
-        {
-            this.BackColor = Color.White;
-            menuStrip1.BackColor = Color.Silver;
-        }
-
-        private void purpleToolStripMenuItem_Click(object sender, EventArgs e) // фиолетовая тема
-        {
-            this.BackColor = Color.BlueViolet;
-            menuStrip1.BackColor = Color.Purple;
-        }
-
         private void Library_Click(object sender, EventArgs e)
         {
             list.library();
@@ -111,6 +99,10 @@ namespace PCHUB
         private void fileexplorer_Click(object sender, EventArgs e)
         {
             list.fileexplorer();
+        }
+
+        private void StartupMenu_Click(object sender, EventArgs e)
+        {
         }
     }
 }

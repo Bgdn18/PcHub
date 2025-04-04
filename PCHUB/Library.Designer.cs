@@ -35,9 +35,6 @@
             btnREGEDIT = new Button();
             btnTaskMGR = new Button();
             menuStrip1 = new MenuStrip();
-            themeToolStripMenuItem = new ToolStripMenuItem();
-            whiteToolStripMenuItem = new ToolStripMenuItem();
-            purpleToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             aDDTOSTARTUPToolStripMenuItem = new ToolStripMenuItem();
@@ -60,7 +57,6 @@
             label2 = new Label();
             btnTools = new Button();
             btnMain = new Button();
-            btnLibrary = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -126,34 +122,13 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { themeToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem, aDDTOSTARTUPToolStripMenuItem });
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, aDDTOSTARTUPToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(673, 24);
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // themeToolStripMenuItem
-            // 
-            themeToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { whiteToolStripMenuItem, purpleToolStripMenuItem });
-            themeToolStripMenuItem.Font = new Font("Consolas", 9F);
-            themeToolStripMenuItem.Name = "themeToolStripMenuItem";
-            themeToolStripMenuItem.Size = new Size(54, 20);
-            themeToolStripMenuItem.Text = "Theme";
-            // 
-            // whiteToolStripMenuItem
-            // 
-            whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            whiteToolStripMenuItem.Size = new Size(116, 22);
-            whiteToolStripMenuItem.Text = "White";
-            whiteToolStripMenuItem.Click += whiteToolStripMenuItem_Click;
-            // 
-            // purpleToolStripMenuItem
-            // 
-            purpleToolStripMenuItem.Name = "purpleToolStripMenuItem";
-            purpleToolStripMenuItem.Size = new Size(116, 22);
-            purpleToolStripMenuItem.Text = "Purple";
-            purpleToolStripMenuItem.Click += purpleToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
@@ -315,7 +290,7 @@
             btnTaskMgrControl.Name = "btnTaskMgrControl";
             btnTaskMgrControl.Size = new Size(125, 35);
             btnTaskMgrControl.TabIndex = 38;
-            btnTaskMgrControl.Text = "TaskMgr Control";
+            btnTaskMgrControl.Text = "TaskMgr Unlocker";
             btnTaskMgrControl.UseVisualStyleBackColor = true;
             btnTaskMgrControl.Click += btnTaskMgrUnlocker_Click;
             // 
@@ -404,26 +379,12 @@
             btnMain.UseVisualStyleBackColor = true;
             btnMain.Click += btnMain_Click;
             // 
-            // btnLibrary
-            // 
-            btnLibrary.Cursor = Cursors.Hand;
-            btnLibrary.Font = new Font("Consolas", 9F);
-            btnLibrary.Location = new Point(274, 367);
-            btnLibrary.Margin = new Padding(4, 3, 4, 3);
-            btnLibrary.Name = "btnLibrary";
-            btnLibrary.Size = new Size(124, 35);
-            btnLibrary.TabIndex = 46;
-            btnLibrary.Text = "Library...";
-            btnLibrary.UseVisualStyleBackColor = true;
-            btnLibrary.Click += btnLibrary_Click;
-            // 
             // Library
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(673, 448);
-            Controls.Add(btnLibrary);
             Controls.Add(btnMain);
             Controls.Add(btnTools);
             Controls.Add(label2);
@@ -453,6 +414,7 @@
             MinimizeBox = false;
             Name = "Library";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Library";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -468,9 +430,6 @@
         private Button btnREGEDIT;
         private Button btnTaskMGR;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem themeToolStripMenuItem;
-        private ToolStripMenuItem whiteToolStripMenuItem;
-        private ToolStripMenuItem purpleToolStripMenuItem;
         private Button btnTxtWriter;
         private Button btnTaskkiller;
         private Button btnFileExplorer;
@@ -493,6 +452,5 @@
         private Label label2;
         private Button btnTools;
         private Button btnMain;
-        private Button btnLibrary;
     }
 }

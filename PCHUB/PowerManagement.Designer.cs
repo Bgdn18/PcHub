@@ -39,7 +39,7 @@
             // Shutdown
             // 
             Shutdown.Cursor = Cursors.Hand;
-            Shutdown.Font = new Font("Consolas", 9F);
+            Shutdown.Font = new Font("Consolas", 12F);
             Shutdown.Location = new Point(12, 27);
             Shutdown.Name = "Shutdown";
             Shutdown.Size = new Size(193, 58);
@@ -51,7 +51,7 @@
             // Restart
             // 
             Restart.Cursor = Cursors.Hand;
-            Restart.Font = new Font("Consolas", 9F);
+            Restart.Font = new Font("Consolas", 12F);
             Restart.Location = new Point(216, 27);
             Restart.Name = "Restart";
             Restart.Size = new Size(193, 58);
@@ -62,6 +62,7 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
             menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
@@ -91,6 +92,7 @@
             MinimizeBox = false;
             Name = "PowerManagement";
             ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PowerManagement";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
