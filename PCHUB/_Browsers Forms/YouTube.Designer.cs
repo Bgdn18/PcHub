@@ -143,6 +143,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "YouTube";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "YouTube";
             menuStrip1.ResumeLayout(false);

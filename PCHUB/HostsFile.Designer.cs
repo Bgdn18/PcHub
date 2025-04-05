@@ -122,6 +122,7 @@
             MinimizeBox = false;
             Name = "HostsFile";
             ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HostsFile";
             menuStrip1.ResumeLayout(false);

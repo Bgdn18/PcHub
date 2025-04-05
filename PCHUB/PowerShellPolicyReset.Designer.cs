@@ -189,6 +189,8 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "PowerShellPolicyReset";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PowerShell Policy Manager";
             menuStrip1.ResumeLayout(false);

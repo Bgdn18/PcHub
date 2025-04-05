@@ -144,6 +144,7 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Browse";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Browse";
             menuStrip1.ResumeLayout(false);

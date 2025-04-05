@@ -18,13 +18,14 @@ namespace PCHUB.Main
 
 
 
+
         // Ниже все функции которые используются в других формах ⏬⏬⏬
 
         public void tools() // открывает Форму AdminApps
         {
             try
             {
-                new AdminApps().ShowDialog();
+                new otherTools().ShowDialog();
             }
             catch (Exception ex)
             {
@@ -302,13 +303,16 @@ namespace PCHUB.Main
 
         public void taskmgr() // Диспетчер Задач
         {
+            OpenOrUnlockTaskMgr taskmgr = new OpenOrUnlockTaskMgr();
+
             try
             {
-                Process.Start("taskmgr.exe");
+                taskmgr.ShowDialog();
             }
+
             catch (Exception ex)
             {
-                MessageBox.Show("Error opening task manager: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error opening Writer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -374,6 +378,20 @@ namespace PCHUB.Main
         {
             return new WindowsPrincipal(WindowsIdentity.GetCurrent())
                 .IsInRole(WindowsBuiltInRole.Administrator);
+        }
+         public void deletefilesform()
+        {
+            Delete_files deletefiles = new Delete_files();
+
+            try
+            {
+                deletefiles.ShowDialog();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

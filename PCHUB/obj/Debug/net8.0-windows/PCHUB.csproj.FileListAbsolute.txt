@@ -15,7 +15,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.pdb
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.genruntimeconfig.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\ref\PCHUB.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.About.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.AdminApps.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Library.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.LocalUser.resources
@@ -28,3 +27,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Browse.re
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.YouTube.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.sourcelink.json
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._MAIN.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.otherTools.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Delete_files.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.OpenOrUnlockTaskMgr.resources

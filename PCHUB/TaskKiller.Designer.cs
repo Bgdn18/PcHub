@@ -40,9 +40,9 @@
             // btnKillProcess
             // 
             btnKillProcess.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKillProcess.Location = new Point(12, 174);
+            btnKillProcess.Location = new Point(11, 94);
             btnKillProcess.Name = "btnKillProcess";
-            btnKillProcess.Size = new Size(776, 59);
+            btnKillProcess.Size = new Size(381, 30);
             btnKillProcess.TabIndex = 0;
             btnKillProcess.Text = "KILL";
             btnKillProcess.UseVisualStyleBackColor = true;
@@ -55,7 +55,7 @@
             txtProcessName.Multiline = true;
             txtProcessName.Name = "txtProcessName";
             txtProcessName.PlaceholderText = "Example -- PCHUB";
-            txtProcessName.Size = new Size(776, 131);
+            txtProcessName.Size = new Size(381, 51);
             txtProcessName.TabIndex = 1;
             txtProcessName.Text = "PCHUB";
             // 
@@ -65,7 +65,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Size = new Size(404, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +89,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 245);
+            ClientSize = new Size(404, 136);
             Controls.Add(txtProcessName);
             Controls.Add(btnKillProcess);
             Controls.Add(menuStrip1);
@@ -98,6 +98,8 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "TaskKiller";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TaskKiller";
             menuStrip1.ResumeLayout(false);

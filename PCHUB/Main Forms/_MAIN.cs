@@ -8,9 +8,6 @@ namespace PCHUB
         {
             InitializeComponent();
 
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-
             BuildLabel.Text = list.buildinfo;
         }
 
@@ -86,9 +83,9 @@ namespace PCHUB
             list.unlocker();
         }
 
-        private void WindowsSettings_Click(object sender, EventArgs e)
+        private void TaskMgr_Click(object sender, EventArgs e)
         {
-            list.settings();
+            list.taskmgr();
         }
 
         private void ExplorerPP_Click(object sender, EventArgs e)
@@ -101,8 +98,9 @@ namespace PCHUB
             list.fileexplorer();
         }
 
-        private void StartupMenu_Click(object sender, EventArgs e)
+        private void btnDeleteFile_Click(object sender, EventArgs e)
         {
+            list.deletefilesform();
         }
     }
 }

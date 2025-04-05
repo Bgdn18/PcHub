@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_MAIN));
             btnPowerManagement = new Button();
             btnADMIN = new Button();
-            btnCMD = new Button();
             menuStrip1 = new MenuStrip();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
@@ -43,10 +42,8 @@
             btnTxtWriter = new Button();
             btnWindowsSettings = new Button();
             btnTaskkiller = new Button();
-            btnExplorerPP = new Button();
-            btnIOBitUnlocker = new Button();
             btnLocalUser = new Button();
-            btnfileexplorer = new Button();
+            btnDeleteFile = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,7 +56,7 @@
             btnPowerManagement.Name = "btnPowerManagement";
             btnPowerManagement.Size = new Size(178, 53);
             btnPowerManagement.TabIndex = 0;
-            btnPowerManagement.Text = "Power \r\nmanagement ⚡";
+            btnPowerManagement.Text = "Power \r\nmanagement";
             btnPowerManagement.UseVisualStyleBackColor = true;
             btnPowerManagement.Click += PowerManagement_Click;
             // 
@@ -67,27 +64,14 @@
             // 
             btnADMIN.Cursor = Cursors.Hand;
             btnADMIN.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnADMIN.Location = new Point(284, 292);
+            btnADMIN.Location = new Point(284, 174);
             btnADMIN.Margin = new Padding(4, 3, 4, 3);
             btnADMIN.Name = "btnADMIN";
             btnADMIN.Size = new Size(178, 53);
             btnADMIN.TabIndex = 2;
-            btnADMIN.Text = "Tools...";
+            btnADMIN.Text = "3rd Party...";
             btnADMIN.UseVisualStyleBackColor = true;
             btnADMIN.Click += ADMIN_Click;
-            // 
-            // btnCMD
-            // 
-            btnCMD.Cursor = Cursors.Hand;
-            btnCMD.Font = new Font("Consolas", 9F);
-            btnCMD.Location = new Point(13, 292);
-            btnCMD.Margin = new Padding(4, 3, 4, 3);
-            btnCMD.Name = "btnCMD";
-            btnCMD.Size = new Size(178, 53);
-            btnCMD.TabIndex = 3;
-            btnCMD.Text = "CMD 🖥";
-            btnCMD.UseVisualStyleBackColor = true;
-            btnCMD.Click += CMD_Click;
             // 
             // menuStrip1
             // 
@@ -147,7 +131,7 @@
             BuildLabel.Cursor = Cursors.Hand;
             BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BuildLabel.ForeColor = Color.White;
-            BuildLabel.Location = new Point(0, 414);
+            BuildLabel.Location = new Point(0, 305);
             BuildLabel.Margin = new Padding(4, 0, 4, 0);
             BuildLabel.Name = "BuildLabel";
             BuildLabel.Size = new Size(35, 20);
@@ -159,12 +143,12 @@
             // 
             btnALL.Cursor = Cursors.Hand;
             btnALL.Font = new Font("Consolas", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnALL.Location = new Point(284, 351);
+            btnALL.Location = new Point(285, 233);
             btnALL.Margin = new Padding(4, 3, 4, 3);
             btnALL.Name = "btnALL";
             btnALL.Size = new Size(178, 53);
             btnALL.TabIndex = 11;
-            btnALL.Text = "Library...";
+            btnALL.Text = "View All...";
             btnALL.UseVisualStyleBackColor = true;
             btnALL.Click += Library_Click;
             // 
@@ -177,7 +161,7 @@
             btnTxtWriter.Name = "btnTxtWriter";
             btnTxtWriter.Size = new Size(178, 53);
             btnTxtWriter.TabIndex = 13;
-            btnTxtWriter.Text = "Writer ✒";
+            btnTxtWriter.Text = "Writer";
             btnTxtWriter.UseVisualStyleBackColor = true;
             btnTxtWriter.Click += TxtWriter_Click;
             // 
@@ -190,9 +174,9 @@
             btnWindowsSettings.Name = "btnWindowsSettings";
             btnWindowsSettings.Size = new Size(178, 53);
             btnWindowsSettings.TabIndex = 15;
-            btnWindowsSettings.Text = "Windows Settings ⚙";
+            btnWindowsSettings.Text = "Task Manager";
             btnWindowsSettings.UseVisualStyleBackColor = true;
-            btnWindowsSettings.Click += WindowsSettings_Click;
+            btnWindowsSettings.Click += TaskMgr_Click;
             // 
             // btnTaskkiller
             // 
@@ -203,78 +187,53 @@
             btnTaskkiller.Name = "btnTaskkiller";
             btnTaskkiller.Size = new Size(178, 53);
             btnTaskkiller.TabIndex = 17;
-            btnTaskkiller.Text = "TaskKill 💀";
+            btnTaskkiller.Text = "TaskKill";
             btnTaskkiller.UseVisualStyleBackColor = true;
             btnTaskkiller.Click += Taskkiller_Click;
-            // 
-            // btnExplorerPP
-            // 
-            btnExplorerPP.Font = new Font("Consolas", 9F);
-            btnExplorerPP.Location = new Point(13, 351);
-            btnExplorerPP.Name = "btnExplorerPP";
-            btnExplorerPP.Size = new Size(178, 53);
-            btnExplorerPP.TabIndex = 19;
-            btnExplorerPP.Text = "Explorer++";
-            btnExplorerPP.UseVisualStyleBackColor = true;
-            btnExplorerPP.Click += ExplorerPP_Click;
-            // 
-            // btnIOBitUnlocker
-            // 
-            btnIOBitUnlocker.Cursor = Cursors.Hand;
-            btnIOBitUnlocker.Font = new Font("Consolas", 9F);
-            btnIOBitUnlocker.Location = new Point(284, 56);
-            btnIOBitUnlocker.Margin = new Padding(4, 3, 4, 3);
-            btnIOBitUnlocker.Name = "btnIOBitUnlocker";
-            btnIOBitUnlocker.Size = new Size(178, 53);
-            btnIOBitUnlocker.TabIndex = 20;
-            btnIOBitUnlocker.Text = "IObit Unlocker 🗝";
-            btnIOBitUnlocker.UseVisualStyleBackColor = true;
-            btnIOBitUnlocker.Click += IOBitUnlocker_Click;
             // 
             // btnLocalUser
             // 
             btnLocalUser.Font = new Font("Consolas", 9F);
-            btnLocalUser.Location = new Point(284, 174);
+            btnLocalUser.Location = new Point(285, 56);
             btnLocalUser.Name = "btnLocalUser";
             btnLocalUser.Size = new Size(178, 53);
             btnLocalUser.TabIndex = 21;
-            btnLocalUser.Text = "Add Local User 👥";
+            btnLocalUser.Text = "Add Local User";
             btnLocalUser.UseVisualStyleBackColor = true;
             btnLocalUser.Click += LocalUser_Click;
             // 
-            // btnfileexplorer
+            // btnDeleteFile
             // 
-            btnfileexplorer.Font = new Font("Consolas", 9F);
-            btnfileexplorer.Location = new Point(284, 115);
-            btnfileexplorer.Name = "btnfileexplorer";
-            btnfileexplorer.Size = new Size(178, 53);
-            btnfileexplorer.TabIndex = 22;
-            btnfileexplorer.Text = "File Explorer 🚎";
-            btnfileexplorer.UseVisualStyleBackColor = true;
-            btnfileexplorer.Click += fileexplorer_Click;
+            btnDeleteFile.Font = new Font("Consolas", 9F);
+            btnDeleteFile.Location = new Point(284, 115);
+            btnDeleteFile.Name = "btnDeleteFile";
+            btnDeleteFile.Size = new Size(178, 53);
+            btnDeleteFile.TabIndex = 23;
+            btnDeleteFile.Text = "File Delete";
+            btnDeleteFile.UseVisualStyleBackColor = true;
+            btnDeleteFile.Click += btnDeleteFile_Click;
             // 
             // _MAIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(475, 446);
-            Controls.Add(btnfileexplorer);
+            ClientSize = new Size(475, 335);
+            Controls.Add(btnDeleteFile);
             Controls.Add(btnLocalUser);
-            Controls.Add(btnIOBitUnlocker);
-            Controls.Add(btnExplorerPP);
             Controls.Add(btnTaskkiller);
             Controls.Add(btnWindowsSettings);
             Controls.Add(btnTxtWriter);
             Controls.Add(btnALL);
             Controls.Add(BuildLabel);
-            Controls.Add(btnCMD);
             Controls.Add(btnADMIN);
             Controls.Add(btnPowerManagement);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "_MAIN";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PcHub";
@@ -288,7 +247,6 @@
 
         private Button btnPowerManagement;
         private Button btnADMIN;
-        private Button btnCMD;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
@@ -297,12 +255,10 @@
         private Button btnTxtWriter;
         private Button btnWindowsSettings;
         private Button btnTaskkiller;
-        private Button btnExplorerPP;
-        private Button btnIOBitUnlocker;
         private Button btnLocalUser;
-        private Button btnfileexplorer;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem aDDToolStripMenuItem;
         private ToolStripMenuItem dELETEToolStripMenuItem;
+        private Button btnDeleteFile;
     }
 }

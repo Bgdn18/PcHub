@@ -149,6 +149,7 @@
             MinimizeBox = false;
             Name = "LocalUser";
             ShowIcon = false;
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LocalUser Manager";
             menuStrip1.ResumeLayout(false);
