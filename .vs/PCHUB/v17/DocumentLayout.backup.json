@@ -3,44 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\krati\\source\\repos\\PCHUB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\powermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\powermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\taskkiller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\taskkiller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|C:\\Users\\krati\\source\\repos\\PCHUB\\pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\taskkiller.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\taskkiller.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|C:\\Users\\krati\\source\\repos\\PCHUB\\pchub\\taskkiller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\taskkiller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\main forms\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\main forms\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|C:\\Users\\krati\\source\\repos\\PCHUB\\pchub\\powermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\powermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|C:\\Users\\krati\\source\\repos\\PCHUB\\pchub\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\main forms\\_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\main forms\\_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|C:\\Users\\krati\\source\\repos\\PCHUB\\pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\powershellpolicyreset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\main forms\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\main forms\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "_list.cs",
               "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Main Forms\\_list.cs",
               "RelativeDocumentMoniker": "PCHUB\\Main Forms\\_list.cs",
               "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Main Forms\\_list.cs",
               "RelativeToolTip": "PCHUB\\Main Forms\\_list.cs",
-              "ViewState": "AgIAAF8BAAAAAAAAAAAiwHgBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAAOAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T15:43:17.6Z",
               "IsPinned": true
@@ -75,109 +55,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TaskKiller.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.Designer.cs",
-              "RelativeDocumentMoniker": "PCHUB\\TaskKiller.Designer.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.Designer.cs",
-              "RelativeToolTip": "PCHUB\\TaskKiller.Designer.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAvwDsAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "_MAIN.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Main Forms\\_MAIN.cs",
+              "RelativeDocumentMoniker": "PCHUB\\Main Forms\\_MAIN.cs",
+              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Main Forms\\_MAIN.cs [Design]",
+              "RelativeToolTip": "PCHUB\\Main Forms\\_MAIN.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:41:25.198Z"
+              "WhenOpened": "2025-04-05T16:56:03.127Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PowerShellPolicyReset.cs [Design]",
               "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerShellPolicyReset.cs",
               "RelativeDocumentMoniker": "PCHUB\\PowerShellPolicyReset.cs",
               "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerShellPolicyReset.cs [Design]",
               "RelativeToolTip": "PCHUB\\PowerShellPolicyReset.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:39:21.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PowerShellPolicyReset.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerShellPolicyReset.cs",
-              "RelativeDocumentMoniker": "PCHUB\\PowerShellPolicyReset.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerShellPolicyReset.cs",
-              "RelativeToolTip": "PCHUB\\PowerShellPolicyReset.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAiwD0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:38:03.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskKiller.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.cs",
-              "RelativeDocumentMoniker": "PCHUB\\TaskKiller.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.cs",
-              "RelativeToolTip": "PCHUB\\TaskKiller.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAowEAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:34:22.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TaskKiller.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.cs",
-              "RelativeDocumentMoniker": "PCHUB\\TaskKiller.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\TaskKiller.cs [Design]",
-              "RelativeToolTip": "PCHUB\\TaskKiller.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:34:20.499Z"
+              "WhenOpened": "2025-04-05T16:55:57.293Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PowerManagement.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerManagement.cs",
-              "RelativeDocumentMoniker": "PCHUB\\PowerManagement.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerManagement.cs",
-              "RelativeToolTip": "PCHUB\\PowerManagement.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwDQAAAB/AAAAAAAAAA==",
+              "Title": "Library.cs",
+              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs",
+              "RelativeDocumentMoniker": "PCHUB\\Library.cs",
+              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs",
+              "RelativeToolTip": "PCHUB\\Library.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAcwHgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:31:39.659Z",
+              "WhenOpened": "2025-04-04T21:02:42.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PowerManagement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerManagement.cs",
-              "RelativeDocumentMoniker": "PCHUB\\PowerManagement.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PowerManagement.cs [Design]",
-              "RelativeToolTip": "PCHUB\\PowerManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T12:30:28.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Library.cs [Design]",
               "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs",
               "RelativeDocumentMoniker": "PCHUB\\Library.cs",
               "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs [Design]",
               "RelativeToolTip": "PCHUB\\Library.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T21:02:18.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Library.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs",
-              "RelativeDocumentMoniker": "PCHUB\\Library.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\Library.cs",
-              "RelativeToolTip": "PCHUB\\Library.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAowEEAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T21:02:42.935Z"
+              "WhenOpened": "2025-04-04T21:02:18.988Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

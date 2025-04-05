@@ -54,6 +54,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.TaskMgr
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PowerShellPolicyReset.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB._MAIN.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.OpenOrUnlockTaskMgr.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Delete_files.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.otherTools.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Delete_files.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.OpenOrUnlockTaskMgr.resources
