@@ -11,9 +11,6 @@ namespace PCHUB
         {
             InitializeComponent();
             CheckCurrentPolicy();
-
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
 
         _list list = new _list();

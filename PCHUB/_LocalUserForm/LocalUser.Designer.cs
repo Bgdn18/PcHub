@@ -38,24 +38,27 @@
             ViewFolder = new Button();
             UserPassword = new TextBox();
             btnOpenSettings = new Button();
+            checkboxAdminUser = new CheckBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // ADDLocalUser
             // 
+            ADDLocalUser.Cursor = Cursors.Hand;
             ADDLocalUser.Font = new Font("Consolas", 9F);
-            ADDLocalUser.Location = new Point(12, 102);
+            ADDLocalUser.Location = new Point(12, 121);
             ADDLocalUser.Name = "ADDLocalUser";
             ADDLocalUser.Size = new Size(135, 40);
             ADDLocalUser.TabIndex = 0;
             ADDLocalUser.Text = "ADD";
             ADDLocalUser.UseVisualStyleBackColor = true;
-            ADDLocalUser.Click += button1_Click;
+            ADDLocalUser.Click += AddLocalUser_Click;
             // 
             // DeleteLocalUser
             // 
+            DeleteLocalUser.Cursor = Cursors.Hand;
             DeleteLocalUser.Font = new Font("Consolas", 9F);
-            DeleteLocalUser.Location = new Point(153, 102);
+            DeleteLocalUser.Location = new Point(153, 121);
             DeleteLocalUser.Name = "DeleteLocalUser";
             DeleteLocalUser.Size = new Size(135, 40);
             DeleteLocalUser.TabIndex = 1;
@@ -66,7 +69,7 @@
             // textboxUsername
             // 
             textboxUsername.Font = new Font("Consolas", 9F);
-            textboxUsername.Location = new Point(12, 46);
+            textboxUsername.Location = new Point(12, 65);
             textboxUsername.Name = "textboxUsername";
             textboxUsername.PlaceholderText = "UserName";
             textboxUsername.Size = new Size(390, 22);
@@ -101,8 +104,9 @@
             // 
             // ViewFolder
             // 
+            ViewFolder.Cursor = Cursors.Hand;
             ViewFolder.Font = new Font("Consolas", 9F);
-            ViewFolder.Location = new Point(335, 102);
+            ViewFolder.Location = new Point(334, 121);
             ViewFolder.Name = "ViewFolder";
             ViewFolder.Size = new Size(135, 40);
             ViewFolder.TabIndex = 4;
@@ -113,7 +117,7 @@
             // UserPassword
             // 
             UserPassword.Font = new Font("Consolas", 9F);
-            UserPassword.Location = new Point(13, 74);
+            UserPassword.Location = new Point(12, 93);
             UserPassword.Name = "UserPassword";
             UserPassword.PasswordChar = '*';
             UserPassword.PlaceholderText = "PassWord";
@@ -122,8 +126,9 @@
             // 
             // btnOpenSettings
             // 
+            btnOpenSettings.Cursor = Cursors.Hand;
             btnOpenSettings.Font = new Font("Consolas", 9F);
-            btnOpenSettings.Location = new Point(408, 46);
+            btnOpenSettings.Location = new Point(408, 64);
             btnOpenSettings.Name = "btnOpenSettings";
             btnOpenSettings.Size = new Size(61, 22);
             btnOpenSettings.TabIndex = 6;
@@ -131,11 +136,24 @@
             btnOpenSettings.UseVisualStyleBackColor = true;
             btnOpenSettings.Click += btnOpenSettings_Click;
             // 
+            // checkboxAdminUser
+            // 
+            checkboxAdminUser.AutoSize = true;
+            checkboxAdminUser.Checked = true;
+            checkboxAdminUser.CheckState = CheckState.Checked;
+            checkboxAdminUser.Location = new Point(12, 40);
+            checkboxAdminUser.Name = "checkboxAdminUser";
+            checkboxAdminUser.Size = new Size(132, 19);
+            checkboxAdminUser.TabIndex = 7;
+            checkboxAdminUser.Text = "Administrator rights";
+            checkboxAdminUser.UseVisualStyleBackColor = true;
+            // 
             // LocalUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(481, 151);
+            ClientSize = new Size(481, 173);
+            Controls.Add(checkboxAdminUser);
             Controls.Add(btnOpenSettings);
             Controls.Add(UserPassword);
             Controls.Add(ViewFolder);
@@ -169,5 +187,6 @@
         private Button ViewFolder;
         private TextBox UserPassword;
         private Button btnOpenSettings;
+        private CheckBox checkboxAdminUser;
     }
 }

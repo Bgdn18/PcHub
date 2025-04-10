@@ -53,15 +53,5 @@ namespace PCHUB
         {
             list.build(); // информация о приложении
         }
-
-        private void whiteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White; // белая тема
-        }
-
-        private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.BackColor = Color.BlueViolet; // фиолетовая тема
-        }
     }
 }

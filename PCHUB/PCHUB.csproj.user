@@ -7,7 +7,16 @@
     <Compile Update="About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="3rd party App.cs">
+    <Compile Update="ProccesStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UnInstaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Main Forms\3rd party App.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Delete files.cs">
@@ -16,7 +25,7 @@
     <Compile Update="HostsFile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OpenOrUnlockTaskMgr.cs">
+    <Compile Update="_Choice Forms\OpenOrUnlockTaskMgr.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PowerShellPolicyReset.cs">
@@ -25,19 +34,19 @@
     <Compile Update="TaskMgrControl.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="_PowerManagerForms\UnlockOrLockPowerMgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="_Browsers Forms\Browse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LocalUser.cs">
+    <Compile Update="_LocalUserForm\LocalUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Main Forms\_MAIN.cs">
+    <Compile Update="_Main Forms\PCHUBForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Library.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PowerManagement.cs">
+    <Compile Update="_PowerManagerForms\PowerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TaskKiller.cs">

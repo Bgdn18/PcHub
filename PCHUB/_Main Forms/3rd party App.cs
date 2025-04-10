@@ -19,11 +19,9 @@ namespace PCHUB
         {
             InitializeComponent();
 
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-
             BuildLabel.Text = list.buildinfo;
         }
+
         _list list = new _list();
 
 
@@ -32,16 +30,6 @@ namespace PCHUB
             list.build();
         }
 
-        private void TxtWriter_Click(object sender, EventArgs e)
-        {
-            list.writer();
-
-        }
-
-        private void RESOURCEMONITOR_Click(object sender, EventArgs e)
-        {
-            list.taskmgr();
-        }
 
         private void EXPLORER_Click(object sender, EventArgs e)
         {
@@ -51,11 +39,6 @@ namespace PCHUB
         private void CONTROLPANEL_Click(object sender, EventArgs e)
         {
             list.controlpanel();
-        }
-
-        private void REGEDIT_Click(object sender, EventArgs e)
-        {
-            list.regedit();
         }
 
         private void CMD_Click(object sender, EventArgs e)
@@ -80,14 +63,10 @@ namespace PCHUB
             list.unlocker();
         }
 
-        public void LocalUser_Click(object? sender, EventArgs e)
-        {
-            list.localuser();
-        }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.quit();
+            this.Close();
         }
 
         private void BuildLabel_Click(object sender, EventArgs e) // информация о билде
@@ -116,6 +95,11 @@ namespace PCHUB
         private void btnTaskMgr_Click(object sender, EventArgs e)
         {
             list.taskmgr();
+        }
+
+        private void btnRegedit_Click(object sender, EventArgs e)
+        {
+            list.regedit();
         }
     }
 }

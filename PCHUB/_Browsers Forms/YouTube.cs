@@ -52,17 +52,6 @@ namespace PCHUB
             list.build();
         }
 
-
-        private void whiteToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.BackColor = Color.White;
-        }
-
-        private void purpleToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.BackColor = Color.BlueViolet;
-        }
-
         private void rickroll_Click(object sender, EventArgs e)
         {
             {

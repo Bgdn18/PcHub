@@ -39,6 +39,7 @@
             // 
             // btnKillProcess
             // 
+            btnKillProcess.Cursor = Cursors.Hand;
             btnKillProcess.Font = new Font("Consolas", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKillProcess.Location = new Point(11, 94);
             btnKillProcess.Name = "btnKillProcess";
@@ -93,6 +94,7 @@
             Controls.Add(txtProcessName);
             Controls.Add(btnKillProcess);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;

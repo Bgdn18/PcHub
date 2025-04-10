@@ -31,20 +31,21 @@
             // 
             // txtPath
             // 
-            txtPath.Font = new Font("Consolas", 9F);
+            txtPath.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPath.Location = new Point(12, 37);
             txtPath.Multiline = true;
             txtPath.Name = "txtPath";
             txtPath.PlaceholderText = "Path to File/Folder";
-            txtPath.Size = new Size(211, 31);
+            txtPath.Size = new Size(316, 31);
             txtPath.TabIndex = 0;
             // 
             // btnDelete
             // 
+            btnDelete.Cursor = Cursors.Hand;
             btnDelete.Font = new Font("Consolas", 9F);
             btnDelete.Location = new Point(13, 74);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(210, 31);
+            btnDelete.Size = new Size(315, 31);
             btnDelete.TabIndex = 1;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -52,23 +53,25 @@
             // 
             // btnBrowseFile
             // 
+            btnBrowseFile.Cursor = Cursors.Hand;
             btnBrowseFile.Font = new Font("Consolas", 8.25F);
-            btnBrowseFile.Location = new Point(229, 37);
+            btnBrowseFile.Location = new Point(334, 37);
             btnBrowseFile.Name = "btnBrowseFile";
-            btnBrowseFile.Size = new Size(74, 31);
+            btnBrowseFile.Size = new Size(97, 31);
             btnBrowseFile.TabIndex = 3;
-            btnBrowseFile.Text = "File...";
+            btnBrowseFile.Text = "View File";
             btnBrowseFile.UseVisualStyleBackColor = true;
             btnBrowseFile.Click += btnBrowseFile_Click;
             // 
             // btnBrowseFolder
             // 
+            btnBrowseFolder.Cursor = Cursors.Hand;
             btnBrowseFolder.Font = new Font("Consolas", 8.25F);
-            btnBrowseFolder.Location = new Point(229, 74);
+            btnBrowseFolder.Location = new Point(334, 75);
             btnBrowseFolder.Name = "btnBrowseFolder";
-            btnBrowseFolder.Size = new Size(74, 31);
+            btnBrowseFolder.Size = new Size(97, 31);
             btnBrowseFolder.TabIndex = 4;
-            btnBrowseFolder.Text = "Folder...";
+            btnBrowseFolder.Text = "View Folder";
             btnBrowseFolder.UseVisualStyleBackColor = true;
             btnBrowseFolder.Click += btnBrowseFolder_Click;
             // 
@@ -78,28 +81,31 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileExplorerToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(320, 24);
+            menuStrip1.Size = new Size(443, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
             // 
             // fileExplorerToolStripMenuItem
             // 
+            fileExplorerToolStripMenuItem.Font = new Font("Consolas", 9F);
             fileExplorerToolStripMenuItem.Name = "fileExplorerToolStripMenuItem";
-            fileExplorerToolStripMenuItem.Size = new Size(83, 20);
+            fileExplorerToolStripMenuItem.Size = new Size(110, 20);
             fileExplorerToolStripMenuItem.Text = "File Explorer";
             fileExplorerToolStripMenuItem.Click += fileExplorerToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
+            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Size = new Size(54, 20);
             aboutToolStripMenuItem.Text = "About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new Size(42, 20);
+            quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
@@ -107,7 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(320, 117);
+            ClientSize = new Size(443, 117);
             Controls.Add(btnBrowseFolder);
             Controls.Add(btnBrowseFile);
             Controls.Add(btnDelete);

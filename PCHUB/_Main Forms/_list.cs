@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar;
-using static PCHUB.Library;
+using static PCHUB.PCHUBForm;
 
 namespace PCHUB.Main
 {
     internal class _list
     {
         // Информация о билде!!!
-        public string? buildinfo = ("build: 4/3/2025");
+        public string? buildinfo = ("1.0.0");
 
 
 
@@ -33,11 +33,11 @@ namespace PCHUB.Main
             }
         }
 
-        public void library() // открывает библеотеку
+        public void pchubform() // открывает PcHubForm
         {
             try
             {
-                new Library().ShowDialog();
+                new PCHUBForm().ShowDialog();
             }
             catch (Exception ex)
             {
@@ -45,65 +45,6 @@ namespace PCHUB.Main
             }
         }
 
-        public void main() // Открывает Форму MAIN (Начальную)
-        {
-            try
-            {
-                new _MAIN().ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void removefromstartup() // Удаление Из Автозагрузки
-        {
-            try
-            {
-                using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(
-                    @"Software\Microsoft\Windows\CurrentVersion\Run", true))
-                {
-                    if (key?.GetValue(AppnamePcHub.AppName) == null)
-                    {
-                        MessageBox.Show("The program was not in startup", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    key.DeleteValue(AppnamePcHub.AppName);
-                    MessageBox.Show("The program has been removed from startup", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void addtostartup() // Добавляет В Автозагрузку
-        {
-            try
-            {
-                string exePath = Application.ExecutablePath;
-
-                using (RegistryKey? key = Registry.CurrentUser.OpenSubKey(
-                    @"Software\Microsoft\Windows\CurrentVersion\Run", true))
-                {
-                    if (key?.GetValue(AppnamePcHub.AppName) != null)
-                    {
-                        MessageBox.Show("The program is already in startup", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    key?.SetValue(AppnamePcHub.AppName, exePath);
-                    MessageBox.Show("The program has been successfully added to startup", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public void unlocker() // Открывает IObit unlocker
         {
@@ -312,19 +253,7 @@ namespace PCHUB.Main
 
             catch (Exception ex)
             {
-                MessageBox.Show($"Error opening Writer: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void quit() // Выход Из Приложения
-        {
-            try
-            {
-                Application.Exit();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Quit: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error opening taskmgr: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -379,7 +308,8 @@ namespace PCHUB.Main
             return new WindowsPrincipal(WindowsIdentity.GetCurrent())
                 .IsInRole(WindowsBuiltInRole.Administrator);
         }
-         public void deletefilesform()
+
+         public void deletefilesform() // форма удаления файлов с компьютера
         {
             Delete_files deletefiles = new Delete_files();
 
@@ -391,6 +321,35 @@ namespace PCHUB.Main
             catch (Exception ex)
             {
                 MessageBox.Show($"Error opening: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void uninstaller()
+        {
+            UnInstaller unInstaller = new UnInstaller();
+
+            try
+            {
+                unInstaller.ShowDialog();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening uninstaller: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void runform()
+        {
+            ProccesStartForm runform = new ProccesStartForm();
+
+            try
+            {
+                runform.ShowDialog();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening RUN: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -41,6 +41,7 @@
             // 
             // btnReset
             // 
+            btnReset.Cursor = Cursors.Hand;
             btnReset.Font = new Font("Consolas", 9F);
             btnReset.Location = new Point(12, 415);
             btnReset.Name = "btnReset";
@@ -62,6 +63,7 @@
             // 
             // Save
             // 
+            Save.Cursor = Cursors.Hand;
             Save.Font = new Font("Consolas", 9F);
             Save.Location = new Point(268, 415);
             Save.Name = "Save";
@@ -73,6 +75,7 @@
             // 
             // OpenFolder
             // 
+            OpenFolder.Cursor = Cursors.Hand;
             OpenFolder.Font = new Font("Consolas", 9F);
             OpenFolder.Location = new Point(524, 415);
             OpenFolder.Name = "OpenFolder";

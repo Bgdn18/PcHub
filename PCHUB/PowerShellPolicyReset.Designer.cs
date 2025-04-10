@@ -184,6 +184,7 @@
             Controls.Add(btnResetPolicy);
             Controls.Add(lblCurrentPolicy);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;

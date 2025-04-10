@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
 using PCHUB.Main;
 
 namespace PCHUB
@@ -49,13 +50,16 @@ namespace PCHUB
 
         private void BSOD_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Через 3 секунды Windows уйдет в BSOD...");
-            System.Threading.Thread.Sleep(3000);
-
             bool enabled;
             RtlAdjustPrivilege(SE_SHUTDOWN_PRIVILEGE, true, false, out enabled);
             uint response;
             NtRaiseHardError(0xC000021A, 0, 0, IntPtr.Zero, 6, out response);
+        }
+
+        private void LockOrUnlockPowerMgr_Click(object sender, EventArgs e)
+        {
+            UnlockPowerMgrForm form = new UnlockPowerMgrForm();
+            form.ShowDialog();
         }
     }
 }

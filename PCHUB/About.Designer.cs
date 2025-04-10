@@ -45,9 +45,9 @@
             ABOUTTEXT.ForeColor = Color.Black;
             ABOUTTEXT.Location = new Point(12, 9);
             ABOUTTEXT.Name = "ABOUTTEXT";
-            ABOUTTEXT.Size = new Size(238, 56);
+            ABOUTTEXT.Size = new Size(245, 56);
             ABOUTTEXT.TabIndex = 0;
-            ABOUTTEXT.Text = "Сделано Bogdan Khorolsky\r\nСделал для ввостановления системы\r\nИсходные файлы программы доступны\r\nНа GitHub.";
+            ABOUTTEXT.Text = "Сделано Богданом Хорольским\r\nСделал для ввостановления системы.\r\nИсходные файлы программы доступны\r\nНа GitHub.";
             // 
             // BuildLabel
             // 
@@ -59,9 +59,9 @@
             BuildLabel.ForeColor = Color.White;
             BuildLabel.Location = new Point(12, 179);
             BuildLabel.Name = "BuildLabel";
-            BuildLabel.Size = new Size(35, 20);
+            BuildLabel.Size = new Size(94, 20);
             BuildLabel.TabIndex = 2;
-            BuildLabel.Text = "null";
+            BuildLabel.Text = "Version: null";
             BuildLabel.Click += BuildLabel_Click;
             // 
             // label2
@@ -91,6 +91,8 @@
             // 
             // GitHub
             // 
+            GitHub.AccessibleDescription = "";
+            GitHub.AccessibleName = "";
             GitHub.Cursor = Cursors.Hand;
             GitHub.Image = Properties.Resources.github;
             GitHub.Location = new Point(339, 149);
@@ -113,6 +115,7 @@
             Controls.Add(BuildLabel);
             Controls.Add(ABOUTTEXT);
             ForeColor = SystemColors.ControlLight;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;

@@ -1,6 +1,6 @@
 ﻿namespace PCHUB
 {
-    partial class PowerManagement
+    partial class ProccesStartForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PowerManagement));
-            Shutdown = new Button();
-            Restart = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProccesStartForm));
+            textBox1 = new TextBox();
+            btnRun = new Button();
             menuStrip1 = new MenuStrip();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
-            BSOD = new Button();
+            pathToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // Shutdown
+            // textBox1
             // 
-            Shutdown.Cursor = Cursors.Hand;
-            Shutdown.Font = new Font("Consolas", 12F);
-            Shutdown.Location = new Point(12, 27);
-            Shutdown.Name = "Shutdown";
-            Shutdown.Size = new Size(135, 50);
-            Shutdown.TabIndex = 0;
-            Shutdown.Text = "Shutdown";
-            Shutdown.UseVisualStyleBackColor = true;
-            Shutdown.Click += Shutdown_Click;
+            textBox1.Location = new Point(12, 33);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(395, 23);
+            textBox1.TabIndex = 0;
             // 
-            // Restart
+            // btnRun
             // 
-            Restart.Cursor = Cursors.Hand;
-            Restart.Font = new Font("Consolas", 12F);
-            Restart.Location = new Point(153, 27);
-            Restart.Name = "Restart";
-            Restart.Size = new Size(135, 50);
-            Restart.TabIndex = 1;
-            Restart.Text = "Restart";
-            Restart.UseVisualStyleBackColor = true;
-            Restart.Click += Restart_Click;
+            btnRun.Font = new Font("Consolas", 9F);
+            btnRun.Location = new Point(413, 33);
+            btnRun.Name = "btnRun";
+            btnRun.Size = new Size(75, 23);
+            btnRun.TabIndex = 1;
+            btnRun.Text = "Run";
+            btnRun.UseVisualStyleBackColor = true;
+            btnRun.Click += buttonrun_Click;
             // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, pathToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(441, 24);
+            menuStrip1.Size = new Size(503, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(54, 20);
+            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -79,36 +82,32 @@
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
-            // BSOD
+            // pathToolStripMenuItem
             // 
-            BSOD.Cursor = Cursors.Hand;
-            BSOD.Font = new Font("Consolas", 12F);
-            BSOD.Location = new Point(294, 27);
-            BSOD.Name = "BSOD";
-            BSOD.Size = new Size(135, 50);
-            BSOD.TabIndex = 3;
-            BSOD.Text = "BSOD";
-            BSOD.UseVisualStyleBackColor = true;
-            BSOD.Click += BSOD_Click;
+            pathToolStripMenuItem.Font = new Font("Consolas", 9F);
+            pathToolStripMenuItem.Name = "pathToolStripMenuItem";
+            pathToolStripMenuItem.Size = new Size(82, 20);
+            pathToolStripMenuItem.Text = "Path Edit";
+            pathToolStripMenuItem.Click += pathToolStripMenuItem_Click;
             // 
-            // PowerManagement
+            // ProccesStartForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(441, 89);
-            Controls.Add(BSOD);
-            Controls.Add(Restart);
-            Controls.Add(Shutdown);
+            ClientSize = new Size(503, 68);
+            Controls.Add(btnRun);
+            Controls.Add(textBox1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "PowerManagement";
+            Name = "ProccesStartForm";
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "PowerManagement";
+            Text = "Procces Run";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -117,10 +116,11 @@
 
         #endregion
 
-        private Button Shutdown;
-        private Button Restart;
+        private TextBox textBox1;
+        private Button btnRun;
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private Button BSOD;
+        private ToolStripMenuItem pathToolStripMenuItem;
     }
 }

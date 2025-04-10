@@ -132,7 +132,7 @@ namespace PCHUB
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.quit();
+            this.Close();
         }
     }
 }

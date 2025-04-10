@@ -22,7 +22,7 @@ namespace PCHUB
         }
         _list list = new _list();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddLocalUser_Click(object sender, EventArgs e)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace PCHUB
                 // Проверяем ввод пользователя
                 if (string.IsNullOrEmpty(username))
                 {
-                    MessageBox.Show("Enter username",
+                    MessageBox.Show("Please enter username",
                                     "Error",
                                   MessageBoxButtons.OK,
                                   MessageBoxIcon.Error);
@@ -63,17 +63,17 @@ namespace PCHUB
                     ExecuteCommand($"net user \"{username}\" /add /active:yes /passwordreq:no");
                 }
 
-
-                // 2. Создаём учётную запись
-                ExecuteCommand($"net user \"{username}\" /add /active:yes /passwordreq:no");
-
-                // 3. Добавляем в администраторы
-                ExecuteCommand($"net localgroup Administrators \"{username}\" /add");
+                // 3. Добавляем в администраторы только если checkbox отмечен
+                if (checkboxAdminUser.Checked)
+                {
+                    ExecuteCommand($"net localgroup Administrators \"{username}\" /add");
+                }
 
                 // 4. Проверяем результат
                 if (CheckIfAccountExists(username))
                 {
-                    MessageBox.Show($"Account '{username}' successfully created!\n\n" +
+                    string adminStatus = checkboxAdminUser.Checked ? "with Administrator rights" : "as a standard user";
+                    MessageBox.Show($"Account '{username}' successfully created {adminStatus}!\n\n" +
                                     "Now you can:\n" +
                                     "1. Restart your computer\n" +
                                     "2. Select the new user on the login screen",
@@ -127,7 +127,7 @@ namespace PCHUB
             }
         }
 
-        // Метод выполнения команд (остаётся без изменений)
+        // Метод выполнения команд
         private void ExecuteCommand(string command)
         {
             Process process = new Process();

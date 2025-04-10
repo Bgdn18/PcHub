@@ -14,17 +14,15 @@ namespace PCHUB
         public About()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
 
-            BuildLabel.Text = list.buildinfo;
+            BuildLabel.Text = ("Version: ") + list.buildinfo;
         }
 
         _list list = new _list();
 
         private void PCHUBlabel_Click(object sender, EventArgs e)
         {
-            this.Text = ("About kostyan edition"); // меняю название формы
+            this.Text = list.buildinfo + (" !!!"); // меняю название формы
 
             Random rand = new Random();
 

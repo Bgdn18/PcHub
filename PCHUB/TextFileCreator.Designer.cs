@@ -39,9 +39,9 @@
             quitToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             txtExtension = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
             FileExplorer = new Button();
+            btnBinaryFile = new Button();
+            btn16DigitCodeFile = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,9 +63,9 @@
             btnCreateFile.Font = new Font("Consolas", 8.25F);
             btnCreateFile.Location = new Point(560, 35);
             btnCreateFile.Name = "btnCreateFile";
-            btnCreateFile.Size = new Size(161, 60);
+            btnCreateFile.Size = new Size(161, 27);
             btnCreateFile.TabIndex = 1;
-            btnCreateFile.Text = "Create TXT File";
+            btnCreateFile.Text = "Create File";
             btnCreateFile.UseVisualStyleBackColor = true;
             btnCreateFile.Click += btnCreateFile_Click;
             // 
@@ -134,7 +134,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(560, 269);
+            label1.Location = new Point(561, 69);
             label1.Name = "label1";
             label1.Size = new Size(121, 26);
             label1.TabIndex = 6;
@@ -152,30 +152,6 @@
             txtExtension.TabIndex = 7;
             txtExtension.Text = ".txt";
             // 
-            // textBox1
-            // 
-            textBox1.Cursor = Cursors.IBeam;
-            textBox1.Font = new Font("Consolas", 8.25F);
-            textBox1.Location = new Point(560, 368);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(160, 64);
-            textBox1.TabIndex = 10;
-            textBox1.Text = "use \"16DigiCode_\" and \"_16DigiCode\" at the end\r\n to make the text binary";
-            // 
-            // textBox2
-            // 
-            textBox2.Cursor = Cursors.IBeam;
-            textBox2.Font = new Font("Consolas", 8.25F);
-            textBox2.Location = new Point(559, 298);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(161, 64);
-            textBox2.TabIndex = 11;
-            textBox2.Text = "use \"isbinary_\" and \"_isbinary\" at the end\r\n to make the text binary";
-            // 
             // FileExplorer
             // 
             FileExplorer.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -187,15 +163,39 @@
             FileExplorer.UseVisualStyleBackColor = true;
             FileExplorer.Click += FileExplorer_Click;
             // 
+            // btnBinaryFile
+            // 
+            btnBinaryFile.Cursor = Cursors.Hand;
+            btnBinaryFile.Font = new Font("Consolas", 8.25F);
+            btnBinaryFile.Location = new Point(561, 101);
+            btnBinaryFile.Name = "btnBinaryFile";
+            btnBinaryFile.Size = new Size(161, 27);
+            btnBinaryFile.TabIndex = 26;
+            btnBinaryFile.Text = "Create Binary File";
+            btnBinaryFile.UseVisualStyleBackColor = true;
+            btnBinaryFile.Click += btnBinaryFile_Click;
+            // 
+            // btn16DigitCodeFile
+            // 
+            btn16DigitCodeFile.Cursor = Cursors.Hand;
+            btn16DigitCodeFile.Font = new Font("Consolas", 8.25F);
+            btn16DigitCodeFile.Location = new Point(561, 134);
+            btn16DigitCodeFile.Name = "btn16DigitCodeFile";
+            btn16DigitCodeFile.Size = new Size(161, 27);
+            btn16DigitCodeFile.TabIndex = 27;
+            btn16DigitCodeFile.Text = "Create 16DigitCode File";
+            btn16DigitCodeFile.UseVisualStyleBackColor = true;
+            btn16DigitCodeFile.Click += btn16DigitCodeFile_Click;
+            // 
             // TextFileCreator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(736, 467);
+            Controls.Add(btn16DigitCodeFile);
+            Controls.Add(btnBinaryFile);
             Controls.Add(FileExplorer);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(txtExtension);
             Controls.Add(label1);
             Controls.Add(txtFileContent);
@@ -204,6 +204,7 @@
             Controls.Add(btnCreateFile);
             Controls.Add(txtFilePath);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
@@ -230,9 +231,9 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Label label1;
         private TextBox txtExtension;
-        private TextBox textBox1;
-        private TextBox textBox2;
         private Button FileExplorer;
         private ToolStripMenuItem quitToolStripMenuItem;
+        private Button btnBinaryFile;
+        private Button btn16DigitCodeFile;
     }
 }

@@ -48,12 +48,15 @@ D:\Моё\C#\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\PCHUB.dll
 D:\Моё\C#\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\PCHUB.pdb
 D:\Моё\C#\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.genruntimeconfig.cache
 D:\Моё\C#\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\ref\PCHUB.dll
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Library.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.LocalUser.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.TaskMgrControl.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PowerShellPolicyReset.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB._MAIN.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.otherTools.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Delete_files.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.OpenOrUnlockTaskMgr.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.BrowserExplorerOrJustExplorerDotExe.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.UnlockPowerMgrForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PCHUBForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.UnInstaller.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.ProccesStartForm.resources
