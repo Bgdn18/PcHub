@@ -83,7 +83,7 @@ namespace PCHUB
             try
             {
                 // Проверка прав администратора
-                if (!list.isadmin())
+                if (!_list.SystemChecks.isadmin())
                 {
                     MessageBox.Show("Administrator rights required!");
                     return;
@@ -163,7 +163,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

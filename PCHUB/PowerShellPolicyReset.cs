@@ -92,7 +92,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
     }
 }

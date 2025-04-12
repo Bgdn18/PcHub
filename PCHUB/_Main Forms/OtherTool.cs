@@ -27,40 +27,34 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
-        }
-
-
-        private void EXPLORER_Click(object sender, EventArgs e)
-        {
-            list.fileexplorer();
+            _list.OpenApps.Build();
         }
 
         private void CONTROLPANEL_Click(object sender, EventArgs e)
         {
-            list.controlpanel();
+            _list.ProcessOpen.ProcessRun("control.exe");
         }
 
         private void CMD_Click(object sender, EventArgs e)
         {
-            list.cmd();
+            _list.OpenApps.Cmd();
         }
 
 
 
         private void ExplorerPP_Click(object sender, EventArgs e)
         {
-            list.explorerpp();
+            _list.Tools.ExplorerPP();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void processhacker_Click(object sender, EventArgs e)
         {
-            list.procceshacker();
+            _list.Tools.ProccesHacker();
         }
 
         private void IObitUnlocker_Click(object sender, EventArgs e)
         {
-            list.unlocker();
+            _list.Tools.Unlocker();  // Запуск IObit Unlocker
         }
 
 
@@ -71,7 +65,7 @@ namespace PCHUB
 
         private void BuildLabel_Click(object sender, EventArgs e) // информация о билде
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         private void btnZapret_Click(object sender, EventArgs e) // Запрет для YouTube и Discord
@@ -92,14 +86,20 @@ namespace PCHUB
             }
         }
 
-        private void btnTaskMgr_Click(object sender, EventArgs e)
-        {
-            list.taskmgr();
-        }
-
         private void btnRegedit_Click(object sender, EventArgs e)
         {
-            list.regedit();
+            if (!_list.SystemChecks.isadmin())
+            {
+                MessageBox.Show("Error, try running as administrator: " , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try
+            {
+                _list.ProcessOpen.ProcessRun("regedit");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening Regedit: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

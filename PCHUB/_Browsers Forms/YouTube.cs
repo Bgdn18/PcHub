@@ -25,7 +25,7 @@ namespace PCHUB
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            list.settings();
+            _list.ProcessOpen.ProcessRun("explorer.exe", "ms-settings:");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         private void rickroll_Click(object sender, EventArgs e)
@@ -66,6 +66,11 @@ namespace PCHUB
                     MessageBox.Show("Error opening youtube: " + ex.Message);
                 }
             }
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

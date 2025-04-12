@@ -116,7 +116,7 @@
             btnProccesHacker.TabIndex = 24;
             btnProccesHacker.Text = "Procces Hacker";
             btnProccesHacker.UseVisualStyleBackColor = true;
-            btnProccesHacker.Click += button1_Click;
+            btnProccesHacker.Click += processhacker_Click;
             // 
             // btnIoBitUnlocker
             // 
@@ -132,6 +132,7 @@
             // 
             // BuildLabel
             // 
+            BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BuildLabel.AutoSize = true;
             BuildLabel.BackColor = Color.Gray;
             BuildLabel.Cursor = Cursors.Hand;
@@ -174,7 +175,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(423, 255);
+            ClientSize = new Size(423, 256);
             Controls.Add(btnRegedit);
             Controls.Add(btnZapret);
             Controls.Add(BuildLabel);
@@ -184,11 +185,12 @@
             Controls.Add(btnCONTROLPANEL);
             Controls.Add(btnCMD);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
+            MaximumSize = new Size(439, 450);
             MinimizeBox = false;
+            MinimumSize = new Size(439, 295);
             Name = "otherTools";
             ShowIcon = false;
             ShowInTaskbar = false;

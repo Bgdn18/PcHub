@@ -126,6 +126,9 @@ namespace PCHUB
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e) => Close();
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e) => new _list().build();
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _list.OpenApps.Build();
+        }
     }
 }

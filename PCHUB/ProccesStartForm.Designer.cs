@@ -42,13 +42,13 @@
             // 
             textBox1.Location = new Point(12, 33);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(395, 23);
+            textBox1.Size = new Size(474, 23);
             textBox1.TabIndex = 0;
             // 
             // btnRun
             // 
             btnRun.Font = new Font("Consolas", 9F);
-            btnRun.Location = new Point(413, 33);
+            btnRun.Location = new Point(491, 33);
             btnRun.Name = "btnRun";
             btnRun.Size = new Size(75, 23);
             btnRun.TabIndex = 1;
@@ -62,7 +62,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, pathToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(503, 24);
+            menuStrip1.Size = new Size(578, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -94,7 +94,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 68);
+            ClientSize = new Size(578, 72);
             Controls.Add(btnRun);
             Controls.Add(textBox1);
             Controls.Add(menuStrip1);

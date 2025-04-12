@@ -29,8 +29,6 @@ namespace PCHUB
         {
             InitializeComponent();
 
-            SetupAutoComplete();
-
             textBox1.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -41,21 +39,6 @@ namespace PCHUB
         }
 
         _list list = new _list();
-
-        private void SetupAutoComplete()
-        {
-            var autoComplete = new AutoCompleteStringCollection();
-            autoComplete.AddRange(new[]
-            {
-                "appwiz.cpl", "ncpa.cpl", "desk.cpl", "main.cpl", "sysdm.cpl",
-                "msconfig", "cmd", "regedit", "devmgmt.msc", "diskmgmt.msc",
-                "control", "calc", "notepad", "explorer", "winver", "powershell",
-                "temp","BrowseExplorer"
-            });
-            textBox1.AutoCompleteCustomSource = autoComplete;
-            textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-        }
 
         private void buttonrun_Click(object sender, EventArgs e)
         {
@@ -71,7 +54,7 @@ namespace PCHUB
             {
                 if (input == "BrowseExplorer")
                 {
-                    list.fileexplorer();
+                    _list.OpenApps.OpenFileExplorer();
                 }
 
                 if (System.IO.File.Exists(input) || System.IO.Directory.Exists(input))
@@ -95,7 +78,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         private void pathToolStripMenuItem_Click(object sender, EventArgs e) // открывает настройку path

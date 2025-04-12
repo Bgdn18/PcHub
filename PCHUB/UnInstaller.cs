@@ -121,7 +121,7 @@ namespace PCHUB
 
             if (result == DialogResult.Yes)
             {
-                buttonUninstall.Enabled = false;
+                deleteToolStripMenuItem.Enabled = false;
                 progressBar1.Style = ProgressBarStyle.Marquee;
                 Refresh();
 
@@ -186,14 +186,14 @@ namespace PCHUB
                 finally
                 {
                     progressBar1.Style = ProgressBarStyle.Blocks;
-                    buttonUninstall.Enabled = true;
+                    deleteToolStripMenuItem.Enabled = true;
                 }
             }
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build(); // информация о программе
+            _list.OpenApps.Build(); // информация о программе
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

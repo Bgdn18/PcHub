@@ -38,13 +38,13 @@ namespace PCHUB
 
         private void UnlockTaskMgr_Click(object sender, EventArgs e)
         {
-            list.taskmgrunlocker();
+            _list.ProcessOpen.ShowForm<TaskMgrControl>();
             this.Close();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

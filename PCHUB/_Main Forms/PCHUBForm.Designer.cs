@@ -46,15 +46,16 @@
             btnTools = new Button();
             btnFileDelete = new Button();
             btnUninstaller = new Button();
-            button1 = new Button();
+            btnBrowseForms = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // btnTaskMGR
             // 
+            btnTaskMGR.Anchor = AnchorStyles.Top;
             btnTaskMGR.Cursor = Cursors.Hand;
             btnTaskMGR.Font = new Font("Consolas", 8.25F);
-            btnTaskMGR.Location = new Point(145, 118);
+            btnTaskMGR.Location = new Point(368, 118);
             btnTaskMGR.Name = "btnTaskMGR";
             btnTaskMGR.Size = new Size(125, 35);
             btnTaskMGR.TabIndex = 6;
@@ -68,7 +69,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, runToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(419, 24);
+            menuStrip1.Size = new Size(864, 24);
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -97,9 +98,10 @@
             // 
             // btnTxtWriter
             // 
+            btnTxtWriter.Anchor = AnchorStyles.Top;
             btnTxtWriter.Cursor = Cursors.Hand;
             btnTxtWriter.Font = new Font("Consolas", 8.25F);
-            btnTxtWriter.Location = new Point(12, 118);
+            btnTxtWriter.Location = new Point(235, 118);
             btnTxtWriter.Name = "btnTxtWriter";
             btnTxtWriter.Size = new Size(125, 35);
             btnTxtWriter.TabIndex = 10;
@@ -109,9 +111,10 @@
             // 
             // btnTaskkiller
             // 
+            btnTaskkiller.Anchor = AnchorStyles.Top;
             btnTaskkiller.Cursor = Cursors.Hand;
             btnTaskkiller.Font = new Font("Consolas", 8.25F);
-            btnTaskkiller.Location = new Point(145, 77);
+            btnTaskkiller.Location = new Point(368, 77);
             btnTaskkiller.Margin = new Padding(4, 3, 4, 3);
             btnTaskkiller.Name = "btnTaskkiller";
             btnTaskkiller.Size = new Size(125, 35);
@@ -122,9 +125,10 @@
             // 
             // btnFileExplorer
             // 
+            btnFileExplorer.Anchor = AnchorStyles.Top;
             btnFileExplorer.Cursor = Cursors.Hand;
             btnFileExplorer.Font = new Font("Consolas", 8.25F);
-            btnFileExplorer.Location = new Point(277, 118);
+            btnFileExplorer.Location = new Point(500, 118);
             btnFileExplorer.Name = "btnFileExplorer";
             btnFileExplorer.Size = new Size(125, 35);
             btnFileExplorer.TabIndex = 23;
@@ -134,9 +138,10 @@
             // 
             // btnAddLocalUser
             // 
+            btnAddLocalUser.Anchor = AnchorStyles.Top;
             btnAddLocalUser.Cursor = Cursors.Hand;
             btnAddLocalUser.Font = new Font("Consolas", 8.25F);
-            btnAddLocalUser.Location = new Point(12, 36);
+            btnAddLocalUser.Location = new Point(235, 36);
             btnAddLocalUser.Name = "btnAddLocalUser";
             btnAddLocalUser.Size = new Size(125, 35);
             btnAddLocalUser.TabIndex = 32;
@@ -146,12 +151,13 @@
             // 
             // BuildLabel
             // 
+            BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BuildLabel.AutoSize = true;
             BuildLabel.BackColor = Color.Gray;
             BuildLabel.Cursor = Cursors.Hand;
             BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BuildLabel.ForeColor = Color.White;
-            BuildLabel.Location = new Point(0, 276);
+            BuildLabel.Location = new Point(0, 527);
             BuildLabel.Margin = new Padding(4, 0, 4, 0);
             BuildLabel.Name = "BuildLabel";
             BuildLabel.Size = new Size(35, 20);
@@ -161,9 +167,10 @@
             // 
             // btnPowerMgr
             // 
+            btnPowerMgr.Anchor = AnchorStyles.Top;
             btnPowerMgr.Cursor = Cursors.Hand;
             btnPowerMgr.Font = new Font("Consolas", 8.25F);
-            btnPowerMgr.Location = new Point(12, 77);
+            btnPowerMgr.Location = new Point(235, 77);
             btnPowerMgr.Margin = new Padding(4, 3, 4, 3);
             btnPowerMgr.Name = "btnPowerMgr";
             btnPowerMgr.Size = new Size(125, 35);
@@ -174,9 +181,10 @@
             // 
             // btnHostsFile
             // 
+            btnHostsFile.Anchor = AnchorStyles.Top;
             btnHostsFile.Cursor = Cursors.Hand;
             btnHostsFile.Font = new Font("Consolas", 8.25F);
-            btnHostsFile.Location = new Point(277, 36);
+            btnHostsFile.Location = new Point(500, 36);
             btnHostsFile.Margin = new Padding(4, 3, 4, 3);
             btnHostsFile.Name = "btnHostsFile";
             btnHostsFile.Size = new Size(125, 35);
@@ -187,9 +195,10 @@
             // 
             // btnPowerShellPolicyManager
             // 
+            btnPowerShellPolicyManager.Anchor = AnchorStyles.Top;
             btnPowerShellPolicyManager.Cursor = Cursors.Hand;
             btnPowerShellPolicyManager.Font = new Font("Consolas", 8.25F);
-            btnPowerShellPolicyManager.Location = new Point(277, 77);
+            btnPowerShellPolicyManager.Location = new Point(500, 77);
             btnPowerShellPolicyManager.Margin = new Padding(4, 3, 4, 3);
             btnPowerShellPolicyManager.Name = "btnPowerShellPolicyManager";
             btnPowerShellPolicyManager.Size = new Size(125, 35);
@@ -200,9 +209,10 @@
             // 
             // HybsLabel
             // 
+            HybsLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             HybsLabel.AutoSize = true;
             HybsLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HybsLabel.Location = new Point(12, 206);
+            HybsLabel.Location = new Point(12, 454);
             HybsLabel.Name = "HybsLabel";
             HybsLabel.Size = new Size(60, 22);
             HybsLabel.TabIndex = 43;
@@ -210,9 +220,10 @@
             // 
             // btnTools
             // 
+            btnTools.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnTools.Cursor = Cursors.Hand;
             btnTools.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTools.Location = new Point(12, 231);
+            btnTools.Location = new Point(12, 479);
             btnTools.Margin = new Padding(4, 3, 4, 3);
             btnTools.Name = "btnTools";
             btnTools.Size = new Size(124, 35);
@@ -223,12 +234,13 @@
             // 
             // btnFileDelete
             // 
+            btnFileDelete.Anchor = AnchorStyles.Top;
             btnFileDelete.Cursor = Cursors.Hand;
             btnFileDelete.Font = new Font("Consolas", 8.25F);
-            btnFileDelete.Location = new Point(144, 36);
+            btnFileDelete.Location = new Point(367, 36);
             btnFileDelete.Margin = new Padding(4, 3, 4, 3);
             btnFileDelete.Name = "btnFileDelete";
-            btnFileDelete.Size = new Size(125, 35);
+            btnFileDelete.Size = new Size(126, 35);
             btnFileDelete.TabIndex = 46;
             btnFileDelete.Text = "File Delete";
             btnFileDelete.UseVisualStyleBackColor = true;
@@ -236,9 +248,10 @@
             // 
             // btnUninstaller
             // 
+            btnUninstaller.Anchor = AnchorStyles.Top;
             btnUninstaller.Cursor = Cursors.Hand;
             btnUninstaller.Font = new Font("Consolas", 8.25F);
-            btnUninstaller.Location = new Point(12, 159);
+            btnUninstaller.Location = new Point(235, 159);
             btnUninstaller.Name = "btnUninstaller";
             btnUninstaller.Size = new Size(125, 35);
             btnUninstaller.TabIndex = 47;
@@ -246,24 +259,27 @@
             btnUninstaller.UseVisualStyleBackColor = true;
             btnUninstaller.Click += btnUninstaller_Click;
             // 
-            // button1
+            // btnBrowseForms
             // 
-            button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Consolas", 8.25F);
-            button1.Location = new Point(145, 159);
-            button1.Name = "button1";
-            button1.Size = new Size(125, 35);
-            button1.TabIndex = 48;
-            button1.Text = "Procces Run";
-            button1.UseVisualStyleBackColor = true;
+            btnBrowseForms.Anchor = AnchorStyles.Top;
+            btnBrowseForms.Cursor = Cursors.Hand;
+            btnBrowseForms.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBrowseForms.Location = new Point(367, 159);
+            btnBrowseForms.Margin = new Padding(4, 3, 4, 3);
+            btnBrowseForms.Name = "btnBrowseForms";
+            btnBrowseForms.Size = new Size(126, 35);
+            btnBrowseForms.TabIndex = 48;
+            btnBrowseForms.Text = "Browse Forms";
+            btnBrowseForms.UseVisualStyleBackColor = true;
+            btnBrowseForms.Click += btnBrowseForms_Click;
             // 
             // PCHUBForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(419, 305);
-            Controls.Add(button1);
+            ClientSize = new Size(864, 556);
+            Controls.Add(btnBrowseForms);
             Controls.Add(btnUninstaller);
             Controls.Add(btnFileDelete);
             Controls.Add(btnTools);
@@ -278,11 +294,12 @@
             Controls.Add(btnTxtWriter);
             Controls.Add(btnTaskMGR);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
+            MaximumSize = new Size(1200, 900);
             MinimizeBox = false;
+            MinimumSize = new Size(500, 500);
             Name = "PCHUBForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "PcHub";
@@ -310,6 +327,6 @@
         private Button btnFileDelete;
         private Button btnUninstaller;
         private ToolStripMenuItem runToolStripMenuItem;
-        private Button button1;
+        private Button btnBrowseForms;
     }
 }

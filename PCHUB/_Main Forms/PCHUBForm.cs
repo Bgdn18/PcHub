@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.Win32;
+using PCHUB._Choice_Forms;
 using PCHUB.Main;
 
 namespace PCHUB
@@ -23,22 +24,22 @@ namespace PCHUB
 
         private void TaskManager_Click(object sender, EventArgs e)
         {
-            list.taskmgr(); // откроется диспетчер задач
+            _list.ProcessOpen.ShowForm<OpenOrUnlockTaskMgr>(); // откроется диспетчер задач
         }
 
         public void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.build(); // откроется информация
+            _list.OpenApps.Build(); // откроется информация
         }
 
         private void TxtWriter_Click(object sender, EventArgs e)
         {
-            list.writer(); // откроется писатель (writer)
+            _list.ProcessOpen.ShowForm<TextFileCreator>(); // откроется писатель (writer)
         }
 
         private void Taskkiller_Click(object sender, EventArgs e)
         {
-            list.taskkill(); // Откроется форма TaskKiller.cs
+            _list.ProcessOpen.ShowForm<TaskKiller>(); // Откроется форма TaskKiller.cs
         }
 
         private void FileExplorer_Click(object? sender, EventArgs e)
@@ -55,12 +56,12 @@ namespace PCHUB
 
         private void btnLocalUser_Click(object? sender, EventArgs e)
         {
-            list.localuser(); // добавление локального пользователя
+            _list.ProcessOpen.ShowForm<LocalUser>(); // добавление локального пользователя
         }
 
         private void btnbuildhelp_Click(object sender, EventArgs e)
         {
-            list.build();
+            _list.OpenApps.Build();
         }
 
         public void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,37 +71,42 @@ namespace PCHUB
 
         private void btnPowerMgr_Click(object? sender, EventArgs e)
         {
-            list.powermgr();
+            _list.ProcessOpen.ShowForm<PowerManagement>();
         }
 
         public void btnHostsFile_Click(object sender, EventArgs e)
         {
-            list.HostsFile();
+            _list.ProcessOpen.ShowForm<HostsFile>();
         }
 
         public void btnPowerShellPolicyManager_Click(object sender, EventArgs e)
         {
-            list.powershellpolicymgr();
+            _list.ProcessOpen.ShowForm<PowerShellPolicyReset>();
         }
 
         private void btnTools_Click(object sender, EventArgs e)
         {
-            list.tools();
+            _list.ProcessOpen.ShowForm<otherTools>();
         }
 
         private void btnFileDelete_Click(object sender, EventArgs e)
         {
-            list.deletefilesform();
+            _list.ProcessOpen.ShowForm<Delete_files>();
         }
 
         private void btnUninstaller_Click(object sender, EventArgs e)
         {
-            list.uninstaller();
+            _list.ProcessOpen.ShowForm<UnInstaller>();
         }
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            list.runform();
+            _list.ProcessOpen.ShowForm<ProccesStartForm>();
+        }
+
+        private void btnBrowseForms_Click(object sender, EventArgs e)
+        {
+            _list.ProcessOpen.ShowForm<BrowserOrYoutube>();
         }
     }
 }

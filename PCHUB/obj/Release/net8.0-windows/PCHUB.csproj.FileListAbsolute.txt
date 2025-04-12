@@ -60,3 +60,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.UnlockP
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PCHUBForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.UnInstaller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.ProccesStartForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB._Choice_Forms.BrowserOrYoutube.resources
