@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCHUB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b959d78fd6203c602d0a3260fb733c2ab50429f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eecdd4521b1ea4acf688b1d5324d153d3dbd144b")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCHUB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCHUB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
