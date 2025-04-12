@@ -1,5 +1,0 @@
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\publish\PCHUB.exe
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\publish\PCHUB.dll
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\publish\PCHUB.deps.json
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\publish\PCHUB.runtimeconfig.json
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\publish\PCHUB.pdb
