@@ -27,7 +27,7 @@
             // btnDisable
             // 
             btnDisable.Cursor = Cursors.Hand;
-            btnDisable.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
+            btnDisable.Font = new Font("Consolas", 11.25F);
             btnDisable.Location = new Point(12, 90);
             btnDisable.Name = "btnDisable";
             btnDisable.Size = new Size(245, 42);
@@ -39,7 +39,7 @@
             // btnEnable
             // 
             btnEnable.Cursor = Cursors.Hand;
-            btnEnable.Font = new Font("Consolas", 11.25F, FontStyle.Bold);
+            btnEnable.Font = new Font("Consolas", 11.25F);
             btnEnable.Location = new Point(12, 42);
             btnEnable.Name = "btnEnable";
             btnEnable.Size = new Size(245, 42);
@@ -54,7 +54,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(280, 24);
+            menuStrip1.Size = new Size(271, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -78,7 +78,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(280, 146);
+            ClientSize = new Size(271, 146);
             Controls.Add(btnEnable);
             Controls.Add(btnDisable);
             Controls.Add(menuStrip1);

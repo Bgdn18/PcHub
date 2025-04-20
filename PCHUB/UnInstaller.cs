@@ -13,8 +13,6 @@ namespace PCHUB
             InitializeComponent();
         }
 
-        _list list = new _list();
-
         private void UnInstaller_Load(object sender, EventArgs e)
         {
             LoadInstalledPrograms();
@@ -193,7 +191,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build(); // информация о программе
+            _list.Open.Build(); // информация о программе
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

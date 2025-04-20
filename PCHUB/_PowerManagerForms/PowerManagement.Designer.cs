@@ -35,6 +35,7 @@
             quitToolStripMenuItem = new ToolStripMenuItem();
             BSOD = new Button();
             LockOrUnlockPowerMgr = new Button();
+            progressBar1 = new ProgressBar();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -103,16 +104,25 @@
             LockOrUnlockPowerMgr.UseVisualStyleBackColor = true;
             LockOrUnlockPowerMgr.Click += LockOrUnlockPowerMgr_Click;
             // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(12, 112);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(417, 23);
+            progressBar1.TabIndex = 5;
+            // 
             // PowerManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(441, 116);
+            ClientSize = new Size(441, 145);
+            Controls.Add(progressBar1);
             Controls.Add(LockOrUnlockPowerMgr);
             Controls.Add(BSOD);
             Controls.Add(Restart);
             Controls.Add(Shutdown);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
@@ -136,5 +146,6 @@
         private ToolStripMenuItem quitToolStripMenuItem;
         private Button BSOD;
         private Button LockOrUnlockPowerMgr;
+        private ProgressBar progressBar1;
     }
 }

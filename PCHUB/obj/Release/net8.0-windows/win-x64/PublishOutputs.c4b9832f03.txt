@@ -1,0 +1,2 @@
+C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\publish\PCHUB.pdb
+C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\publish\PCHUB.exe

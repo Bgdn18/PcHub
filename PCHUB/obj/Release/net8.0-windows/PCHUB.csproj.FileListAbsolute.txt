@@ -18,7 +18,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.Browse.
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.YouTube.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.BrowserExplorerOrJustExplorerDotExe.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB._Choice_Forms.BrowserOrYoutube.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.OpenOrUnlockTaskMgr.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.LocalUser.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.otherTools.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.PCHUBForm.resources
@@ -35,3 +34,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\refint\PCHUB.
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.pdb
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.genruntimeconfig.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\ref\PCHUB.dll
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\PCHUB.SystemUnlocker.resources

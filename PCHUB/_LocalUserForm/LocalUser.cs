@@ -20,7 +20,6 @@ namespace PCHUB
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
         }
-        _list list = new _list();
 
         private void AddLocalUser_Click(object sender, EventArgs e)
         {
@@ -216,7 +215,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void ViewFolder_Click(object sender, EventArgs e)

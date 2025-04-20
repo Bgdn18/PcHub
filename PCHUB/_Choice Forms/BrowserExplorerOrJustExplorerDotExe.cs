@@ -38,14 +38,14 @@ namespace PCHUB
 
         private void btnBrowseFileExplorer_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.OpenFileExplorer();
+            _list.OpenSystemTools.OpenFileExplorer();
 
             this.Close(); // Закрываем форму
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

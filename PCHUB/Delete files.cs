@@ -122,12 +122,12 @@ namespace PCHUB
 
         private void fileExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.OpenFileExplorer();
+            _list.OpenSystemTools.OpenFileExplorer();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

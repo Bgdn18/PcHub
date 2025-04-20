@@ -29,18 +29,18 @@ namespace PCHUB
         public PowerManagement()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
 
         private void Shutdown_Click(object sender, EventArgs e)
         {
-            Process.Start("shutdown", "/s /t 0");
+                Process.Start("shutdown", "/s /t 0");
+                progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            Process.Start("shutdown", "/r /t 0");
+                Process.Start("shutdown", "/r /t 0");
+                progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,16 +50,16 @@ namespace PCHUB
 
         private void BSOD_Click(object sender, EventArgs e)
         {
-            bool enabled;
-            RtlAdjustPrivilege(SE_SHUTDOWN_PRIVILEGE, true, false, out enabled);
-            uint response;
-            NtRaiseHardError(0xC000021A, 0, 0, IntPtr.Zero, 6, out response);
+                bool enabled;
+                RtlAdjustPrivilege(SE_SHUTDOWN_PRIVILEGE, true, false, out enabled);
+                uint response;
+                NtRaiseHardError(0xC000021A, 0, 0, IntPtr.Zero, 6, out response);
+                progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         private void LockOrUnlockPowerMgr_Click(object sender, EventArgs e)
         {
-            UnlockPowerMgrForm form = new UnlockPowerMgrForm();
-            form.ShowDialog();
+            _list.Open.ShowForm<UnlockPowerMgrForm>();
         }
     }
 }

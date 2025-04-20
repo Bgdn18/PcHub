@@ -54,7 +54,7 @@ namespace PCHUB
             {
                 if (input == "BrowseExplorer")
                 {
-                    _list.OpenApps.OpenFileExplorer();
+                    _list.OpenSystemTools.OpenFileExplorer();
                 }
 
                 if (System.IO.File.Exists(input) || System.IO.Directory.Exists(input))
@@ -78,7 +78,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void pathToolStripMenuItem_Click(object sender, EventArgs e) // открывает настройку path

@@ -20,19 +20,19 @@ namespace PCHUB._Choice_Forms
 
         private void btnBrowser_Click(object sender, EventArgs e)
         {
-            _list.ProcessOpen.ShowForm<Browse>();
+            _list.Open.ShowForm<Browse>();
             this.Close();
         }
 
         private void btnYoutube_Click(object sender, EventArgs e)
         {
-            _list.ProcessOpen.ShowForm<YouTube>();
+            _list.Open.ShowForm<YouTube>();
             this.Close();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

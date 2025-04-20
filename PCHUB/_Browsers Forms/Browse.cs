@@ -26,7 +26,7 @@ namespace PCHUB
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            _list.ProcessOpen.ProcessRun("explorer.exe", "ms-settings:");
+            _list.Open.ProcessRun("explorer.exe", "ms-settings:");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build(); // информация о приложении
+            _list.Open.Build(); // информация о приложении
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

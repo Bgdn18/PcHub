@@ -56,7 +56,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace PCHUB
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.ProcessOpen.ShowForm<ProccesStartForm>();
+            _list.Open.ShowForm<ProccesStartForm>();
         }
 
         private void btnRefreshAutoStart_Click(object sender, EventArgs e)

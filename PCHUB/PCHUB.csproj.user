@@ -4,10 +4,22 @@
     <_LastSelectedProfileId>C:\Users\krati\source\repos\PCHUB\PCHUB\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="About.cs">
+    <Compile Update="BlockProcces\BlockProcessForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HostsEdit\BlockWebSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Choice Forms\PerfmonOrTaskmgr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="_Main\About.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ProccesStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SystemUnlocker.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UnInstaller.cs">
@@ -16,7 +28,7 @@
     <Compile Update="_Choice Forms\BrowserOrYoutube.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main Forms\OtherTool.cs">
+    <Compile Update="_Main\OtherTool.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
@@ -25,10 +37,7 @@
     <Compile Update="Delete files.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HostsFile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="_Choice Forms\OpenOrUnlockTaskMgr.cs">
+    <Compile Update="HostsEdit\HostsFile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PowerShellPolicyReset.cs">
@@ -46,7 +55,7 @@
     <Compile Update="_LocalUserForm\LocalUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main Forms\PCHUBForm.cs">
+    <Compile Update="_Main\PCHUBForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_PowerManagerForms\PowerManagement.cs">

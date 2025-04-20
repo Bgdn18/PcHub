@@ -21,35 +21,6 @@ namespace PCHUB
         public UnlockPowerMgrForm()
         {
             InitializeComponent();
-            CheckAdminStatus();
-        }
-
-        _list list = new _list();
-
-        private async void CheckAdminStatus()
-        {
-            bool isAdmin = await Task.Run(() => IsAdministrator());
-            if (!isAdmin)
-            {
-                MessageBox.Show("Требуются права администратора!", "PCHUB",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-        }
-
-        private bool IsAdministrator()
-        {
-            return new WindowsPrincipal(WindowsIdentity.GetCurrent())
-                  .IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
-        private async void btnRestore_Click(object sender, EventArgs e)
-        {
-            await ExecuteWithRefreshAsync(async () =>
-            {
-                await ExecutePowerCommandAsync("/restoredefaultschemes");
-                return "Стандартные схемы питания восстановлены!";
-            });
         }
 
         private async void btnDisable_Click(object sender, EventArgs e)
@@ -58,13 +29,13 @@ namespace PCHUB
             {
                 await Task.Run(() => SetPowerRegistry(false));
                 await ExecutePowerCommandAsync("/hibernate off");
-                return "Управление питанием отключено!";
+                return "Power management is disabled";
             });
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.OpenApps.Build();
+            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,7 +50,7 @@ namespace PCHUB
                 await Task.Run(() => SetPowerRegistry(true));
                 await ExecutePowerCommandAsync("/hibernate on");
                 await ExecutePowerCommandAsync("/restoredefaultschemes");
-                return "Управление питанием включено!";
+                return "Power management is enabled";
             });
         }
 
@@ -93,12 +64,12 @@ namespace PCHUB
                 string message = await action.Invoke();
                 await RefreshSystemAsync();
 
-                MessageBox.Show(message, "PCHUB - Успех",
+                MessageBox.Show(message, "Info",
                               MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}", "PCHUB - Ошибка",
+                MessageBox.Show($"Error: {ex.Message}", "Error",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -113,21 +84,7 @@ namespace PCHUB
             await Task.Run(() =>
             {
                 SendMessage((IntPtr)HWND_BROADCAST, WM_SETTINGCHANGE, IntPtr.Zero, IntPtr.Zero);
-                RestartExplorer();
             });
-        }
-
-        private void RestartExplorer()
-        {
-            try
-            {
-                foreach (var process in Process.GetProcessesByName("explorer"))
-                {
-                    process.Kill();
-                }
-                Process.Start("explorer.exe");
-            }
-            catch { /* Игнорируем ошибки */ }
         }
 
         private async Task ExecutePowerCommandAsync(string arguments)
@@ -167,19 +124,6 @@ namespace PCHUB
                     powerSettings.SetValue("NoClose", 1, RegistryValueKind.DWord);
                     powerSettings.SetValue("StartMenuLogOff", 1, RegistryValueKind.DWord);
                 }
-            }
-        }
-
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Process.Start("powercfg.cpl");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка: {ex.Message}", "PCHUB - Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
