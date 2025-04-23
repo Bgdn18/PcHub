@@ -10,11 +10,11 @@ using PCHUB.Main;
 
 namespace PCHUB
 {
-    public partial class TextFileCreator : Form
+    public partial class Writer : Form
     {
         private enum ConversionType { None, Binary, Hex }
 
-        public TextFileCreator()
+        public Writer()
         {
             InitializeComponent();
         }

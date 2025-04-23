@@ -42,7 +42,6 @@
             btnPowerMgr = new Button();
             btnHostsFile = new Button();
             btnPowerShellPolicyManager = new Button();
-            HybsLabel = new Label();
             btnTools = new Button();
             btnFileDelete = new Button();
             btnUninstaller = new Button();
@@ -51,6 +50,8 @@
             btnToTray = new Button();
             btnBlockWebSite = new Button();
             btnUtilMan = new Button();
+            btnCmdLine = new Button();
+            btnMyProgramList = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, runToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.System;
             menuStrip1.Size = new Size(484, 24);
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
@@ -211,28 +213,17 @@
             btnPowerShellPolicyManager.UseVisualStyleBackColor = true;
             btnPowerShellPolicyManager.Click += btnPowerShellPolicyManager_Click;
             // 
-            // HybsLabel
-            // 
-            HybsLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            HybsLabel.AutoSize = true;
-            HybsLabel.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HybsLabel.Location = new Point(12, 359);
-            HybsLabel.Name = "HybsLabel";
-            HybsLabel.Size = new Size(60, 22);
-            HybsLabel.TabIndex = 43;
-            HybsLabel.Text = "Hubs:";
-            // 
             // btnTools
             // 
             btnTools.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnTools.Cursor = Cursors.Hand;
             btnTools.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTools.Location = new Point(12, 384);
+            btnTools.Location = new Point(371, 424);
             btnTools.Margin = new Padding(4, 3, 4, 3);
             btnTools.Name = "btnTools";
-            btnTools.Size = new Size(124, 35);
+            btnTools.Size = new Size(100, 25);
             btnTools.TabIndex = 44;
-            btnTools.Text = "3rd Party Apps";
+            btnTools.Text = "Win...";
             btnTools.UseVisualStyleBackColor = true;
             btnTools.Click += btnTools_Click;
             // 
@@ -287,7 +278,7 @@
             btnBlockProcessForm.Name = "btnBlockProcessForm";
             btnBlockProcessForm.Size = new Size(126, 35);
             btnBlockProcessForm.TabIndex = 50;
-            btnBlockProcessForm.Text = "Block Process";
+            btnBlockProcessForm.Text = "Block Any Process";
             btnBlockProcessForm.UseVisualStyleBackColor = true;
             btnBlockProcessForm.Click += btnBlockProcessForm_Click;
             // 
@@ -295,9 +286,9 @@
             // 
             btnToTray.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnToTray.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnToTray.Location = new Point(387, 424);
+            btnToTray.Location = new Point(372, 362);
             btnToTray.Name = "btnToTray";
-            btnToTray.Size = new Size(85, 25);
+            btnToTray.Size = new Size(100, 25);
             btnToTray.TabIndex = 51;
             btnToTray.Text = "To Tray ⏬";
             btnToTray.UseVisualStyleBackColor = true;
@@ -313,7 +304,7 @@
             btnBlockWebSite.Name = "btnBlockWebSite";
             btnBlockWebSite.Size = new Size(125, 35);
             btnBlockWebSite.TabIndex = 52;
-            btnBlockWebSite.Text = "Block WebSite";
+            btnBlockWebSite.Text = "Block Any WebSite";
             btnBlockWebSite.UseVisualStyleBackColor = true;
             btnBlockWebSite.Click += btnBlockWebSite_Click;
             // 
@@ -327,9 +318,37 @@
             btnUtilMan.Name = "btnUtilMan";
             btnUtilMan.Size = new Size(125, 35);
             btnUtilMan.TabIndex = 53;
-            btnUtilMan.Text = "UtilMan";
+            btnUtilMan.Text = "Add To UtilMan";
             btnUtilMan.UseVisualStyleBackColor = true;
             btnUtilMan.Click += btnUtilMan_Click;
+            // 
+            // btnCmdLine
+            // 
+            btnCmdLine.Anchor = AnchorStyles.Top;
+            btnCmdLine.Cursor = Cursors.Hand;
+            btnCmdLine.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCmdLine.Location = new Point(309, 200);
+            btnCmdLine.Margin = new Padding(4, 3, 4, 3);
+            btnCmdLine.Name = "btnCmdLine";
+            btnCmdLine.Size = new Size(125, 35);
+            btnCmdLine.TabIndex = 54;
+            btnCmdLine.Text = "Add To CmdLine";
+            btnCmdLine.UseVisualStyleBackColor = true;
+            btnCmdLine.Click += btnCmdLine_Click;
+            // 
+            // btnMyProgramList
+            // 
+            btnMyProgramList.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnMyProgramList.Cursor = Cursors.Hand;
+            btnMyProgramList.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMyProgramList.Location = new Point(371, 393);
+            btnMyProgramList.Margin = new Padding(4, 3, 4, 3);
+            btnMyProgramList.Name = "btnMyProgramList";
+            btnMyProgramList.Size = new Size(100, 25);
+            btnMyProgramList.TabIndex = 55;
+            btnMyProgramList.Text = "My programs";
+            btnMyProgramList.UseVisualStyleBackColor = true;
+            btnMyProgramList.Click += btnMyProgramList_Click;
             // 
             // PCHUBForm
             // 
@@ -337,6 +356,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(484, 461);
+            Controls.Add(btnMyProgramList);
+            Controls.Add(btnCmdLine);
             Controls.Add(btnUtilMan);
             Controls.Add(btnBlockWebSite);
             Controls.Add(btnToTray);
@@ -345,7 +366,6 @@
             Controls.Add(btnUninstaller);
             Controls.Add(btnFileDelete);
             Controls.Add(btnTools);
-            Controls.Add(HybsLabel);
             Controls.Add(btnPowerShellPolicyManager);
             Controls.Add(btnHostsFile);
             Controls.Add(btnPowerMgr);
@@ -384,7 +404,6 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private Button btnHostsFile;
         private Button btnPowerShellPolicyManager;
-        private Label HybsLabel;
         private Button btnTools;
         private Button btnFileDelete;
         private Button btnUninstaller;
@@ -394,5 +413,7 @@
         private Button btnToTray;
         private Button btnBlockWebSite;
         private Button btnUtilMan;
+        private Button btnCmdLine;
+        private Button btnMyProgramList;
     }
 }

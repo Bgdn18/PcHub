@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PCHUB.Main;
+﻿using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -20,11 +9,6 @@ namespace PCHUB
             InitializeComponent();
 
             BuildLabel.Text = _list.BuildInfo;
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.Build();
         }
 
         private void CONTROLPANEL_Click(object sender, EventArgs e)
@@ -48,7 +32,7 @@ namespace PCHUB
             _list.Open.Build();
         }
 
-        private void btnRegedit_Click(object sender, EventArgs e)
+        private void btnRegedit_Click(object sender, EventArgs e) // Regedit
         {
             if (!_list.SystemChecks.isadmin())
             {

@@ -62,7 +62,7 @@ namespace PCHUB
 
         private void TxtWriter_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<TextFileCreator>(); // откроется писатель (writer)
+            _list.Open.ShowForm<Writer>(); // откроется писатель (writer)
         }
 
         private void Taskkiller_Click(object sender, EventArgs e)
@@ -162,6 +162,16 @@ namespace PCHUB
         private void btnUtilMan_Click(object sender, EventArgs e)
         {
             _list.Open.ShowForm<UtilManForm>();
+        }
+
+        private void btnCmdLine_Click(object sender, EventArgs e)
+        {
+            _list.Open.ShowForm<CmdLineForm>();
+        }
+
+        private void btnMyProgramList_Click(object sender, EventArgs e)
+        {
+            _list.Open.ShowForm<MyProgramList>();
         }
     }
 }

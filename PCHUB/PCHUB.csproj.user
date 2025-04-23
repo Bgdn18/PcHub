@@ -7,7 +7,13 @@
     <Compile Update="BlockProcces\BlockProcessForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CmdLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="HostsEdit\BlockWebSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MyProgramList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_Choice Forms\PerfmonOrTaskmgr.cs">
@@ -46,7 +52,7 @@
     <Compile Update="TaskMgrControl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main\UtilManForm.cs">
+    <Compile Update="UtilManForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_PowerManagerForms\UnlockOrLockPowerMgr.cs">
@@ -67,7 +73,7 @@
     <Compile Update="TaskKiller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TextFileCreator.cs">
+    <Compile Update="Writer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_Browsers Forms\YouTube.cs">

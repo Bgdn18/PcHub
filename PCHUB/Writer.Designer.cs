@@ -1,6 +1,6 @@
 ﻿namespace PCHUB
 {
-    partial class TextFileCreator
+    partial class Writer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextFileCreator));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Writer));
             txtFilePath = new TextBox();
             btnCreateFile = new Button();
             lblStatus = new Label();
@@ -158,7 +158,7 @@
             FileExplorer.Name = "FileExplorer";
             FileExplorer.Size = new Size(53, 27);
             FileExplorer.TabIndex = 24;
-            FileExplorer.Text = "File";
+            FileExplorer.Text = "...";
             FileExplorer.UseVisualStyleBackColor = true;
             FileExplorer.Click += FileExplorer_Click;
             // 
@@ -213,7 +213,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "TextFileCreator";
+            Text = "Writer";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

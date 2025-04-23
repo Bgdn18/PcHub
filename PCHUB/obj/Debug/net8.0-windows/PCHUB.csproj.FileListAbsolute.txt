@@ -12,7 +12,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Propertie
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.SystemUnlocker.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.TaskKiller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.TaskMgrControl.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.TextFileCreator.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.UnInstaller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Browse.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.YouTube.resources
@@ -38,3 +37,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.BlockProc
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.HostsEdit.BlockWebSite.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._Choice_Forms.PerfmonOrTaskmgr.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._Main.UtilManForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.CmdLineForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Writer.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.MyProgramList.resources

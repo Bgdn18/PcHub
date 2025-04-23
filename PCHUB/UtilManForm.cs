@@ -108,5 +108,18 @@ namespace PCHUB._Main
         {
             this.Close();
         }
+
+        private void system32ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string system32Path = Environment.GetFolderPath(Environment.SpecialFolder.System);
+            try
+            {
+                Process.Start("explorer.exe", system32Path);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error opening: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
