@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PerfmonOrTaskmgr));
             menuStrip1 = new MenuStrip();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             btnTaskmgr = new Button();
@@ -41,19 +40,12 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(353, 24);
             menuStrip1.TabIndex = 11;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -121,7 +113,6 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
         private Label label1;
         private Button btnTaskmgr;

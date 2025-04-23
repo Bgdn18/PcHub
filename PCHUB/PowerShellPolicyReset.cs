@@ -13,8 +13,6 @@ namespace PCHUB
             CheckCurrentPolicy();
         }
 
-        _list list = new _list();
-
         // Проверка текущей политики
         private void CheckCurrentPolicy()
         {

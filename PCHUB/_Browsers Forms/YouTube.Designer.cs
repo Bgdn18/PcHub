@@ -34,7 +34,6 @@
             txtSearch = new TextBox();
             Settings = new Button();
             menuStrip1 = new MenuStrip();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -91,20 +90,12 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(653, 24);
             menuStrip1.TabIndex = 7;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(54, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -147,7 +138,6 @@
         private TextBox txtSearch;
         private Button Settings;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

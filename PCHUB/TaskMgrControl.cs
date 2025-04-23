@@ -13,11 +13,7 @@ namespace PCHUB
         public TaskMgrControl()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
-
-        _list list = new _list();
 
 
         // Проверка текущего статуса

@@ -38,8 +38,6 @@ namespace PCHUB
             };
         }
 
-        _list list = new _list();
-
         private void buttonrun_Click(object sender, EventArgs e)
         {
             string input = textBox1.Text.Trim();

@@ -24,7 +24,6 @@
             btnBrowseFolder = new Button();
             menuStrip1 = new MenuStrip();
             fileExplorerToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -78,7 +77,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileExplorerToolStripMenuItem, aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, fileExplorerToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(443, 24);
@@ -92,14 +91,6 @@
             fileExplorerToolStripMenuItem.Size = new Size(110, 20);
             fileExplorerToolStripMenuItem.Text = "File Explorer";
             fileExplorerToolStripMenuItem.Click += fileExplorerToolStripMenuItem_Click;
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(54, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -143,7 +134,6 @@
         private Button btnBrowseFile;
         private Button btnBrowseFolder;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ToolStripMenuItem fileExplorerToolStripMenuItem;
     }

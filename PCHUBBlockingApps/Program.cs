@@ -1,8 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
+﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Threading;
 
 namespace PCHUBBlockingApps
 {
@@ -12,79 +9,78 @@ namespace PCHUBBlockingApps
         private static extern IntPtr GetConsoleWindow();
 
         [DllImport("user32.dll")]
-        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        private static extern bool ShowWindow(IntPtr hWnd, int nCmdShow); // скрывает консоль
 
         private const int SW_HIDE = 0;
+        private const string AutostartFlag = "--autostart";
+        private const string SettingsFileName = "blocker_settings.txt";
+        private const string AppDataFolder = "PCHUBBlocker";
 
         static void Main(string[] args)
         {
             ShowWindow(GetConsoleWindow(), SW_HIDE);
 
-            if (args.Length == 0)
-                return;
+            if (args.Length == 0) return;
 
-            string[] processNames;
-            int killInterval;
+            var (processNames, killInterval) = ParseArguments(args);
+            if (processNames == null || killInterval <= 0) return;
 
-            // Режим автозапуска (читаем из файла)
-            if (args[0] == "--autostart")
+            RunBlockingLoop(processNames, killInterval);
+        }
+
+        private static (string[] processNames, int killInterval) ParseArguments(string[] args)
+        {
+            if (args[0] == AutostartFlag)
             {
                 string settingsPath = Path.Combine(
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                    "PCHUBBlocker",
-                    "blocker_settings.txt"
-                );
+                    AppDataFolder,
+                    SettingsFileName);
 
-                if (!File.Exists(settingsPath))
-                    return;
+                if (!File.Exists(settingsPath)) return (null!, 0);
 
                 string[] settings = File.ReadAllLines(settingsPath);
-                if (settings.Length < 2)
-                    return;
+                if (settings.Length < 2) return (null!, 0);
 
-                processNames = settings[0].Split(',')
-                    .Select(p => p.Trim().ToLower().Replace(".exe", ""))
-                    .Distinct()
-                    .ToArray();
-
-                if (!int.TryParse(settings[1], out killInterval))
-                    return;
+                return (ParseProcessNames(settings[0]),
+                       int.TryParse(settings[1], out int interval) ? interval : 0);
             }
-            // Обычный режим (запуск из GUI)
-            else if (args.Length >= 2)
+
+            if (args.Length >= 2)
             {
-                processNames = args[0].Split(',')
-                    .Select(p => p.Trim().ToLower().Replace(".exe", ""))
-                    .Distinct()
-                    .ToArray();
-
-                if (!int.TryParse(args[1], out killInterval))
-                    return;
-            }
-            else
-            {
-                return;
+                return (ParseProcessNames(args[0]),
+                       int.TryParse(args[1], out int interval) ? interval : 0);
             }
 
-            // Основной цикл блокировки
+            return (null!, 0);
+        }
+
+        private static string[] ParseProcessNames(string input) // удаляет .exe из имени
+        {
+            return input.Split(',')
+                       .Select(p => p.Trim().ToLower().Replace(".exe", ""))
+                       .Distinct()
+                       .ToArray();
+        }
+
+        private static void RunBlockingLoop(string[] processNames, int killInterval)
+        {
             while (true)
             {
                 foreach (var name in processNames)
+                {
                     KillProcess(name);
-
+                }
                 Thread.Sleep(killInterval * 1000);
             }
         }
 
-        static void KillProcess(string name)
+        private static void KillProcess(string name)
         {
-            foreach (Process process in Process.GetProcessesByName(name))
+            foreach (var process in Process.GetProcessesByName(name).Where(p => !p.HasExited))
             {
-                if (!process.HasExited)
-                {
                     process.Kill();
                     process.WaitForExit(500);
-                }
             }
         }
     }

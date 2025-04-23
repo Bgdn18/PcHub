@@ -18,10 +18,7 @@ namespace PCHUB
         public YouTube()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
-        _list list = new _list();
 
         private void Settings_Click(object sender, EventArgs e)
         {
@@ -45,11 +42,6 @@ namespace PCHUB
                     MessageBox.Show("Error opening youtube: " + ex.Message);
                 }
             }
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.Build();
         }
 
         private void rickroll_Click(object sender, EventArgs e)

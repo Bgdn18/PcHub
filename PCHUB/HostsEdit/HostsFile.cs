@@ -18,12 +18,7 @@ namespace PCHUB
         {
             InitializeComponent();
             LoadHostsContent();
-
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
-
-        _list list = new _list();
 
         // Подгрузка файла hosts
         private void LoadHostsContent()

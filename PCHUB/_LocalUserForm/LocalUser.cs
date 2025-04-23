@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using PCHUB.Main;
+﻿using System.Diagnostics;
 
 namespace PCHUB
 {
@@ -17,8 +7,6 @@ namespace PCHUB
         public LocalUser()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
 
         private void AddLocalUser_Click(object sender, EventArgs e)
@@ -211,11 +199,6 @@ namespace PCHUB
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.Build();
         }
 
         private void ViewFolder_Click(object sender, EventArgs e)

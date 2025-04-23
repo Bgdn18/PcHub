@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Diagnostics;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Win32;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ScrollBar;
-using static PCHUB.PCHUBForm;
 
 namespace PCHUB.Main
 {
     internal class _list
     {
         // Информация о билде!!!
-        public const string BuildInfo = "1.0.0 (build 2025-04-16)";
+        public const string BuildInfo = "1.0.0 (build 2025-04-22)";
         // Информация о билде!!!
 
         public static void LaunchTool(string folderName, string exeName, string toolName)
@@ -40,32 +32,6 @@ namespace PCHUB.Main
                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        //начало tools
-        public static class Tool // полезные приложения
-        {
-            public static void Unlocker() // Открывает IObit unlocker
-            {
-                _list.Open.RunPCHUBTool("IObit Unlocker", "IObitUnlocker.exe", "IObit Unlocker");
-            }
-
-
-            public static void ExplorerPP() // Открывает Проводник++
-            {
-                _list.Open.RunPCHUBTool("ExplorerPP", "Explorer++.exe", "Explorer++");
-            }
-
-            public static void ProccesHacker() // Открывает Проццес Хакер
-            {
-                _list.Open.RunPCHUBTool("Process Hacker 2", "ProcessHacker.exe", "Process Hacker");
-            }
-
-            public static void ZapretForRussia() // Открывает ZAPRET
-            {
-                _list.Open.RunPCHUBTool("ZAPRET", "ZAPRET.bat", "Zapret For Russia");
-            }
-        }
-        //конец tools
 
         // начало ProcessOpen
         public static class Open

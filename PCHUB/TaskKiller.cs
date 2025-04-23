@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using PCHUB.BlockProcces;
 using PCHUB.Main;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PCHUB
 {
@@ -19,9 +21,23 @@ namespace PCHUB
         public TaskKiller()
         {
             InitializeComponent();
-        }
 
-        _list list = new _list();
+            startupListView.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Delete)
+                {
+                    btnDeleteAutoStart.PerformClick();
+                }
+            };
+
+            listBoxProcesses.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Delete)
+                {
+                    btnEndTask.PerformClick();
+                }
+            };
+        }
 
         private void btnKillProcess_Click(object sender, EventArgs e)
         {
@@ -80,7 +96,7 @@ namespace PCHUB
                 listBoxProcesses.Items.Add(process.ProcessName);
                 programCount++;
             }
-            TasksLabel.Text = $"{programCount} programs";
+            TasksLabel.Text = $"Process: {programCount}";
         }
 
 
@@ -92,7 +108,7 @@ namespace PCHUB
         private void TaskKiller_Load(object sender, EventArgs e)
         {
             LoadProcesses();
-            btnRefreshAutoStart_Click(null,null);
+            btnRefreshAutoStart_Click(null!, null!);
         }
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
@@ -107,24 +123,20 @@ namespace PCHUB
             RegistryKey? currentUserKey = Registry.CurrentUser.OpenSubKey(
                 @"Software\Microsoft\Windows\CurrentVersion\Run");
 
-            LoadStartupItems(currentUserKey, "User");
+            LoadStartupItems(currentUserKey!, "User");
 
             RegistryKey? localMachineKey = Registry.LocalMachine.OpenSubKey(
                 @"Software\Microsoft\Windows\CurrentVersion\Run");
 
-            LoadStartupItems(localMachineKey, "System");
+            LoadStartupItems(localMachineKey!, "System");
         }
 
         private void LoadStartupItems(RegistryKey key, string category)
         {
-            int startup = 0;
-
             if (key == null) return;
 
             foreach (string appName in key.GetValueNames())
             {
-                startup++;
-
                 string? appPath = key.GetValue(appName)?.ToString();
                 if (string.IsNullOrEmpty(appPath)) continue;
 
@@ -136,8 +148,8 @@ namespace PCHUB
                 startupListView.Items.Add(item);
             }
 
-            labelAutoStartCount.Text = ($"process: " + startup);
-
+            // Общее количество = числу элементов в списке
+            labelAutoStartCount.Text = $"Process: {startupListView.Items.Count}";
             key.Close();
         }
 
@@ -150,24 +162,24 @@ namespace PCHUB
                 return;
             }
 
-            ListViewItem selectedItem = (ListViewItem)startupListView.SelectedItems[0];
+            ListViewItem selectedItem = (ListViewItem)startupListView.SelectedItems[0]!;
             string? appName = selectedItem.Text;
-            string? registryPath = selectedItem.Tag.ToString();
+            string? registryPath = selectedItem.Tag!.ToString();
 
             try
             {
-                RegistryKey key = registryPath.Contains("HKEY_LOCAL_MACHINE")
+                RegistryKey key = registryPath!.Contains("HKEY_LOCAL_MACHINE")
                     ? Registry.LocalMachine
                     : Registry.CurrentUser;
 
                 using (RegistryKey startupKey = key.OpenSubKey(
-                    @"Software\Microsoft\Windows\CurrentVersion\Run", true))
+                    @"Software\Microsoft\Windows\CurrentVersion\Run", true)!)
                 {
                     if (startupKey != null)
                     {
                         startupKey.DeleteValue(appName, false);
                         MessageBox.Show($"'{appName}' removed from startup", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        btnRefreshAutoStart_Click(null, null); // Обновляем список
+                        btnRefreshAutoStart_Click(null!, null!); // Обновляем список
                     }
                 }
             }
@@ -210,11 +222,11 @@ namespace PCHUB
                             : Registry.LocalMachine;
 
                         using (RegistryKey startupKey = key.OpenSubKey(
-                            @"Software\Microsoft\Windows\CurrentVersion\Run", true))
+                            @"Software\Microsoft\Windows\CurrentVersion\Run", true)!)
                         {
                             startupKey?.SetValue(appName, appPath);
                             MessageBox.Show($"'{appName}' added to startup", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            btnRefreshAutoStart_Click(null, null); // Обновляем список
+                            btnRefreshAutoStart_Click(null!, null!); // Обновляем список
                         }
                     }
                     catch (UnauthorizedAccessException)
@@ -229,6 +241,11 @@ namespace PCHUB
                     }
                 }
             }
+        }
+
+        private void blockProcessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _list.Open.ShowForm<BlockProcessForm>();
         }
     }
 }

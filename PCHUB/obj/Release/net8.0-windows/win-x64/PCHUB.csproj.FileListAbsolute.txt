@@ -497,3 +497,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\refin
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.pdb
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.genruntimeconfig.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\ref\PCHUB.dll
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._Main.UtilManForm.resources

@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.Win32;
 using PCHUB._Choice_Forms;
+using PCHUB._Main;
 using PCHUB.BlockProcces;
 using PCHUB.HostsEdit;
 using PCHUB.Main;
@@ -9,12 +10,19 @@ namespace PCHUB
 {
     public partial class PCHUBForm : Form
     {
-        private NotifyIcon trayIcon;
+        private NotifyIcon? trayIcon;
 
         public PCHUBForm()
         {
             InitializeComponent();
             CheckadminStatus();
+
+            string appPath = Path.Combine(Application.StartupPath, "Blocker", "PCHUBBlockingApps.exe");
+            if (!File.Exists(appPath))
+            {
+                btnBlockProcessForm.Enabled = false;
+                return;
+            }
 
 
             trayIcon = new NotifyIcon
@@ -136,19 +144,24 @@ namespace PCHUB
         private void btnToTray_Click(object sender, EventArgs e)
         {
             Hide();
-            trayIcon.Visible = true;
+            trayIcon!.Visible = true;
         }
 
         private void RestoreFromTray()
         {
             Show();
             WindowState = FormWindowState.Normal; // Разворачиваем (если было свернуто)
-            trayIcon.Visible = false; // Скрываем иконку из трея
+            trayIcon!.Visible = false; // Скрываем иконку из трея
         }
 
         private void btnBlockWebSite_Click(object sender, EventArgs e)
         {
             _list.Open.ShowForm<BlockWebSite>();
+        }
+
+        private void btnUtilMan_Click(object sender, EventArgs e)
+        {
+            _list.Open.ShowForm<UtilManForm>();
         }
     }
 }

@@ -11,19 +11,30 @@ namespace PCHUB.BlockProcces
     {
         private const string AppName = "PCHUBBlocker";
         private const string RegistryRunKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
-        private string _settingsPath;
+        private string? _settingsPath;
+        private const string SettingsFileName = "blocker_settings.txt"; // blocker config 
+        private const string AppDataFolder = "PCHUBBlocker"; // Папка внутри appdata
+
 
         public BlockProcessForm()
         {
             InitializeComponent();
+
+            string appPath = Path.Combine(Application.StartupPath, "Blocker", "PCHUBBlockingApps.exe");
+            if (!File.Exists(appPath))
+            {
+                MessageBox.Show("PCHUBBlockingApps.exe not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+
             _settingsPath = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
                 AppName,
                 "blocker_settings.txt"
             );
 
-            // Проверяем, есть ли блокировка в автозагрузке
-            CheckAutoStartStatus();
+            CheckAutoStartStatus(); // проверка на автозагрузку
         }
 
         private void CheckAutoStartStatus()
@@ -136,6 +147,32 @@ namespace PCHUB.BlockProcces
         private void taskKillerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _list.Open.ShowForm<TaskKiller>();
+        }
+
+        private void configFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            // Получаем путь к AppData/Roaming текущего пользователя
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+            // Формируем полный путь к папке с настройками
+            string settingsFolderPath = Path.Combine(appDataPath, AppDataFolder);
+
+            // Создаем папку, если ее нет
+            Directory.CreateDirectory(settingsFolderPath);
+
+            // Формируем полный путь к файлу настроек
+            string settingsFilePath = Path.Combine(settingsFolderPath, SettingsFileName);
+
+            // Создаем файл с настройками по умолчанию, если его нет
+            if (!File.Exists(settingsFilePath))
+            {
+                File.WriteAllText(settingsFilePath, "process1.exe,process2.exe\n5");
+            }
+
+            // Открываем папку в проводнике и выделяем файл
+            Process.Start("explorer.exe", $"/select,\"{settingsFilePath}\"");
         }
     }
 }

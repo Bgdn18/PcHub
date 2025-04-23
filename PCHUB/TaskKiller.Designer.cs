@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskKiller));
             menuStrip1 = new MenuStrip();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
+            blockProcessToolStripMenuItem = new ToolStripMenuItem();
             runToolStripMenuItem = new ToolStripMenuItem();
             listBoxProcesses = new ListBox();
             TasksLabel = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             btnRunNewProcess = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnRefreshProcess = new Button();
+            btnEndTask = new Button();
             tabPage2 = new TabPage();
             labelAutoStartCount = new Label();
             btnAddAutoStart = new Button();
@@ -55,20 +55,12 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem, runToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, blockProcessToolStripMenuItem, runToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(569, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(54, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -77,6 +69,13 @@
             quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click_1;
+            // 
+            // blockProcessToolStripMenuItem
+            // 
+            blockProcessToolStripMenuItem.Name = "blockProcessToolStripMenuItem";
+            blockProcessToolStripMenuItem.Size = new Size(91, 20);
+            blockProcessToolStripMenuItem.Text = "Block Process";
+            blockProcessToolStripMenuItem.Click += blockProcessToolStripMenuItem_Click;
             // 
             // runToolStripMenuItem
             // 
@@ -121,8 +120,8 @@
             // tabPage1
             // 
             tabPage1.Controls.Add(btnRunNewProcess);
-            tabPage1.Controls.Add(button2);
-            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(btnRefreshProcess);
+            tabPage1.Controls.Add(btnEndTask);
             tabPage1.Controls.Add(listBoxProcesses);
             tabPage1.Controls.Add(TasksLabel);
             tabPage1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -145,27 +144,27 @@
             btnRunNewProcess.UseVisualStyleBackColor = true;
             btnRunNewProcess.Click += runToolStripMenuItem_Click;
             // 
-            // button2
+            // btnRefreshProcess
             // 
-            button2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(397, 408);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 8;
-            button2.Text = "Refresh";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += btnRefresh_Click;
+            btnRefreshProcess.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnRefreshProcess.Location = new Point(397, 408);
+            btnRefreshProcess.Name = "btnRefreshProcess";
+            btnRefreshProcess.Size = new Size(75, 23);
+            btnRefreshProcess.TabIndex = 8;
+            btnRefreshProcess.Text = "Refresh";
+            btnRefreshProcess.UseVisualStyleBackColor = true;
+            btnRefreshProcess.Click += btnRefresh_Click;
             // 
-            // button1
+            // btnEndTask
             // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.Location = new Point(478, 408);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 7;
-            button1.Text = "End Task";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += btnKillProcess_Click;
+            btnEndTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEndTask.Location = new Point(478, 408);
+            btnEndTask.Name = "btnEndTask";
+            btnEndTask.Size = new Size(75, 23);
+            btnEndTask.TabIndex = 7;
+            btnEndTask.Text = "End Task";
+            btnEndTask.UseVisualStyleBackColor = true;
+            btnEndTask.Click += btnKillProcess_Click;
             // 
             // tabPage2
             // 
@@ -268,7 +267,6 @@
 
         #endregion
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ListBox listBoxProcesses;
         private Label TasksLabel;
@@ -276,13 +274,14 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private Button button2;
-        private Button button1;
+        private Button btnRefreshProcess;
+        private Button btnEndTask;
         private Button btnRefreshAutoStart;
         private Button btnDeleteAutoStart;
         private Button btnAddAutoStart;
         private Label labelAutoStartCount;
         private ListBox startupListView;
         private Button btnRunNewProcess;
+        private ToolStripMenuItem blockProcessToolStripMenuItem;
     }
 }

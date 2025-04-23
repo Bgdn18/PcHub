@@ -24,8 +24,6 @@ namespace PCHUB
 
         const int SE_SHUTDOWN_PRIVILEGE = 0x13;
 
-
-        _list list = new _list();
         public PowerManagement()
         {
             InitializeComponent();
@@ -33,14 +31,30 @@ namespace PCHUB
 
         private void Shutdown_Click(object sender, EventArgs e)
         {
-                Process.Start("shutdown", "/s /t 0");
-                progressBar1.Style = ProgressBarStyle.Marquee;
+            try
+            {
+                    Process.Start("shutdown", "/s /t 0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: ", "Error" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         private void Restart_Click(object sender, EventArgs e)
         {
+            try
+            {
                 Process.Start("shutdown", "/r /t 0");
-                progressBar1.Style = ProgressBarStyle.Marquee;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: ", "Error" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            progressBar1.Style = ProgressBarStyle.Marquee;
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -50,10 +64,18 @@ namespace PCHUB
 
         private void BSOD_Click(object sender, EventArgs e)
         {
+            try
+            {
                 bool enabled;
                 RtlAdjustPrivilege(SE_SHUTDOWN_PRIVILEGE, true, false, out enabled);
                 uint response;
                 NtRaiseHardError(0xC000021A, 0, 0, IntPtr.Zero, 6, out response);
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: ", "Error" + ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
                 progressBar1.Style = ProgressBarStyle.Marquee;
         }
 

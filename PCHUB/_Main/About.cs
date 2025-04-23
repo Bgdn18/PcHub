@@ -59,37 +59,5 @@ namespace PCHUB
                 MessageBox.Show("Error opening GitHub: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void BuildLabel_Click(object sender, EventArgs e)
-        {
-            // Получаем путь к директории с программой
-            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-            // Формируем относительный путь к HTML-файлу
-            string htmlPath = Path.Combine(appDirectory, "HtmlBuildInfo", "html.html");
-
-            try
-            {
-                // Проверяем существование файла
-                if (File.Exists(htmlPath))
-                {
-                    // Открываем в браузере по умолчанию
-                    ProcessStartInfo startInfo = new ProcessStartInfo
-                    {
-                        FileName = htmlPath,
-                        UseShellExecute = true
-                    };
-                    Process.Start(startInfo);
-                }
-                else
-                {
-                    MessageBox.Show("HTML not found");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-        }
     }
 }

@@ -34,11 +34,7 @@
             menuStrip1 = new MenuStrip();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
-            btnExplorerPP = new Button();
-            btnProccesHacker = new Button();
-            btnIoBitUnlocker = new Button();
             BuildLabel = new Label();
-            btnZapret = new Button();
             btnRegedit = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -47,7 +43,7 @@
             // 
             btnCONTROLPANEL.Cursor = Cursors.Hand;
             btnCONTROLPANEL.Font = new Font("Consolas", 9F);
-            btnCONTROLPANEL.Location = new Point(282, 44);
+            btnCONTROLPANEL.Location = new Point(146, 44);
             btnCONTROLPANEL.Name = "btnCONTROLPANEL";
             btnCONTROLPANEL.Size = new Size(128, 50);
             btnCONTROLPANEL.TabIndex = 16;
@@ -94,42 +90,6 @@
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
-            // btnExplorerPP
-            // 
-            btnExplorerPP.Cursor = Cursors.Hand;
-            btnExplorerPP.Font = new Font("Consolas", 9F);
-            btnExplorerPP.Location = new Point(148, 44);
-            btnExplorerPP.Name = "btnExplorerPP";
-            btnExplorerPP.Size = new Size(128, 50);
-            btnExplorerPP.TabIndex = 23;
-            btnExplorerPP.Text = "Explorer++";
-            btnExplorerPP.UseVisualStyleBackColor = true;
-            btnExplorerPP.Click += ExplorerPP_Click;
-            // 
-            // btnProccesHacker
-            // 
-            btnProccesHacker.Cursor = Cursors.Hand;
-            btnProccesHacker.Font = new Font("Consolas", 9F);
-            btnProccesHacker.Location = new Point(12, 100);
-            btnProccesHacker.Name = "btnProccesHacker";
-            btnProccesHacker.Size = new Size(128, 50);
-            btnProccesHacker.TabIndex = 24;
-            btnProccesHacker.Text = "Procces Hacker";
-            btnProccesHacker.UseVisualStyleBackColor = true;
-            btnProccesHacker.Click += processhacker_Click;
-            // 
-            // btnIoBitUnlocker
-            // 
-            btnIoBitUnlocker.Cursor = Cursors.Hand;
-            btnIoBitUnlocker.Font = new Font("Consolas", 9F);
-            btnIoBitUnlocker.Location = new Point(148, 100);
-            btnIoBitUnlocker.Name = "btnIoBitUnlocker";
-            btnIoBitUnlocker.Size = new Size(128, 50);
-            btnIoBitUnlocker.TabIndex = 25;
-            btnIoBitUnlocker.Text = "IObit Unlocker";
-            btnIoBitUnlocker.UseVisualStyleBackColor = true;
-            btnIoBitUnlocker.Click += IObitUnlocker_Click;
-            // 
             // BuildLabel
             // 
             BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -146,23 +106,11 @@
             BuildLabel.Text = "null";
             BuildLabel.Click += BuildLabel_Click;
             // 
-            // btnZapret
-            // 
-            btnZapret.Cursor = Cursors.Hand;
-            btnZapret.Font = new Font("Consolas", 9F);
-            btnZapret.Location = new Point(282, 100);
-            btnZapret.Name = "btnZapret";
-            btnZapret.Size = new Size(128, 50);
-            btnZapret.TabIndex = 29;
-            btnZapret.Text = "Zapret";
-            btnZapret.UseVisualStyleBackColor = true;
-            btnZapret.Click += btnZapret_Click;
-            // 
             // btnRegedit
             // 
             btnRegedit.Cursor = Cursors.Hand;
             btnRegedit.Font = new Font("Consolas", 9F);
-            btnRegedit.Location = new Point(12, 156);
+            btnRegedit.Location = new Point(280, 44);
             btnRegedit.Name = "btnRegedit";
             btnRegedit.Size = new Size(128, 50);
             btnRegedit.TabIndex = 30;
@@ -177,11 +125,7 @@
             BackColor = Color.White;
             ClientSize = new Size(423, 256);
             Controls.Add(btnRegedit);
-            Controls.Add(btnZapret);
             Controls.Add(BuildLabel);
-            Controls.Add(btnIoBitUnlocker);
-            Controls.Add(btnProccesHacker);
-            Controls.Add(btnExplorerPP);
             Controls.Add(btnCONTROLPANEL);
             Controls.Add(btnCMD);
             Controls.Add(menuStrip1);
@@ -207,12 +151,8 @@
         private Button btnCMD;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem aboutToolStripMenuItem;
-        private Button btnExplorerPP;
-        private Button btnProccesHacker;
-        private Button btnIoBitUnlocker;
         private ToolStripMenuItem quitToolStripMenuItem;
         private Label BuildLabel;
-        private Button btnZapret;
         private Button btnRegedit;
     }
 }

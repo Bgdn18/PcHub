@@ -34,6 +34,9 @@
             chkTaskmgr = new CheckBox();
             btnUnlock = new Button();
             btnLock = new Button();
+            menuStrip1 = new MenuStrip();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // chkCmd
@@ -43,7 +46,7 @@
             chkCmd.Checked = true;
             chkCmd.CheckState = CheckState.Checked;
             chkCmd.Font = new Font("Consolas", 9F);
-            chkCmd.Location = new Point(12, 12);
+            chkCmd.Location = new Point(12, 27);
             chkCmd.Name = "chkCmd";
             chkCmd.Size = new Size(138, 18);
             chkCmd.TabIndex = 0;
@@ -57,7 +60,7 @@
             chkRegedit.Checked = true;
             chkRegedit.CheckState = CheckState.Checked;
             chkRegedit.Font = new Font("Consolas", 9F);
-            chkRegedit.Location = new Point(12, 37);
+            chkRegedit.Location = new Point(12, 51);
             chkRegedit.Name = "chkRegedit";
             chkRegedit.Size = new Size(166, 18);
             chkRegedit.TabIndex = 1;
@@ -71,7 +74,7 @@
             chkTaskmgr.Checked = true;
             chkTaskmgr.CheckState = CheckState.Checked;
             chkTaskmgr.Font = new Font("Consolas", 9F);
-            chkTaskmgr.Location = new Point(13, 62);
+            chkTaskmgr.Location = new Point(12, 75);
             chkTaskmgr.Name = "chkTaskmgr";
             chkTaskmgr.Size = new Size(159, 18);
             chkTaskmgr.TabIndex = 2;
@@ -102,6 +105,23 @@
             btnLock.UseVisualStyleBackColor = true;
             btnLock.Click += btnLock_Click;
             // 
+            // menuStrip1
+            // 
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(208, 24);
+            menuStrip1.TabIndex = 5;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // quitToolStripMenuItem
+            // 
+            quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            quitToolStripMenuItem.Size = new Size(42, 20);
+            quitToolStripMenuItem.Text = "Quit";
+            quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
+            // 
             // SystemUnlocker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -112,7 +132,9 @@
             Controls.Add(chkTaskmgr);
             Controls.Add(chkRegedit);
             Controls.Add(chkCmd);
+            Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MaximumSize = new Size(700, 475);
             MinimizeBox = false;
@@ -122,6 +144,8 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SystemUnlocker";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +157,7 @@
         private CheckBox chkTaskmgr;
         private Button btnUnlock;
         private Button btnLock;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

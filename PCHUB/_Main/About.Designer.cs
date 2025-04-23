@@ -54,7 +54,6 @@
             BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             BuildLabel.AutoSize = true;
             BuildLabel.BackColor = Color.Gray;
-            BuildLabel.Cursor = Cursors.Help;
             BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             BuildLabel.ForeColor = Color.White;
             BuildLabel.Location = new Point(12, 179);
@@ -62,7 +61,6 @@
             BuildLabel.Size = new Size(94, 20);
             BuildLabel.TabIndex = 2;
             BuildLabel.Text = "Version: null";
-            BuildLabel.Click += BuildLabel_Click;
             // 
             // label2
             // 

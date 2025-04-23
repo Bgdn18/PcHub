@@ -138,5 +138,10 @@ namespace PCHUB
 
             MessageBox.Show("Block complete", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

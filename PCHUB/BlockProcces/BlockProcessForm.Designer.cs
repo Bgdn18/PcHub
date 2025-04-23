@@ -35,6 +35,7 @@
             btnStop = new Button();
             menuStrip1 = new MenuStrip();
             quitToolStripMenuItem = new ToolStripMenuItem();
+            configFileToolStripMenuItem = new ToolStripMenuItem();
             taskKillerToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             btnStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnStart.Font = new Font("Consolas", 9F);
-            btnStart.Location = new Point(12, 125);
+            btnStart.Location = new Point(12, 128);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(524, 23);
             btnStart.TabIndex = 2;
@@ -78,7 +79,7 @@
             btnStop.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnStop.Enabled = false;
             btnStop.Font = new Font("Consolas", 9F);
-            btnStop.Location = new Point(12, 154);
+            btnStop.Location = new Point(12, 157);
             btnStop.Name = "btnStop";
             btnStop.Size = new Size(524, 23);
             btnStop.TabIndex = 3;
@@ -89,7 +90,7 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, taskKillerToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, configFileToolStripMenuItem, taskKillerToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(544, 24);
@@ -104,6 +105,13 @@
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
+            // configFileToolStripMenuItem
+            // 
+            configFileToolStripMenuItem.Name = "configFileToolStripMenuItem";
+            configFileToolStripMenuItem.Size = new Size(76, 20);
+            configFileToolStripMenuItem.Text = "Config File";
+            configFileToolStripMenuItem.Click += configFileToolStripMenuItem_Click;
+            // 
             // taskKillerToolStripMenuItem
             // 
             taskKillerToolStripMenuItem.Font = new Font("Consolas", 9F);
@@ -116,7 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 191);
+            ClientSize = new Size(544, 194);
             Controls.Add(btnStop);
             Controls.Add(btnStart);
             Controls.Add(textBoxTimer);
@@ -148,5 +156,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ToolStripMenuItem taskKillerToolStripMenuItem;
+        private ToolStripMenuItem configFileToolStripMenuItem;
     }
 }

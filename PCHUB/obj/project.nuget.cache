@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DF46lMaF/BI=",
+  "dgSpecHash": "wE8fN7GN7Eg=",
   "success": true,
   "projectFilePath": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\PCHUB.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\krati\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.14\\microsoft.net.illink.tasks.8.0.14.nupkg.sha512",
+    "C:\\Users\\krati\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.14\\microsoft.netcore.app.runtime.win-x64.8.0.14.nupkg.sha512",
+    "C:\\Users\\krati\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.14\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.14.nupkg.sha512",
+    "C:\\Users\\krati\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.14\\microsoft.aspnetcore.app.runtime.win-x64.8.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

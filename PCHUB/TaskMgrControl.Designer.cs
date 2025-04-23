@@ -31,9 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskMgrControl));
             btnUnlock = new Button();
             btnLock = new Button();
-            label1 = new Label();
             menuStrip1 = new MenuStrip();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -41,7 +39,7 @@
             // btnUnlock
             // 
             btnUnlock.Font = new Font("Consolas", 9F);
-            btnUnlock.Location = new Point(12, 62);
+            btnUnlock.Location = new Point(12, 27);
             btnUnlock.Name = "btnUnlock";
             btnUnlock.Size = new Size(185, 55);
             btnUnlock.TabIndex = 0;
@@ -52,7 +50,7 @@
             // btnLock
             // 
             btnLock.Font = new Font("Consolas", 9F);
-            btnLock.Location = new Point(203, 62);
+            btnLock.Location = new Point(203, 27);
             btnLock.Name = "btnLock";
             btnLock.Size = new Size(185, 55);
             btnLock.TabIndex = 1;
@@ -60,33 +58,15 @@
             btnLock.UseVisualStyleBackColor = true;
             btnLock.Click += btnLock_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Consolas", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 35);
-            label1.Name = "label1";
-            label1.Size = new Size(202, 24);
-            label1.TabIndex = 2;
-            label1.Text = "TaskMgr Control:";
-            // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(400, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Font = new Font("Consolas", 9F);
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(54, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -100,11 +80,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(400, 133);
-            Controls.Add(label1);
+            ClientSize = new Size(400, 89);
             Controls.Add(btnLock);
             Controls.Add(btnUnlock);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
@@ -124,9 +104,7 @@
 
         private Button btnUnlock;
         private Button btnLock;
-        private Label label1;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem quitToolStripMenuItem;
     }
 }

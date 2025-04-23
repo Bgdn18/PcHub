@@ -18,11 +18,7 @@ namespace PCHUB
         public Browse()
         {
             InitializeComponent();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
         }
-
-        _list list = new _list();
 
         private void Settings_Click(object sender, EventArgs e)
         {
@@ -44,11 +40,6 @@ namespace PCHUB
                     MessageBox.Show("Error opening browser: " + ex.Message);
                 }
             }
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.Build(); // информация о приложении
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

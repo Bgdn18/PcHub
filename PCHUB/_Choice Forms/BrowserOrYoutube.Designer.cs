@@ -33,7 +33,6 @@
             btnYoutube = new Button();
             btnBrowser = new Button();
             quitToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -77,17 +76,10 @@
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
-            // aboutToolStripMenuItem
-            // 
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
-            aboutToolStripMenuItem.Text = "About";
-            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
-            // 
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem, quitToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(353, 24);
@@ -124,7 +116,6 @@
         private Button btnYoutube;
         private Button btnBrowser;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private ToolStripMenuItem aboutToolStripMenuItem;
         private MenuStrip menuStrip1;
     }
 }

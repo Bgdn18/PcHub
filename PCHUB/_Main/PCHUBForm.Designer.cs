@@ -46,11 +46,11 @@
             btnTools = new Button();
             btnFileDelete = new Button();
             btnUninstaller = new Button();
-            btnBrowseForms = new Button();
             UnlockSystem = new Button();
             btnBlockProcessForm = new Button();
             btnToTray = new Button();
             btnBlockWebSite = new Button();
+            btnUtilMan = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -263,20 +263,6 @@
             btnUninstaller.UseVisualStyleBackColor = true;
             btnUninstaller.Click += btnUninstaller_Click;
             // 
-            // btnBrowseForms
-            // 
-            btnBrowseForms.Anchor = AnchorStyles.Top;
-            btnBrowseForms.Cursor = Cursors.Hand;
-            btnBrowseForms.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBrowseForms.Location = new Point(45, 200);
-            btnBrowseForms.Margin = new Padding(4, 3, 4, 3);
-            btnBrowseForms.Name = "btnBrowseForms";
-            btnBrowseForms.Size = new Size(126, 35);
-            btnBrowseForms.TabIndex = 48;
-            btnBrowseForms.Text = "Your browser \r\nOr Youtube";
-            btnBrowseForms.UseVisualStyleBackColor = true;
-            btnBrowseForms.Click += btnBrowseForms_Click;
-            // 
             // UnlockSystem
             // 
             UnlockSystem.Anchor = AnchorStyles.Top;
@@ -322,14 +308,28 @@
             btnBlockWebSite.Anchor = AnchorStyles.Top;
             btnBlockWebSite.Cursor = Cursors.Hand;
             btnBlockWebSite.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBlockWebSite.Location = new Point(177, 200);
+            btnBlockWebSite.Location = new Point(45, 200);
             btnBlockWebSite.Margin = new Padding(4, 3, 4, 3);
             btnBlockWebSite.Name = "btnBlockWebSite";
-            btnBlockWebSite.Size = new Size(126, 35);
+            btnBlockWebSite.Size = new Size(125, 35);
             btnBlockWebSite.TabIndex = 52;
             btnBlockWebSite.Text = "Block WebSite";
             btnBlockWebSite.UseVisualStyleBackColor = true;
             btnBlockWebSite.Click += btnBlockWebSite_Click;
+            // 
+            // btnUtilMan
+            // 
+            btnUtilMan.Anchor = AnchorStyles.Top;
+            btnUtilMan.Cursor = Cursors.Hand;
+            btnUtilMan.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUtilMan.Location = new Point(177, 200);
+            btnUtilMan.Margin = new Padding(4, 3, 4, 3);
+            btnUtilMan.Name = "btnUtilMan";
+            btnUtilMan.Size = new Size(125, 35);
+            btnUtilMan.TabIndex = 53;
+            btnUtilMan.Text = "UtilMan";
+            btnUtilMan.UseVisualStyleBackColor = true;
+            btnUtilMan.Click += btnUtilMan_Click;
             // 
             // PCHUBForm
             // 
@@ -337,11 +337,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(484, 461);
+            Controls.Add(btnUtilMan);
             Controls.Add(btnBlockWebSite);
             Controls.Add(btnToTray);
             Controls.Add(btnBlockProcessForm);
             Controls.Add(UnlockSystem);
-            Controls.Add(btnBrowseForms);
             Controls.Add(btnUninstaller);
             Controls.Add(btnFileDelete);
             Controls.Add(btnTools);
@@ -389,10 +389,10 @@
         private Button btnFileDelete;
         private Button btnUninstaller;
         private ToolStripMenuItem runToolStripMenuItem;
-        private Button btnBrowseForms;
         private Button UnlockSystem;
         private Button btnBlockProcessForm;
         private Button btnToTray;
         private Button btnBlockWebSite;
+        private Button btnUtilMan;
     }
 }
