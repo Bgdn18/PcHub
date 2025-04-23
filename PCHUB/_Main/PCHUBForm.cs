@@ -35,7 +35,7 @@ namespace PCHUB
             var contextMenu = new ContextMenuStrip();
             contextMenu.Items.Add("Expand", null, (s, e) => RestoreFromTray()); //EXPAND
             contextMenu.Items.Add("Close PCHUB", null, (s, e) => Application.Exit()); //CLOSE
-            trayIcon.ContextMenuStrip = contextMenu;
+            trayIcon.ContextMenuStrip = contextMenu; // MENU
 
             BuildLabel.Text = _list.BuildInfo;
         }

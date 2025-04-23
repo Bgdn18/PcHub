@@ -23,28 +23,29 @@
             btnBrowseFile = new Button();
             btnBrowseFolder = new Button();
             menuStrip1 = new MenuStrip();
-            fileExplorerToolStripMenuItem = new ToolStripMenuItem();
             quitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // txtPath
             // 
+            txtPath.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPath.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPath.Location = new Point(12, 37);
             txtPath.Multiline = true;
             txtPath.Name = "txtPath";
             txtPath.PlaceholderText = "Path to File/Folder";
-            txtPath.Size = new Size(316, 31);
+            txtPath.Size = new Size(357, 75);
             txtPath.TabIndex = 0;
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnDelete.Cursor = Cursors.Hand;
             btnDelete.Font = new Font("Consolas", 9F);
-            btnDelete.Location = new Point(13, 74);
+            btnDelete.Location = new Point(13, 118);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(315, 31);
+            btnDelete.Size = new Size(356, 31);
             btnDelete.TabIndex = 1;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@
             // 
             // btnBrowseFile
             // 
+            btnBrowseFile.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnBrowseFile.Cursor = Cursors.Hand;
             btnBrowseFile.Font = new Font("Consolas", 8.25F);
-            btnBrowseFile.Location = new Point(334, 37);
+            btnBrowseFile.Location = new Point(375, 37);
             btnBrowseFile.Name = "btnBrowseFile";
             btnBrowseFile.Size = new Size(97, 31);
             btnBrowseFile.TabIndex = 3;
@@ -64,9 +66,10 @@
             // 
             // btnBrowseFolder
             // 
+            btnBrowseFolder.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnBrowseFolder.Cursor = Cursors.Hand;
             btnBrowseFolder.Font = new Font("Consolas", 8.25F);
-            btnBrowseFolder.Location = new Point(334, 75);
+            btnBrowseFolder.Location = new Point(375, 75);
             btnBrowseFolder.Name = "btnBrowseFolder";
             btnBrowseFolder.Size = new Size(97, 31);
             btnBrowseFolder.TabIndex = 4;
@@ -77,20 +80,12 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, fileExplorerToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(443, 24);
+            menuStrip1.Size = new Size(484, 24);
             menuStrip1.TabIndex = 5;
             menuStrip1.Text = "menuStrip1";
-            // 
-            // fileExplorerToolStripMenuItem
-            // 
-            fileExplorerToolStripMenuItem.Font = new Font("Consolas", 9F);
-            fileExplorerToolStripMenuItem.Name = "fileExplorerToolStripMenuItem";
-            fileExplorerToolStripMenuItem.Size = new Size(110, 20);
-            fileExplorerToolStripMenuItem.Text = "File Explorer";
-            fileExplorerToolStripMenuItem.Click += fileExplorerToolStripMenuItem_Click;
             // 
             // quitToolStripMenuItem
             // 
@@ -104,13 +99,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(443, 117);
+            ClientSize = new Size(484, 161);
             Controls.Add(btnBrowseFolder);
             Controls.Add(btnBrowseFile);
             Controls.Add(btnDelete);
             Controls.Add(txtPath);
             Controls.Add(menuStrip1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
@@ -135,6 +129,5 @@
         private Button btnBrowseFolder;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private ToolStripMenuItem fileExplorerToolStripMenuItem;
     }
 }

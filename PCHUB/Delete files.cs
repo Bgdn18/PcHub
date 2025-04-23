@@ -18,15 +18,13 @@ namespace PCHUB
             InitializeComponent();
         }
 
-        _list list = new _list();
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string path = txtPath.Text.Trim();
 
             if (string.IsNullOrEmpty(path))
             {
-                MessageBox.Show("Пожалуйста, введите путь к файлу или папке", "Ошибка",
+                MessageBox.Show("Please enter the path to the file or folder", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -36,7 +34,7 @@ namespace PCHUB
 
             if (!isFile && !isDirectory)
             {
-                MessageBox.Show("Указанный файл или папка не существует", "Ошибка",
+                MessageBox.Show("The specified file or folder does not exist", "Error",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -49,30 +47,30 @@ namespace PCHUB
                     File.SetAttributes(path, FileAttributes.Normal);
                     File.Delete(path);
 
-                    MessageBox.Show("Файл успешно удален", "Успех",
+                    MessageBox.Show("File successfully deleted", "Info",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (isDirectory)
                 {
                     // Удаление папки
                     DeleteDirectory(path);
-                    MessageBox.Show("Папка успешно удалена", "Успех",
+                    MessageBox.Show("The folder was deleted successfully", "info",
                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show($"Отказано в доступе: {ex.Message}", "Ошибка доступа",
+                MessageBox.Show($"Access denied: {ex.Message}", "Access error",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (IOException ex)
             {
-                MessageBox.Show($"Ошибка ввода-вывода: {ex.Message}", "Ошибка",
+                MessageBox.Show($"Input/output error: {ex.Message}", "Error",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка",
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -118,16 +116,6 @@ namespace PCHUB
                     txtPath.Text = dlg.SelectedPath;
                 }
             }
-        }
-
-        private void fileExplorerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.OpenSystemTools.OpenFileExplorer();
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
