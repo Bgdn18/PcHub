@@ -1,24 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
 
 namespace PCHUB
 {
     public partial class MyProgramList : Form
     {
-        private const string SaveFilePath = "saved_programs.txt";
+        private const string AppDataFolder = "PCHUB"; // Папка в AppData
+        private static readonly string SaveFilePath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            AppDataFolder,
+            "saved_programs.txt"
+        );
 
         public MyProgramList()
         {
             InitializeComponent();
+            EnsureAppDataFolderExists();
             LoadSavedPrograms();
+        }
+
+        private void EnsureAppDataFolderExists()
+        {
+            string appDataPath = Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                AppDataFolder
+            );
+            if (!Directory.Exists(appDataPath))
+            {
+                Directory.CreateDirectory(appDataPath);
+            }
         }
 
         private void LoadSavedPrograms()

@@ -16,14 +16,18 @@ namespace PCHUB
         {
             InitializeComponent();
             CheckadminStatus();
+            BuildLabel.Text = _list.BuildInfo;
 
-            string appPath = Path.Combine(Application.StartupPath, "Blocker", "PCHUBBlockingApps.exe");
+            string appPath = Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+            "PCHUB",
+            "Blocker",
+            "PCHUBBlockingApps.exe"
+            );
             if (!File.Exists(appPath))
             {
                 btnBlockProcessForm.Enabled = false;
-                return;
-            }
-
+            };
 
             trayIcon = new NotifyIcon
             {
@@ -36,8 +40,6 @@ namespace PCHUB
             contextMenu.Items.Add("Expand", null, (s, e) => RestoreFromTray()); //EXPAND
             contextMenu.Items.Add("Close PCHUB", null, (s, e) => Application.Exit()); //CLOSE
             trayIcon.ContextMenuStrip = contextMenu; // MENU
-
-            BuildLabel.Text = _list.BuildInfo;
         }
 
         private void CheckadminStatus()

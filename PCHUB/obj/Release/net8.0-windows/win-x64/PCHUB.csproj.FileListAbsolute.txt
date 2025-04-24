@@ -472,7 +472,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.SystemUnlocker.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.TaskKiller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.TaskMgrControl.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.TextFileCreator.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.UnInstaller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.Browse.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.YouTube.resources
@@ -498,3 +497,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.genruntimeconfig.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\ref\PCHUB.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._Main.UtilManForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.CmdLineForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.MyProgramList.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.Writer.resources

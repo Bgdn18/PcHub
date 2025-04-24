@@ -215,7 +215,7 @@
             // 
             // btnTools
             // 
-            btnTools.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnTools.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnTools.Cursor = Cursors.Hand;
             btnTools.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTools.Location = new Point(371, 424);
@@ -338,7 +338,7 @@
             // 
             // btnMyProgramList
             // 
-            btnMyProgramList.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnMyProgramList.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnMyProgramList.Cursor = Cursors.Hand;
             btnMyProgramList.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMyProgramList.Location = new Point(371, 393);

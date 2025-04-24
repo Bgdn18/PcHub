@@ -34,7 +34,7 @@
     <Compile Update="_Choice Forms\BrowserOrYoutube.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main\OtherTool.cs">
+    <Compile Update="_Main\WindowsTool.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
