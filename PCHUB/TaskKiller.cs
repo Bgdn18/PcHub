@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using PCHUB._Main;
+using PCHUB._Main.Class;
 using PCHUB.BlockProcces;
 using PCHUB.Main;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -72,7 +74,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -113,7 +115,7 @@ namespace PCHUB
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<ProccesStartForm>();
+            OpenClass.Open.ShowForm<ProccesStartForm>();
         }
 
         private void btnRefreshAutoStart_Click(object sender, EventArgs e)
@@ -245,7 +247,7 @@ namespace PCHUB
 
         private void blockProcessToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<BlockProcessForm>();
+            OpenClass.Open.ShowForm<BlockProcessForm>();
         }
     }
 }

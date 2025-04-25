@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PCHUB.Main;
+using PCHUB.WindowsTool.Class;
 
 namespace PCHUB
 {
@@ -38,14 +39,14 @@ namespace PCHUB
 
         private void btnBrowseFileExplorer_Click(object sender, EventArgs e)
         {
-            _list.OpenSystemTools.OpenFileExplorer();
+            WinToolClass.Open.OpenBrowserExplorer();
 
             this.Close(); // Закрываем форму
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

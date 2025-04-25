@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PCHUB.Main;
+using PCHUB.WindowsTool.Class;
 
 namespace PCHUB
 {
@@ -52,7 +53,7 @@ namespace PCHUB
             {
                 if (input == "BrowseExplorer")
                 {
-                    _list.OpenSystemTools.OpenFileExplorer();
+                    WinToolClass.Open.OpenBrowserExplorer();
                 }
 
                 if (System.IO.File.Exists(input) || System.IO.Directory.Exists(input))
@@ -76,7 +77,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void pathToolStripMenuItem_Click(object sender, EventArgs e) // открывает настройку path

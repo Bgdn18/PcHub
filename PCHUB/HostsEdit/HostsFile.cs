@@ -4,6 +4,7 @@ using System.IO;
 using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 
 namespace PCHUB
@@ -78,7 +79,7 @@ namespace PCHUB
             try
             {
                 // Проверка прав администратора
-                if (!_list.SystemChecks.isadmin())
+                if (!SystemCheckClass.SystemChecks.isadmin())
                 {
                     MessageBox.Show("Administrator rights required!");
                     return;
@@ -148,7 +149,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

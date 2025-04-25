@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 
 namespace PCHUB
@@ -93,7 +94,7 @@ namespace PCHUB
 
         private void regeditToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ProcessRun("regedit");
+            OpenClass.Open.ProcessRun("regedit");
         }
     }
 }

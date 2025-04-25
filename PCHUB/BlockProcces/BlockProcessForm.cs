@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 
 namespace PCHUB.BlockProcces
@@ -244,7 +245,7 @@ namespace PCHUB.BlockProcces
         private void taskKillerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Предполагается, что _list.Open.ShowForm<TaskKiller>() доступен в контексте
-            _list.Open.ShowForm<TaskKiller>();
+            OpenClass.Open.ShowForm<TaskKiller>();
         }
 
         private void configFileToolStripMenuItem_Click(object sender, EventArgs e)

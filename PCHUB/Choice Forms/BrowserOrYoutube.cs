@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 
 namespace PCHUB._Choice_Forms
@@ -20,19 +21,19 @@ namespace PCHUB._Choice_Forms
 
         private void btnBrowser_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<Browse>();
+            OpenClass.Open.ShowForm<Browse>();
             this.Close();
         }
 
         private void btnYoutube_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<YouTube>();
+            OpenClass.Open.ShowForm<YouTube>();
             this.Close();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

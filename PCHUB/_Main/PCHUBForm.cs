@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using PCHUB._Choice_Forms;
 using PCHUB._Main;
+using PCHUB._Main.Class;
 using PCHUB.BlockProcces;
 using PCHUB.HostsEdit;
 using PCHUB.Main;
@@ -10,13 +11,13 @@ namespace PCHUB
 {
     public partial class PCHUBForm : Form
     {
-        private NotifyIcon? trayIcon;
+        private NotifyIcon? trayIcon; //TRAY
 
         public PCHUBForm()
         {
             InitializeComponent();
             CheckadminStatus();
-            BuildLabel.Text = _list.BuildInfo;
+            BuildLabel.Text = AboutClass.BuildInfo.ToString();
 
             string appPath = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
@@ -24,15 +25,17 @@ namespace PCHUB
             "Blocker",
             "PCHUBBlockingApps.exe"
             );
-            if (!File.Exists(appPath))
+
+            if (!File.Exists(appPath)) // Blocker app
             {
                 btnBlockProcessForm.Enabled = false;
             };
 
+            //TRAY
             trayIcon = new NotifyIcon
             {
                 Icon = SystemIcons.Exclamation, // ICON
-                Text = "PcHub" + _list.BuildInfo, // NAME
+                Text = "PcHub" + AboutClass.BuildInfo, // NAME
                 Visible = false
             };
             trayIcon.DoubleClick += (s, e) => RestoreFromTray(); //RESTORE DOUBLE CLICK
@@ -40,11 +43,12 @@ namespace PCHUB
             contextMenu.Items.Add("Expand", null, (s, e) => RestoreFromTray()); //EXPAND
             contextMenu.Items.Add("Close PCHUB", null, (s, e) => Application.Exit()); //CLOSE
             trayIcon.ContextMenuStrip = contextMenu; // MENU
+            //TRAY
         }
 
         private void CheckadminStatus()
         {
-            if (!_list.SystemChecks.isadmin())
+            if (!SystemCheckClass.SystemChecks.isadmin())
             {
                 MessageBox.Show("Run the program as administrator", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
@@ -54,37 +58,37 @@ namespace PCHUB
 
         private void TaskManager_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<PerfmonOrTaskmgr>();
+            OpenClass.Open.ShowForm<PerfmonOrTaskmgr>();
         }
 
         public void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build(); // откроется информация
+            AboutClass.Open.Build(); // откроется информация
         }
 
         private void TxtWriter_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<Writer>(); // откроется писатель (writer)
+            OpenClass.Open.ShowForm<Writer>(); // откроется писатель (writer)
         }
 
         private void Taskkiller_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<TaskKiller>(); // Откроется форма TaskKiller.cs
+            OpenClass.Open.ShowForm<TaskKiller>(); // Откроется форма TaskKiller.cs
         }
 
         private void FileExplorer_Click(object? sender, EventArgs e)
         {
-            _list.Open.ShowForm<BrowserExplorerOrJustExplorerDotExe>(); // Откроется форма TaskKiller.cs
+            OpenClass.Open.ShowForm<BrowserExplorerOrJustExplorerDotExe>(); // Откроется форма TaskKiller.cs
         }
 
         private void btnLocalUser_Click(object? sender, EventArgs e)
         {
-            _list.Open.ShowForm<LocalUser>(); // добавление локального пользователя
+            OpenClass.Open.ShowForm<LocalUser>(); // добавление локального пользователя
         }
 
         private void btnbuildhelp_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         public void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -94,52 +98,47 @@ namespace PCHUB
 
         private void btnPowerMgr_Click(object? sender, EventArgs e)
         {
-            _list.Open.ShowForm<PowerManagement>();
+            OpenClass.Open.ShowForm<PowerManagement>();
         }
 
         public void btnHostsFile_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<HostsFile>();
+            OpenClass.Open.ShowForm<HostsFile>();
         }
 
         public void btnPowerShellPolicyManager_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<PowerShellPolicyReset>();
+            OpenClass.Open.ShowForm<PowerShellPolicyReset>();
         }
 
         private void btnTools_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<otherTools>();
+            OpenClass.Open.ShowForm<otherTools>();
         }
 
         private void btnFileDelete_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<Delete_files>();
+            OpenClass.Open.ShowForm<Delete_files>();
         }
 
         private void btnUninstaller_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<UnInstaller>();
+            OpenClass.Open.ShowForm<UnInstaller>();
         }
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<ProccesStartForm>();
-        }
-
-        private void btnBrowseForms_Click(object sender, EventArgs e)
-        {
-            _list.Open.ShowForm<BrowserOrYoutube>();
+            OpenClass.Open.ShowForm<ProccesStartForm>();
         }
 
         private void UnlockSystem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<SystemUnlocker>();
+            OpenClass.Open.ShowForm<SystemUnlocker>();
         }
 
         private void btnBlockProcessForm_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<BlockProcessForm>();
+            OpenClass.Open.ShowForm<BlockProcessForm>();
         }
 
 
@@ -158,22 +157,22 @@ namespace PCHUB
 
         private void btnBlockWebSite_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<BlockWebSite>();
+            OpenClass.Open.ShowForm<BlockWebSite>();
         }
 
         private void btnUtilMan_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<UtilManForm>();
+            OpenClass.Open.ShowForm<UtilManForm>();
         }
 
         private void btnCmdLine_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<CmdLineForm>();
+            OpenClass.Open.ShowForm<CmdLineForm>();
         }
 
         private void btnMyProgramList_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<MyProgramList>();
+            OpenClass.Open.ShowForm<MyProgramList>();
         }
     }
 }

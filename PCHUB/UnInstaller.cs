@@ -191,7 +191,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build(); // информация о программе
+            AboutClass.Open.Build(); // информация о программе
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

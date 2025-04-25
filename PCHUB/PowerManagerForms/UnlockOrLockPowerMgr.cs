@@ -35,7 +35,7 @@ namespace PCHUB
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

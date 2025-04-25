@@ -1,7 +1,9 @@
+using PCHUB._Main.Class;
 using PCHUB.BlockProcces;
 using PCHUB.HostsEdit;
+using PCHUB.Main;
 
-namespace PCHUB.Main
+namespace PCHUB._Main
 {
     internal static class Program
     {

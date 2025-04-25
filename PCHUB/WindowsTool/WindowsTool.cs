@@ -1,4 +1,6 @@
-﻿using PCHUB.Main;
+﻿using PCHUB._Main.Class;
+using PCHUB.Main;
+using PCHUB.WindowsTool.Class;
 
 namespace PCHUB
 {
@@ -8,17 +10,17 @@ namespace PCHUB
         {
             InitializeComponent();
 
-            BuildLabel.Text = _list.BuildInfo;
+            BuildLabel.Text = AboutClass.BuildInfo.ToString();
         }
 
         private void CONTROLPANEL_Click(object sender, EventArgs e)
         {
-            _list.Open.ProcessRun("control.exe");
+            OpenClass.Open.ProcessRun("control.exe");
         }
 
         private void CMD_Click(object sender, EventArgs e)
         {
-            _list.OpenSystemTools.Cmd();
+            WinToolClass.Open.Cmd();
         }
 
 
@@ -29,16 +31,16 @@ namespace PCHUB
 
         private void BuildLabel_Click(object sender, EventArgs e) // информация о билде
         {
-            _list.Open.Build();
+            AboutClass.Open.Build();
         }
 
         private void btnRegedit_Click(object sender, EventArgs e) // Regedit
         {
-            if (!_list.SystemChecks.isadmin())
+            if (!SystemCheckClass.SystemChecks.isadmin())
             {
                 MessageBox.Show("Error, try running as administrator: " , "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                _list.Open.ProcessRun("regedit");
+            OpenClass.Open.ProcessRun("regedit");
         }
     }
 }

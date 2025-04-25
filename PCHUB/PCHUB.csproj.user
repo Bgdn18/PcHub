@@ -16,10 +16,10 @@
     <Compile Update="MyProgramList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Choice Forms\PerfmonOrTaskmgr.cs">
+    <Compile Update="Choice Forms\PerfmonOrTaskmgr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main\About.cs">
+    <Compile Update="About\About.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ProccesStartForm.cs">
@@ -31,13 +31,13 @@
     <Compile Update="UnInstaller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Choice Forms\BrowserOrYoutube.cs">
+    <Compile Update="Choice Forms\BrowserOrYoutube.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main\WindowsTool.cs">
+    <Compile Update="WindowsTool\WindowsTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
+    <Compile Update="Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Delete files.cs">
@@ -55,19 +55,19 @@
     <Compile Update="UtilManForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_PowerManagerForms\UnlockOrLockPowerMgr.cs">
+    <Compile Update="PowerManagerForms\UnlockOrLockPowerMgr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Browsers Forms\Browse.cs">
+    <Compile Update="Browsers Forms\Browse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_LocalUserForm\LocalUser.cs">
+    <Compile Update="LocalUserForm\LocalUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="_Main\PCHUBForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_PowerManagerForms\PowerManagement.cs">
+    <Compile Update="PowerManagerForms\PowerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TaskKiller.cs">
@@ -76,7 +76,7 @@
     <Compile Update="Writer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Browsers Forms\YouTube.cs">
+    <Compile Update="Browsers Forms\YouTube.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

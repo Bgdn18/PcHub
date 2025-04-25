@@ -1,4 +1,5 @@
-﻿using PCHUB.Main;
+﻿using PCHUB._Main.Class;
+using PCHUB.Main;
 
 namespace PCHUB._Choice_Forms
 {
@@ -11,19 +12,13 @@ namespace PCHUB._Choice_Forms
 
         private void btnPerfmon_Click(object sender, EventArgs e)
         {
-            _list.Open.ProcessRun("resmon");
+            OpenClass.Open.ProcessRun("resmon");
             this.Close();
         }
 
         private void btnTaskmgr_Click(object sender, EventArgs e)
         {
-            _list.Open.ProcessRun("taskmgr");
-            this.Close();
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            _list.Open.ShowForm<About>();
+            OpenClass.Open.ProcessRun("taskmgr");
             this.Close();
         }
 

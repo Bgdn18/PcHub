@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using PCHUB.Main;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+﻿using System.Diagnostics;
 namespace PCHUB
 {
     public partial class About : Form
@@ -15,12 +7,12 @@ namespace PCHUB
         {
             InitializeComponent();
 
-            BuildLabel.Text = ("Version: ") + _list.BuildInfo;
+            BuildLabel.Text = ("Version: ") + AboutClass.BuildInfo;
         }
 
         private void PCHUBlabel_Click(object sender, EventArgs e)
         {
-            this.Text = _list.BuildInfo + (" !!!"); // меняю название формы
+            this.Text = AboutClass.BuildInfo + (" !!!"); // меняю название формы
 
             Random rand = new Random();
 

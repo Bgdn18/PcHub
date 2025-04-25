@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -50,7 +51,7 @@ namespace PCHUB.HostsEdit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<About>();
+            OpenClass.Open.ShowForm<About>();
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace PCHUB.HostsEdit
 
         private void hostFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _list.Open.ShowForm<HostsFile>();
+            OpenClass.Open.ShowForm<HostsFile>();
         }
     }
 }

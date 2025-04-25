@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PCHUB._Main.Class;
 using PCHUB.Main;
 
 namespace PCHUB
@@ -22,7 +23,7 @@ namespace PCHUB
 
         private void Settings_Click(object sender, EventArgs e)
         {
-            _list.Open.ProcessRun("explorer.exe", "ms-settings:");
+            OpenClass.Open.ProcessRun("explorer.exe", "ms-settings:");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
