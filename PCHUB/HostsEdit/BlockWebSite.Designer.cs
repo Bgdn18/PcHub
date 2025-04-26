@@ -48,10 +48,11 @@
             // 
             // btnBlock
             // 
+            btnBlock.Cursor = Cursors.Hand;
             btnBlock.Font = new Font("Consolas", 9F);
             btnBlock.Location = new Point(12, 76);
             btnBlock.Name = "btnBlock";
-            btnBlock.Size = new Size(423, 45);
+            btnBlock.Size = new Size(423, 27);
             btnBlock.TabIndex = 1;
             btnBlock.Text = "Block";
             btnBlock.UseVisualStyleBackColor = true;
@@ -87,7 +88,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(447, 128);
+            ClientSize = new Size(447, 110);
             Controls.Add(btnBlock);
             Controls.Add(TextBoxBlock);
             Controls.Add(menuStrip1);

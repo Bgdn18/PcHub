@@ -84,6 +84,7 @@
             // btnUnlock
             // 
             btnUnlock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnUnlock.Cursor = Cursors.Hand;
             btnUnlock.Font = new Font("Consolas", 9F);
             btnUnlock.Location = new Point(12, 98);
             btnUnlock.Name = "btnUnlock";
@@ -96,6 +97,7 @@
             // btnLock
             // 
             btnLock.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnLock.Cursor = Cursors.Hand;
             btnLock.Font = new Font("Consolas", 9F);
             btnLock.Location = new Point(12, 127);
             btnLock.Name = "btnLock";

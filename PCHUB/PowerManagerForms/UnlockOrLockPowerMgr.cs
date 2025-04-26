@@ -3,7 +3,6 @@ using Microsoft.Win32;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Security.Principal;
-using PCHUB.Main;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
 

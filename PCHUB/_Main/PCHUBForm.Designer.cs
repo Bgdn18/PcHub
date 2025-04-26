@@ -285,6 +285,7 @@
             // btnToTray
             // 
             btnToTray.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnToTray.Cursor = Cursors.Hand;
             btnToTray.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnToTray.Location = new Point(372, 362);
             btnToTray.Name = "btnToTray";

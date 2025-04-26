@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using Microsoft.Win32;
-using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -187,11 +186,6 @@ namespace PCHUB
                     deleteToolStripMenuItem.Enabled = true;
                 }
             }
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AboutClass.Open.Build(); // информация о программе
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)

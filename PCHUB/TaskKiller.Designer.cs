@@ -136,6 +136,7 @@
             // btnRunNewProcess
             // 
             btnRunNewProcess.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnRunNewProcess.Cursor = Cursors.Hand;
             btnRunNewProcess.Location = new Point(6, 408);
             btnRunNewProcess.Name = "btnRunNewProcess";
             btnRunNewProcess.Size = new Size(107, 23);
@@ -147,6 +148,7 @@
             // btnRefreshProcess
             // 
             btnRefreshProcess.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnRefreshProcess.Cursor = Cursors.Hand;
             btnRefreshProcess.Location = new Point(397, 408);
             btnRefreshProcess.Name = "btnRefreshProcess";
             btnRefreshProcess.Size = new Size(75, 23);
@@ -158,6 +160,7 @@
             // btnEndTask
             // 
             btnEndTask.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnEndTask.Cursor = Cursors.Hand;
             btnEndTask.Location = new Point(478, 408);
             btnEndTask.Name = "btnEndTask";
             btnEndTask.Size = new Size(75, 23);
@@ -196,6 +199,7 @@
             // btnAddAutoStart
             // 
             btnAddAutoStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAddAutoStart.Cursor = Cursors.Hand;
             btnAddAutoStart.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddAutoStart.Location = new Point(6, 409);
             btnAddAutoStart.Name = "btnAddAutoStart";
@@ -208,6 +212,7 @@
             // btnDeleteAutoStart
             // 
             btnDeleteAutoStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnDeleteAutoStart.Cursor = Cursors.Hand;
             btnDeleteAutoStart.Location = new Point(478, 409);
             btnDeleteAutoStart.Name = "btnDeleteAutoStart";
             btnDeleteAutoStart.Size = new Size(75, 23);
@@ -219,6 +224,7 @@
             // btnRefreshAutoStart
             // 
             btnRefreshAutoStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnRefreshAutoStart.Cursor = Cursors.Hand;
             btnRefreshAutoStart.Location = new Point(397, 409);
             btnRefreshAutoStart.Name = "btnRefreshAutoStart";
             btnRefreshAutoStart.Size = new Size(75, 23);

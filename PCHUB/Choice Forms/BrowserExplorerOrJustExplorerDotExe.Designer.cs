@@ -49,6 +49,7 @@
             // 
             // btnBrowseFileExplorer
             // 
+            btnBrowseFileExplorer.Cursor = Cursors.Hand;
             btnBrowseFileExplorer.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnBrowseFileExplorer.Location = new Point(192, 35);
             btnBrowseFileExplorer.Name = "btnBrowseFileExplorer";
@@ -60,6 +61,7 @@
             // 
             // btnFileExplorer
             // 
+            btnFileExplorer.Cursor = Cursors.Hand;
             btnFileExplorer.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnFileExplorer.Location = new Point(12, 35);
             btnFileExplorer.Name = "btnFileExplorer";

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PCHUB.About.Class
+namespace PCHUB
 {
     internal class AboutClass
     {
@@ -18,7 +18,7 @@ namespace PCHUB.About.Class
             {
                 try
                 {
-                    new About().ShowDialog();
+                    new AboutForm().ShowDialog();
                 }
                 catch (Exception ex)
                 {

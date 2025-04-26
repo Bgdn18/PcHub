@@ -65,6 +65,7 @@
             // btnStart
             // 
             btnStart.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnStart.Cursor = Cursors.Hand;
             btnStart.Font = new Font("Consolas", 9F);
             btnStart.Location = new Point(12, 128);
             btnStart.Name = "btnStart";
@@ -77,6 +78,7 @@
             // btnStop
             // 
             btnStop.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnStop.Cursor = Cursors.Hand;
             btnStop.Enabled = false;
             btnStop.Font = new Font("Consolas", 9F);
             btnStop.Location = new Point(12, 157);

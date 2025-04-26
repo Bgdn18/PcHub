@@ -38,6 +38,7 @@
             // 
             // btnUnlock
             // 
+            btnUnlock.Cursor = Cursors.Hand;
             btnUnlock.Font = new Font("Consolas", 9F);
             btnUnlock.Location = new Point(12, 27);
             btnUnlock.Name = "btnUnlock";
@@ -49,6 +50,7 @@
             // 
             // btnLock
             // 
+            btnLock.Cursor = Cursors.Hand;
             btnLock.Font = new Font("Consolas", 9F);
             btnLock.Location = new Point(203, 27);
             btnLock.Name = "btnLock";

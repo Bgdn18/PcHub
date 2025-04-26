@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics;
 using Microsoft.Win32;
-using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -119,11 +118,6 @@ namespace PCHUB
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AboutClass.Open.Build();
         }
     }
 }

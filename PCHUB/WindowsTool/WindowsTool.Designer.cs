@@ -33,7 +33,6 @@
             btnCMD = new Button();
             menuStrip1 = new MenuStrip();
             quitToolStripMenuItem = new ToolStripMenuItem();
-            BuildLabel = new Label();
             btnRegedit = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -81,22 +80,6 @@
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
-            // BuildLabel
-            // 
-            BuildLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            BuildLabel.AutoSize = true;
-            BuildLabel.BackColor = Color.Gray;
-            BuildLabel.Cursor = Cursors.Hand;
-            BuildLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            BuildLabel.ForeColor = Color.White;
-            BuildLabel.Location = new Point(0, 226);
-            BuildLabel.Margin = new Padding(4, 0, 4, 0);
-            BuildLabel.Name = "BuildLabel";
-            BuildLabel.Size = new Size(35, 20);
-            BuildLabel.TabIndex = 28;
-            BuildLabel.Text = "null";
-            BuildLabel.Click += BuildLabel_Click;
-            // 
             // btnRegedit
             // 
             btnRegedit.Cursor = Cursors.Hand;
@@ -116,7 +99,6 @@
             BackColor = Color.White;
             ClientSize = new Size(423, 256);
             Controls.Add(btnRegedit);
-            Controls.Add(BuildLabel);
             Controls.Add(btnCONTROLPANEL);
             Controls.Add(btnCMD);
             Controls.Add(menuStrip1);
@@ -142,7 +124,6 @@
         private Button btnCMD;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem quitToolStripMenuItem;
-        private Label BuildLabel;
         private Button btnRegedit;
     }
 }

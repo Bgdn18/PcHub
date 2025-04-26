@@ -55,6 +55,7 @@
             // 
             // btnResetPolicy
             // 
+            btnResetPolicy.Cursor = Cursors.Hand;
             btnResetPolicy.Font = new Font("Consolas", 9F);
             btnResetPolicy.Location = new Point(12, 110);
             btnResetPolicy.Name = "btnResetPolicy";
@@ -66,6 +67,7 @@
             // 
             // btnCheck
             // 
+            btnCheck.Cursor = Cursors.Hand;
             btnCheck.Font = new Font("Consolas", 9F);
             btnCheck.Location = new Point(12, 49);
             btnCheck.Name = "btnCheck";
@@ -77,6 +79,7 @@
             // 
             // btnUnrestricted
             // 
+            btnUnrestricted.Cursor = Cursors.Hand;
             btnUnrestricted.Font = new Font("Consolas", 9F);
             btnUnrestricted.Location = new Point(304, 110);
             btnUnrestricted.Name = "btnUnrestricted";
@@ -88,6 +91,7 @@
             // 
             // btnRemoteSigned
             // 
+            btnRemoteSigned.Cursor = Cursors.Hand;
             btnRemoteSigned.Font = new Font("Consolas", 9F);
             btnRemoteSigned.Location = new Point(446, 110);
             btnRemoteSigned.Name = "btnRemoteSigned";
@@ -99,6 +103,7 @@
             // 
             // btnAllSigned
             // 
+            btnAllSigned.Cursor = Cursors.Hand;
             btnAllSigned.Font = new Font("Consolas", 9F);
             btnAllSigned.Location = new Point(588, 110);
             btnAllSigned.Name = "btnAllSigned";
@@ -110,6 +115,7 @@
             // 
             // btnRestricted
             // 
+            btnRestricted.Cursor = Cursors.Hand;
             btnRestricted.Font = new Font("Consolas", 9F);
             btnRestricted.Location = new Point(588, 49);
             btnRestricted.Name = "btnRestricted";
@@ -121,6 +127,7 @@
             // 
             // btnBypass
             // 
+            btnBypass.Cursor = Cursors.Hand;
             btnBypass.Font = new Font("Consolas", 9F);
             btnBypass.Location = new Point(446, 49);
             btnBypass.Name = "btnBypass";
@@ -132,6 +139,7 @@
             // 
             // btnUndefined
             // 
+            btnUndefined.Cursor = Cursors.Hand;
             btnUndefined.Font = new Font("Consolas", 9F);
             btnUndefined.Location = new Point(304, 49);
             btnUndefined.Name = "btnUndefined";

@@ -153,6 +153,7 @@
             // FileExplorer
             // 
             FileExplorer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            FileExplorer.Cursor = Cursors.Hand;
             FileExplorer.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FileExplorer.Location = new Point(502, 35);
             FileExplorer.Name = "FileExplorer";
@@ -188,7 +189,7 @@
             btn16DigitCodeFile.UseVisualStyleBackColor = true;
             btn16DigitCodeFile.Click += btn16DigitCodeFile_Click;
             // 
-            // TextFileCreator
+            // Writer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -209,7 +210,7 @@
             MainMenuStrip = menuStrip1;
             MinimizeBox = false;
             MinimumSize = new Size(300, 300);
-            Name = "TextFileCreator";
+            Name = "Writer";
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;

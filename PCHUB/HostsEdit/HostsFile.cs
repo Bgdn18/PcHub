@@ -5,7 +5,6 @@ using System.Security.Principal;
 using System.Text;
 using System.Windows.Forms;
 using PCHUB._Main.Class;
-using PCHUB.Main;
 
 namespace PCHUB
 {

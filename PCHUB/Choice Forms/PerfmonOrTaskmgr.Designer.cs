@@ -66,6 +66,7 @@
             // 
             // btnTaskmgr
             // 
+            btnTaskmgr.Cursor = Cursors.Hand;
             btnTaskmgr.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnTaskmgr.Location = new Point(191, 35);
             btnTaskmgr.Name = "btnTaskmgr";
@@ -77,6 +78,7 @@
             // 
             // btnPerfmon
             // 
+            btnPerfmon.Cursor = Cursors.Hand;
             btnPerfmon.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnPerfmon.Location = new Point(11, 35);
             btnPerfmon.Name = "btnPerfmon";

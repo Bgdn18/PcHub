@@ -3,7 +3,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Debug\net8.0-windows\PCHUB.deps.json
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Debug\net8.0-windows\PCHUB.runtimeconfig.json
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Debug\net8.0-windows\PCHUB.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Debug\net8.0-windows\PCHUB.pdb
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.About.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Delete_files.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.PowerShellPolicyReset.resources
@@ -40,3 +39,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._Main.Uti
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.CmdLineForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.Writer.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.MyProgramList.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.AboutForm.resources

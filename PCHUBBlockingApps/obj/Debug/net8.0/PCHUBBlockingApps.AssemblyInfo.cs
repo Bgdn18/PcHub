@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCHUBBlockingApps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09cda2482d2893feab24d5028dc0cf059ff7ad94")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71f7689b40a3006e99766f5ddf69a586e82b1e96")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCHUBBlockingApps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCHUBBlockingApps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

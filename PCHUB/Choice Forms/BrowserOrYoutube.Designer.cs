@@ -49,6 +49,7 @@
             // 
             // btnYoutube
             // 
+            btnYoutube.Cursor = Cursors.Hand;
             btnYoutube.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnYoutube.Location = new Point(192, 35);
             btnYoutube.Name = "btnYoutube";
@@ -60,6 +61,7 @@
             // 
             // btnBrowser
             // 
+            btnBrowser.Cursor = Cursors.Hand;
             btnBrowser.Font = new Font("Consolas", 9.75F, FontStyle.Bold);
             btnBrowser.Location = new Point(12, 35);
             btnBrowser.Name = "btnBrowser";

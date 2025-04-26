@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PCHUB.Main;
 using PCHUB.WindowsTool.Class;
 
 namespace PCHUB
@@ -19,8 +18,6 @@ namespace PCHUB
         {
             InitializeComponent();
         }
-
-        _list list = new _list();
 
         private void btnFileExplorer_Click(object sender, EventArgs e)
         {

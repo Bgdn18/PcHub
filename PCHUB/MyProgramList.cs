@@ -4,29 +4,48 @@ namespace PCHUB
 {
     public partial class MyProgramList : Form
     {
-        private const string AppDataFolder = "PCHUB"; // Папка в AppData
+        private const string ProgramFolder = "PCHUB"; // Название папки на системном диске
+        private static readonly string? SystemDrive = Path.GetPathRoot(Environment.SystemDirectory);
         private static readonly string SaveFilePath = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            AppDataFolder,
+            SystemDrive!,
+            ProgramFolder,
             "saved_programs.txt"
         );
 
         public MyProgramList()
         {
             InitializeComponent();
-            EnsureAppDataFolderExists();
+            EnsureProgramFolderExists();
             LoadSavedPrograms();
         }
 
-        private void EnsureAppDataFolderExists()
+        private void EnsureProgramFolderExists()
         {
-            string appDataPath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                AppDataFolder
-            );
-            if (!Directory.Exists(appDataPath))
+            string programPath = Path.Combine(SystemDrive!, ProgramFolder);
+            if (!Directory.Exists(programPath))
             {
-                Directory.CreateDirectory(appDataPath);
+                try
+                {
+                    Directory.CreateDirectory(programPath);
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    MessageBox.Show(
+                        "No write access to the system drive. Run as Administrator or choose another location.",
+                        "Access Denied",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                        $"Failed to create directory: {ex.Message}",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
             }
         }
 
@@ -34,19 +53,52 @@ namespace PCHUB
         {
             if (File.Exists(SaveFilePath))
             {
-                string[] programs = File.ReadAllLines(SaveFilePath);
-                listBox1.Items.AddRange(programs);
+                try
+                {
+                    string[] programs = File.ReadAllLines(SaveFilePath);
+                    listBox1.Items.AddRange(programs);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(
+                        $"Failed to load programs: {ex.Message}",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+                }
             }
         }
 
         private void SavePrograms()
         {
-            List<string> programs = new List<string>();
-            foreach (var item in listBox1.Items)
+            try
             {
-                programs.Add(item.ToString()!);
+                List<string> programs = new List<string>();
+                foreach (var item in listBox1.Items)
+                {
+                    programs.Add(item.ToString()!);
+                }
+                File.WriteAllLines(SaveFilePath, programs);
             }
-            File.WriteAllLines(SaveFilePath, programs);
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show(
+                    "No permission to save. Run as Administrator or choose another location.",
+                    "Access Denied",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    $"Failed to save programs: {ex.Message}",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

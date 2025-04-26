@@ -6,7 +6,6 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
 using System.Diagnostics;
-using PCHUB.Main;
 
 namespace PCHUB
 {

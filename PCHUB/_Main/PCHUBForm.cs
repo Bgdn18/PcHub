@@ -5,7 +5,6 @@ using PCHUB._Main;
 using PCHUB._Main.Class;
 using PCHUB.BlockProcces;
 using PCHUB.HostsEdit;
-using PCHUB.Main;
 
 namespace PCHUB
 {
@@ -17,19 +16,7 @@ namespace PCHUB
         {
             InitializeComponent();
             CheckadminStatus();
-            BuildLabel.Text = AboutClass.BuildInfo.ToString();
-
-            string appPath = Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "PCHUB",
-            "Blocker",
-            "PCHUBBlockingApps.exe"
-            );
-
-            if (!File.Exists(appPath)) // Blocker app
-            {
-                btnBlockProcessForm.Enabled = false;
-            };
+            BuildLabel.Text = ($"Version: {AboutClass.BuildInfo.ToString()}");
 
             //TRAY
             trayIcon = new NotifyIcon

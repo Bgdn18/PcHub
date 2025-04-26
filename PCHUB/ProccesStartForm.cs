@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PCHUB.Main;
 using PCHUB.WindowsTool.Class;
 
 namespace PCHUB

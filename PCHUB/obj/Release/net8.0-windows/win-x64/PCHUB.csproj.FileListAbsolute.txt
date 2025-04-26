@@ -479,7 +479,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._Choice_Forms.BrowserOrYoutube.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._Choice_Forms.PerfmonOrTaskmgr.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.LocalUser.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.About.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.otherTools.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PCHUBForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PowerManagement.resources
@@ -500,3 +499,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.CmdLineForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.MyProgramList.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.Writer.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.AboutForm.resources

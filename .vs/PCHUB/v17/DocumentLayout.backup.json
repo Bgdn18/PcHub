@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\krati\\source\\repos\\PCHUB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\_main\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\_main\\_list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\cmdlineform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|solutionrelative:pchub\\cmdlineform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69D5C72E-4414-44FA-9524-1C06B5A25D2A}|PCHUB\\PCHUB.csproj|c:\\users\\krati\\source\\repos\\pchub\\pchub\\_main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,22 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_list.cs",
-              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\_Main\\_list.cs",
-              "RelativeDocumentMoniker": "PCHUB\\_Main\\_list.cs",
-              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\_Main\\_list.cs",
-              "RelativeToolTip": "PCHUB\\_Main\\_list.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T16:30:42.806Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -42,10 +28,23 @@
               "RelativeDocumentMoniker": "PCHUB\\_Main\\Program.cs",
               "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\_Main\\Program.cs",
               "RelativeToolTip": "PCHUB\\_Main\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T16:30:50.958Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CmdLineForm.cs",
+              "DocumentMoniker": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\CmdLineForm.cs",
+              "RelativeDocumentMoniker": "PCHUB\\CmdLineForm.cs",
+              "ToolTip": "C:\\Users\\krati\\source\\repos\\PCHUB\\PCHUB\\CmdLineForm.cs",
+              "RelativeToolTip": "PCHUB\\CmdLineForm.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwGcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:34:09.578Z",
               "EditorCaption": ""
             },
             {

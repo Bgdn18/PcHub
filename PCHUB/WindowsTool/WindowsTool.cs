@@ -1,5 +1,4 @@
 ﻿using PCHUB._Main.Class;
-using PCHUB.Main;
 using PCHUB.WindowsTool.Class;
 
 namespace PCHUB
@@ -9,8 +8,6 @@ namespace PCHUB
         public otherTools()
         {
             InitializeComponent();
-
-            BuildLabel.Text = AboutClass.BuildInfo.ToString();
         }
 
         private void CONTROLPANEL_Click(object sender, EventArgs e)
@@ -27,11 +24,6 @@ namespace PCHUB
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void BuildLabel_Click(object sender, EventArgs e) // информация о билде
-        {
-            AboutClass.Open.Build();
         }
 
         private void btnRegedit_Click(object sender, EventArgs e) // Regedit

@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using PCHUB._Main.Class;
-using PCHUB.Main;
 
 namespace PCHUB
 {

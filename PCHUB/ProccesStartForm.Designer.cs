@@ -47,6 +47,7 @@
             // 
             // btnRun
             // 
+            btnRun.Cursor = Cursors.Hand;
             btnRun.Font = new Font("Consolas", 9F);
             btnRun.Location = new Point(491, 33);
             btnRun.Name = "btnRun";

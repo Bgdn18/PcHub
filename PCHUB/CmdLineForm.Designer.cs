@@ -39,6 +39,7 @@
             // 
             // btnAdd
             // 
+            btnAdd.Cursor = Cursors.Hand;
             btnAdd.Font = new Font("Consolas", 9F);
             btnAdd.Location = new Point(12, 27);
             btnAdd.Name = "btnAdd";
@@ -50,6 +51,7 @@
             // 
             // btnRemove
             // 
+            btnRemove.Cursor = Cursors.Hand;
             btnRemove.Font = new Font("Consolas", 9F);
             btnRemove.Location = new Point(118, 27);
             btnRemove.Name = "btnRemove";

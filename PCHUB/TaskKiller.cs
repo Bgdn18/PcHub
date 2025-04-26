@@ -13,7 +13,6 @@ using Microsoft.Win32;
 using PCHUB._Main;
 using PCHUB._Main.Class;
 using PCHUB.BlockProcces;
-using PCHUB.Main;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PCHUB

@@ -54,6 +54,7 @@
             // btnAdd
             // 
             btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAdd.Cursor = Cursors.Hand;
             btnAdd.Font = new Font("Consolas", 9F);
             btnAdd.Location = new Point(12, 441);
             btnAdd.Name = "btnAdd";
@@ -66,6 +67,7 @@
             // btnDelete
             // 
             btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnDelete.Cursor = Cursors.Hand;
             btnDelete.Font = new Font("Consolas", 9F);
             btnDelete.Location = new Point(93, 441);
             btnDelete.Name = "btnDelete";
@@ -78,6 +80,7 @@
             // btnOpen
             // 
             btnOpen.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnOpen.Cursor = Cursors.Hand;
             btnOpen.Font = new Font("Consolas", 9F);
             btnOpen.Location = new Point(397, 441);
             btnOpen.Name = "btnOpen";

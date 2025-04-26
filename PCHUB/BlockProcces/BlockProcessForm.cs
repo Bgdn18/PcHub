@@ -4,7 +4,6 @@ using System.IO;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using PCHUB._Main.Class;
-using PCHUB.Main;
 
 namespace PCHUB.BlockProcces
 {
@@ -13,10 +12,13 @@ namespace PCHUB.BlockProcces
         private const string AppName = "PCHUBBlocker";
         private const string RegistryRunKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
         private const string SettingsFileName = "blocker_settings.txt";
-        private const string AppDataFolder = "PCHUB";
+        private const string ProgramFolder = "PCHUB"; // Папка на системном диске
+        private const string BlockerSubfolder = "Blocker"; // Подпапка для блокировщика
         private const string BlockerExeName = "PCHUBBlockingApps.exe";
 
-        private readonly string _appDataPath;
+        private readonly string _systemDrive;
+        private readonly string _programFolderPath;
+        private readonly string _blockerFolderPath;
         private readonly string _settingsFilePath;
         private readonly string _blockerAppPath;
 
@@ -24,34 +26,36 @@ namespace PCHUB.BlockProcces
         {
             InitializeComponent();
 
-            //APPDATA
-            _appDataPath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                AppDataFolder);
+            // Определяем системный диск (например, "C:\")
+            _systemDrive = Path.GetPathRoot(Environment.SystemDirectory)!;
 
-            //SETTINGS FILE
-            _settingsFilePath = Path.Combine(_appDataPath, SettingsFileName);
+            // Основная папка (C:\PCHUB\)
+            _programFolderPath = Path.Combine(_systemDrive, ProgramFolder);
 
-            //BLOCKER APP
-            _blockerAppPath = Path.Combine(
-                _appDataPath,
-                "Blocker",
-                BlockerExeName);
+            // Папка блокировщика (C:\PCHUB\Blocker\)
+            _blockerFolderPath = Path.Combine(_programFolderPath, BlockerSubfolder);
+
+            // Файл настроек (C:\PCHUB\blocker_settings.txt)
+            _settingsFilePath = Path.Combine(_programFolderPath, SettingsFileName);
+
+            // Путь к блокировщику (C:\PCHUB\Blocker\PCHUBBlockingApps.exe)
+            _blockerAppPath = Path.Combine(_blockerFolderPath, BlockerExeName);
 
             ValidateBlockerExistence();
             CheckAutoStartStatus();
         }
 
-        private void ValidateBlockerExistence()
+        public bool ValidateBlockerExistence()  // Изменили на public и добавили возвращаемый тип
         {
             if (!File.Exists(_blockerAppPath))
             {
-                MessageBox.Show($"{BlockerExeName} not found in the expected location.",
+                MessageBox.Show($"{BlockerExeName} not found in:\n{_blockerAppPath}",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                Close();
+                return false;  // Возвращаем false если файл не найден
             }
+            return true;  // Возвращаем true если всё в порядке
         }
 
         private void CheckAutoStartStatus()
@@ -112,8 +116,15 @@ namespace PCHUB.BlockProcces
         {
             try
             {
-                Directory.CreateDirectory(_appDataPath);
+                Directory.CreateDirectory(_programFolderPath); // Создаём C:\PCHUB\
                 File.WriteAllText(_settingsFilePath, $"{processes}\n{interval}");
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("No permission to save settings. Run as Administrator.",
+                    "Access Denied",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -268,7 +279,7 @@ namespace PCHUB.BlockProcces
         {
             if (!File.Exists(_settingsFilePath))
             {
-                Directory.CreateDirectory(_appDataPath);
+                Directory.CreateDirectory(_programFolderPath);
                 File.WriteAllText(_settingsFilePath, "process1.exe,process2.exe\n5");
             }
         }
