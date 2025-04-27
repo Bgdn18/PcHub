@@ -4,79 +4,67 @@
     <_LastSelectedProfileId>C:\Users\krati\source\repos\PCHUB\PCHUB\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="BlockProcces\BlockProcessForm.cs">
+    <Compile Update="System\BlockProcces\BlockProcessForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CmdLineForm.cs">
+    <Compile Update="System\ReplaceInSystem\CmdLineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HostsEdit\BlockWebSite.cs">
+    <Compile Update="System\HostsEdit\BlockHostFile\BlockWebSite.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MyProgramList.cs">
+    <Compile Update="System\LocalUserForm\LocalUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Choice Forms\PerfmonOrTaskmgr.cs">
+    <Compile Update="PCHUB\MyProgramList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="About\AboutForm.cs">
+    <Compile Update="PCHUB\Choice Forms\PerfmonOrTaskmgr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ProccesStartForm.cs">
+    <Compile Update="PCHUB\About\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SystemUnlocker.cs">
+    <Compile Update="System\ProccesStartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UnInstaller.cs">
+    <Compile Update="System\SystemUnlocker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Choice Forms\BrowserOrYoutube.cs">
+    <Compile Update="System\UnInstaller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="WindowsTool\WindowsTool.cs">
+    <Compile Update="System\WindowsTool\WindowsTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
+    <Compile Update="PCHUB\Choice Forms\BrowserExplorerOrJustExplorerDotExe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Delete files.cs">
+    <Compile Update="System\Delete files.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="HostsEdit\HostsFile.cs">
+    <Compile Update="System\HostsEdit\ViewHostFile\HostsFile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PowerShellPolicyReset.cs">
+    <Compile Update="System\PowerShellPolicyReset.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="TaskMgrControl.cs">
+    <Compile Update="System\ReplaceInSystem\UtilManForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UtilManForm.cs">
+    <Compile Update="System\PowerManagerForms\UnlockOrLockPowerMgr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PowerManagerForms\UnlockOrLockPowerMgr.cs">
+    <Compile Update="PCHUB\_Main\PCHUBForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Browsers Forms\Browse.cs">
+    <Compile Update="System\PowerManagerForms\PowerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LocalUserForm\LocalUser.cs">
+    <Compile Update="System\TaskKiller.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="_Main\PCHUBForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="PowerManagerForms\PowerManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TaskKiller.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Writer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Browsers Forms\YouTube.cs">
+    <Compile Update="PCHUB\Writer.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
