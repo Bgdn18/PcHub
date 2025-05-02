@@ -462,7 +462,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\zh-Ha
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\zh-Hant\UIAutomationTypes.resources.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\zh-Hant\WindowsBase.resources.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\zh-Hant\WindowsFormsIntegration.resources.dll
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.BlockProcces.BlockProcessForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.Delete_files.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PowerShellPolicyReset.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.ProccesStartForm.resources
@@ -496,3 +495,4 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PowerSpace.PowerManagement.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PowerSpace.UnlockPowerMgrForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.WinToolSpace.WinToolsForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.WinLogonSpace.WinLogonEditForm.resources
