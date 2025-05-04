@@ -232,7 +232,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\creat
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\hostfxr.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\hostpolicy.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\mscordaccore.dll
-C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\mscordaccore_amd64_amd64_8.0.1425.11118.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\mscordbi.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\mscorrc.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\msquic.dll
@@ -469,7 +468,6 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.SystemUnlocker.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.TaskKiller.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.UnInstaller.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PCHUBForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.csproj.GenerateResource.cache
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.AssemblyInfoInputs.cache
@@ -484,11 +482,7 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\ref\PCHUB.dll
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._Main.UtilManForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.CmdLineForm.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.MyProgramList.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.Writer.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.About.AboutForm.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.ChoiceSpace.BrowserExplorerOrJustExplorerDotExe.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.ChoiceSpace.PerfmonOrTaskmgr.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.HostsSpace.BlockWebSite.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.HostsSpace.HostsFile.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.LocalUserSpace.LocalUserForm.resources
@@ -496,3 +490,10 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PowerSpace.UnlockPowerMgrForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.WinToolSpace.WinToolsForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.WinLogonSpace.WinLogonEditForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\bin\Release\net8.0-windows\win-x64\mscordaccore_amd64_amd64_8.0.1525.16413.dll
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.ChoiceSpace.BrowseOrExplorer.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.ChoiceSpace.ResmonOrTaskmgr.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.MyProgramListForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.WriterForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB._PCHUB_Forms._Main.PCHubForm.resources
+C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Release\net8.0-windows\win-x64\PCHUB.PCHubFormOld.resources

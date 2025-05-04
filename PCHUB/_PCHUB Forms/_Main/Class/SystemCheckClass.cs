@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Principal;
 
 namespace PCHUB.SystemCheckSpace
 {
     internal class SystemCheckClass
     {
-            public static bool isadmin() // проверка на то является ли пользователь админом
+        public static bool isadmin() // вернет значение true или false от того является ли пользователь адмном
+        {
+            return new WindowsPrincipal(WindowsIdentity.GetCurrent())
+                .IsInRole(WindowsBuiltInRole.Administrator);
+        }
+
+        public static void CheckAdminStatus() // если isadmin == false тогда выдает ошибку
+        {
+            if (!isadmin())
             {
-                return new WindowsPrincipal(WindowsIdentity.GetCurrent())
-                    .IsInRole(WindowsBuiltInRole.Administrator);
+                MessageBoxClassSpace.MessageBoxShowClass.ShowErrorMessage("No administrator rights");
+                Environment.Exit(0);
             }
+        }
     }
 }

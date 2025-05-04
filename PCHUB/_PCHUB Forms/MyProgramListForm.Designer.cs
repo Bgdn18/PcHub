@@ -29,37 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyProgramListForm));
-            ListBoxMyProgram = new System.Windows.Forms.ListBox();
-            btnAdd = new System.Windows.Forms.Button();
-            btnDelete = new System.Windows.Forms.Button();
-            btnOpen = new System.Windows.Forms.Button();
-            menuStrip1 = new System.Windows.Forms.MenuStrip();
-            quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            txtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            btnRefresh = new System.Windows.Forms.Button();
+            ListBoxMyProgram = new ListBox();
+            btnAdd = new Button();
+            btnDelete = new Button();
+            btnOpen = new Button();
+            menuStrip1 = new MenuStrip();
+            quitToolStripMenuItem = new ToolStripMenuItem();
+            txtFileToolStripMenuItem = new ToolStripMenuItem();
+            btnRefresh = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // ListBoxMyProgram
             // 
-            ListBoxMyProgram.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-            ListBoxMyProgram.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+            ListBoxMyProgram.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ListBoxMyProgram.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ListBoxMyProgram.FormattingEnabled = true;
             ListBoxMyProgram.ItemHeight = 14;
-            ListBoxMyProgram.Location = new System.Drawing.Point(12, 40);
+            ListBoxMyProgram.Location = new Point(12, 40);
             ListBoxMyProgram.Name = "ListBoxMyProgram";
-            ListBoxMyProgram.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            ListBoxMyProgram.Size = new System.Drawing.Size(460, 396);
+            ListBoxMyProgram.SelectionMode = SelectionMode.MultiExtended;
+            ListBoxMyProgram.Size = new Size(460, 396);
             ListBoxMyProgram.TabIndex = 0;
             // 
             // btnAdd
             // 
-            btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-            btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnAdd.Font = new System.Drawing.Font("Consolas", 9F);
-            btnAdd.Location = new System.Drawing.Point(12, 441);
+            btnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatStyle = FlatStyle.System;
+            btnAdd.Font = new Font("Consolas", 9F);
+            btnAdd.Location = new Point(12, 441);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new System.Drawing.Size(75, 23);
+            btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 1;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -67,12 +68,13 @@
             // 
             // btnDelete
             // 
-            btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-            btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnDelete.Font = new System.Drawing.Font("Consolas", 9F);
-            btnDelete.Location = new System.Drawing.Point(93, 441);
+            btnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnDelete.Cursor = Cursors.Hand;
+            btnDelete.FlatStyle = FlatStyle.System;
+            btnDelete.Font = new Font("Consolas", 9F);
+            btnDelete.Location = new Point(93, 441);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new System.Drawing.Size(75, 23);
+            btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -80,74 +82,77 @@
             // 
             // btnOpen
             // 
-            btnOpen.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
-            btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnOpen.Font = new System.Drawing.Font("Consolas", 9F);
-            btnOpen.Location = new System.Drawing.Point(397, 441);
+            btnOpen.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnOpen.Cursor = Cursors.Hand;
+            btnOpen.FlatStyle = FlatStyle.System;
+            btnOpen.Font = new Font("Consolas", 9F);
+            btnOpen.Location = new Point(397, 441);
             btnOpen.Name = "btnOpen";
-            btnOpen.Size = new System.Drawing.Size(75, 23);
-            btnOpen.TabIndex = 3;
+            btnOpen.Size = new Size(75, 23);
+            btnOpen.TabIndex = 4;
             btnOpen.Text = "Open";
             btnOpen.UseVisualStyleBackColor = true;
             btnOpen.Click += btnOpen_Click;
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)((byte)224)), ((int)((byte)224)), ((int)((byte)224)));
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { quitToolStripMenuItem, txtFileToolStripMenuItem });
-            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, txtFileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new System.Drawing.Size(484, 24);
+            menuStrip1.Size = new Size(484, 24);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "menuStrip1";
             // 
             // quitToolStripMenuItem
             // 
-            quitToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F);
+            quitToolStripMenuItem.Font = new Font("Consolas", 9F);
             quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            quitToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            quitToolStripMenuItem.Size = new Size(47, 20);
             quitToolStripMenuItem.Text = "Quit";
             quitToolStripMenuItem.Click += quitToolStripMenuItem_Click;
             // 
             // txtFileToolStripMenuItem
             // 
-            txtFileToolStripMenuItem.Font = new System.Drawing.Font("Consolas", 9F);
+            txtFileToolStripMenuItem.Font = new Font("Consolas", 9F);
             txtFileToolStripMenuItem.Name = "txtFileToolStripMenuItem";
-            txtFileToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            txtFileToolStripMenuItem.Size = new Size(68, 20);
             txtFileToolStripMenuItem.Text = "TxtFile";
             txtFileToolStripMenuItem.Click += txtFileToolStripMenuItem_Click;
             // 
             // btnRefresh
             // 
-            btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-            btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnRefresh.Font = new System.Drawing.Font("Consolas", 9F);
-            btnRefresh.Location = new System.Drawing.Point(174, 441);
+            btnRefresh.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnRefresh.Cursor = Cursors.Hand;
+            btnRefresh.FlatStyle = FlatStyle.System;
+            btnRefresh.Font = new Font("Consolas", 9F);
+            btnRefresh.Location = new Point(174, 441);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new System.Drawing.Size(75, 23);
-            btnRefresh.TabIndex = 5;
+            btnRefresh.Size = new Size(75, 23);
+            btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Refresh";
             btnRefresh.UseVisualStyleBackColor = true;
             btnRefresh.Click += btnRefresh_Click;
             // 
-            // MyProgramList
+            // MyProgramListForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(484, 476);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(484, 476);
             Controls.Add(btnRefresh);
             Controls.Add(btnOpen);
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(ListBoxMyProgram);
             Controls.Add(menuStrip1);
-            Icon = ((System.Drawing.Icon)resources.GetObject("$this.Icon"));
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             MinimizeBox = false;
-            MinimumSize = new System.Drawing.Size(300, 300);
+            MinimumSize = new Size(300, 300);
+            Name = "MyProgramListForm";
             ShowIcon = false;
             ShowInTaskbar = false;
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "My program list";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

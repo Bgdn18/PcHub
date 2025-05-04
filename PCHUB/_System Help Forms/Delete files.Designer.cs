@@ -35,6 +35,7 @@
             txtPath.Multiline = true;
             txtPath.Name = "txtPath";
             txtPath.PlaceholderText = "Path to File/Folder";
+            txtPath.ScrollBars = ScrollBars.Both;
             txtPath.Size = new Size(357, 75);
             txtPath.TabIndex = 0;
             // 
@@ -109,6 +110,7 @@
             MainMenuStrip = menuStrip1;
             MaximizeBox = false;
             MinimizeBox = false;
+            MinimumSize = new Size(268, 158);
             Name = "Delete_files";
             ShowIcon = false;
             ShowInTaskbar = false;

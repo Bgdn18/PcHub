@@ -35,17 +35,18 @@
             menuStrip1 = new MenuStrip();
             quitToolStripMenuItem = new ToolStripMenuItem();
             regEditToolStripMenuItem = new ToolStripMenuItem();
+            ThreeDot = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // TextBoxLogon
             // 
-            TextBoxLogon.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            TextBoxLogon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             TextBoxLogon.Font = new Font("Consolas", 9F);
-            TextBoxLogon.Location = new Point(12, 33);
+            TextBoxLogon.Location = new Point(12, 27);
             TextBoxLogon.Multiline = true;
             TextBoxLogon.Name = "TextBoxLogon";
-            TextBoxLogon.Size = new Size(425, 63);
+            TextBoxLogon.Size = new Size(340, 75);
             TextBoxLogon.TabIndex = 0;
             // 
             // btnSave
@@ -53,7 +54,7 @@
             btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnSave.Cursor = Cursors.Hand;
             btnSave.Font = new Font("Consolas", 9F);
-            btnSave.Location = new Point(12, 101);
+            btnSave.Location = new Point(12, 107);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(100, 25);
             btnSave.TabIndex = 1;
@@ -66,7 +67,7 @@
             btnReset.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnReset.Cursor = Cursors.Hand;
             btnReset.Font = new Font("Consolas", 9F);
-            btnReset.Location = new Point(337, 101);
+            btnReset.Location = new Point(251, 108);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(100, 25);
             btnReset.TabIndex = 2;
@@ -80,7 +81,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, regEditToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(449, 24);
+            menuStrip1.Size = new Size(409, 24);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -98,11 +99,25 @@
             regEditToolStripMenuItem.Text = "RegEdit";
             regEditToolStripMenuItem.Click += regEditToolStripMenuItem_Click;
             // 
+            // ThreeDot
+            // 
+            ThreeDot.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            ThreeDot.Cursor = Cursors.Hand;
+            ThreeDot.Font = new Font("Consolas", 9F);
+            ThreeDot.Location = new Point(358, 27);
+            ThreeDot.Name = "ThreeDot";
+            ThreeDot.Size = new Size(39, 22);
+            ThreeDot.TabIndex = 4;
+            ThreeDot.Text = "...";
+            ThreeDot.UseVisualStyleBackColor = true;
+            ThreeDot.Click += ThreeDot_Click;
+            // 
             // WinLogonEditForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(449, 136);
+            ClientSize = new Size(409, 143);
+            Controls.Add(ThreeDot);
             Controls.Add(btnReset);
             Controls.Add(btnSave);
             Controls.Add(TextBoxLogon);
@@ -112,7 +127,7 @@
             MaximizeBox = false;
             MaximumSize = new Size(1300, 195);
             MinimizeBox = false;
-            MinimumSize = new Size(465, 175);
+            MinimumSize = new Size(288, 130);
             Name = "WinLogonEditForm";
             ShowIcon = false;
             ShowInTaskbar = false;
@@ -132,5 +147,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ToolStripMenuItem regEditToolStripMenuItem;
+        private Button ThreeDot;
     }
 }

@@ -37,4 +37,3 @@ C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.MyProgram
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.WriterForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._PCHUB_Forms._Main.PCHubForm.resources
 C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB.PCHubFormOld.resources
-C:\Users\krati\source\repos\PCHUB\PCHUB\obj\Debug\net8.0-windows\PCHUB._PCHUB_Forms._Main.HelpForm.resources

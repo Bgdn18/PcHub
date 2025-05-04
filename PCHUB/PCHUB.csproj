@@ -7,8 +7,12 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>Resources\commandprompt_comman_2180.ico</ApplicationIcon>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationManifest>PCHub.manifest</ApplicationManifest>
   </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Remove="app.manifest" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include="Resources\commandprompt_comman_2180.ico" />

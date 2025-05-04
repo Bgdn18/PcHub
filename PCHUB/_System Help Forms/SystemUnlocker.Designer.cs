@@ -76,9 +76,9 @@
             chkTaskmgr.Font = new Font("Consolas", 9F);
             chkTaskmgr.Location = new Point(12, 75);
             chkTaskmgr.Name = "chkTaskmgr";
-            chkTaskmgr.Size = new Size(68, 18);
+            chkTaskmgr.Size = new Size(75, 18);
             chkTaskmgr.TabIndex = 2;
-            chkTaskmgr.Text = "TakMgr";
+            chkTaskmgr.Text = "TaskMgr";
             chkTaskmgr.UseVisualStyleBackColor = true;
             // 
             // btnUnlock

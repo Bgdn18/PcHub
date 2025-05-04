@@ -64,7 +64,7 @@
             btnTaskMGR.Location = new Point(178, 118);
             btnTaskMGR.Name = "btnTaskMGR";
             btnTaskMGR.Size = new Size(125, 35);
-            btnTaskMGR.TabIndex = 6;
+            btnTaskMGR.TabIndex = 8;
             btnTaskMGR.Text = "Taskmgr\r\nOr Resmon";
             btnTaskMGR.UseVisualStyleBackColor = false;
             btnTaskMGR.Click += TaskManager_Click;
@@ -107,7 +107,7 @@
             btnTxtWriter.Location = new Point(45, 118);
             btnTxtWriter.Name = "btnTxtWriter";
             btnTxtWriter.Size = new Size(125, 35);
-            btnTxtWriter.TabIndex = 10;
+            btnTxtWriter.TabIndex = 7;
             btnTxtWriter.Text = "Writer";
             btnTxtWriter.UseVisualStyleBackColor = false;
             btnTxtWriter.Click += TxtWriter_Click;
@@ -124,7 +124,7 @@
             btnTaskkiller.Margin = new Padding(4, 3, 4, 3);
             btnTaskkiller.Name = "btnTaskkiller";
             btnTaskkiller.Size = new Size(125, 35);
-            btnTaskkiller.TabIndex = 18;
+            btnTaskkiller.TabIndex = 5;
             btnTaskkiller.Text = "TaskKiller";
             btnTaskkiller.UseVisualStyleBackColor = false;
             btnTaskkiller.Click += Taskkiller_Click;
@@ -140,7 +140,7 @@
             btnFileExplorer.Location = new Point(310, 118);
             btnFileExplorer.Name = "btnFileExplorer";
             btnFileExplorer.Size = new Size(125, 35);
-            btnFileExplorer.TabIndex = 23;
+            btnFileExplorer.TabIndex = 9;
             btnFileExplorer.Text = "Browse Explorer \r\nOr File Explorer";
             btnFileExplorer.UseVisualStyleBackColor = false;
             btnFileExplorer.Click += FileExplorer_Click;
@@ -156,7 +156,7 @@
             btnAddLocalUser.Location = new Point(45, 36);
             btnAddLocalUser.Name = "btnAddLocalUser";
             btnAddLocalUser.Size = new Size(125, 35);
-            btnAddLocalUser.TabIndex = 32;
+            btnAddLocalUser.TabIndex = 1;
             btnAddLocalUser.Text = "Add Local User";
             btnAddLocalUser.UseVisualStyleBackColor = false;
             btnAddLocalUser.Click += btnLocalUser_Click;
@@ -173,7 +173,7 @@
             BuildLabel.Margin = new Padding(4, 0, 4, 0);
             BuildLabel.Name = "BuildLabel";
             BuildLabel.Size = new Size(35, 20);
-            BuildLabel.TabIndex = 36;
+            BuildLabel.TabIndex = 18;
             BuildLabel.Text = "null";
             BuildLabel.Click += btnbuildhelp_Click;
             // 
@@ -189,7 +189,7 @@
             btnPowerMgr.Margin = new Padding(4, 3, 4, 3);
             btnPowerMgr.Name = "btnPowerMgr";
             btnPowerMgr.Size = new Size(125, 35);
-            btnPowerMgr.TabIndex = 37;
+            btnPowerMgr.TabIndex = 4;
             btnPowerMgr.Text = "Power \r\nmanagement";
             btnPowerMgr.UseVisualStyleBackColor = false;
             btnPowerMgr.Click += btnPowerMgr_Click;
@@ -206,7 +206,7 @@
             btnHostsFile.Margin = new Padding(4, 3, 4, 3);
             btnHostsFile.Name = "btnHostsFile";
             btnHostsFile.Size = new Size(125, 35);
-            btnHostsFile.TabIndex = 39;
+            btnHostsFile.TabIndex = 3;
             btnHostsFile.Text = "HostsFile";
             btnHostsFile.UseVisualStyleBackColor = false;
             btnHostsFile.Click += btnHostsFile_Click;
@@ -223,7 +223,7 @@
             btnPowerShellPolicyManager.Margin = new Padding(4, 3, 4, 3);
             btnPowerShellPolicyManager.Name = "btnPowerShellPolicyManager";
             btnPowerShellPolicyManager.Size = new Size(125, 35);
-            btnPowerShellPolicyManager.TabIndex = 40;
+            btnPowerShellPolicyManager.TabIndex = 6;
             btnPowerShellPolicyManager.Text = "PowerShell Policy Manager";
             btnPowerShellPolicyManager.UseVisualStyleBackColor = false;
             btnPowerShellPolicyManager.Click += btnPowerShellPolicyManager_Click;
@@ -240,7 +240,7 @@
             btnTools.Margin = new Padding(4, 3, 4, 3);
             btnTools.Name = "btnTools";
             btnTools.Size = new Size(100, 25);
-            btnTools.TabIndex = 44;
+            btnTools.TabIndex = 17;
             btnTools.Text = "Win...";
             btnTools.UseVisualStyleBackColor = false;
             btnTools.Click += btnTools_Click;
@@ -257,7 +257,7 @@
             btnFileDelete.Margin = new Padding(4, 3, 4, 3);
             btnFileDelete.Name = "btnFileDelete";
             btnFileDelete.Size = new Size(126, 35);
-            btnFileDelete.TabIndex = 46;
+            btnFileDelete.TabIndex = 2;
             btnFileDelete.Text = "File Delete";
             btnFileDelete.UseVisualStyleBackColor = false;
             btnFileDelete.Click += btnFileDelete_Click;
@@ -273,7 +273,7 @@
             btnUninstaller.Location = new Point(45, 159);
             btnUninstaller.Name = "btnUninstaller";
             btnUninstaller.Size = new Size(125, 35);
-            btnUninstaller.TabIndex = 47;
+            btnUninstaller.TabIndex = 10;
             btnUninstaller.Text = "UnInstaller";
             btnUninstaller.UseVisualStyleBackColor = false;
             btnUninstaller.Click += btnUninstaller_Click;
@@ -290,7 +290,7 @@
             UnlockSystem.Margin = new Padding(4, 3, 4, 3);
             UnlockSystem.Name = "UnlockSystem";
             UnlockSystem.Size = new Size(126, 35);
-            UnlockSystem.TabIndex = 49;
+            UnlockSystem.TabIndex = 11;
             UnlockSystem.Text = "System Unlocker";
             UnlockSystem.UseVisualStyleBackColor = false;
             UnlockSystem.Click += UnlockSystem_Click;
@@ -307,7 +307,7 @@
             btnBlockWebSite.Margin = new Padding(4, 3, 4, 3);
             btnBlockWebSite.Name = "btnBlockWebSite";
             btnBlockWebSite.Size = new Size(125, 35);
-            btnBlockWebSite.TabIndex = 52;
+            btnBlockWebSite.TabIndex = 12;
             btnBlockWebSite.Text = "Block Any WebSite";
             btnBlockWebSite.UseVisualStyleBackColor = false;
             btnBlockWebSite.Click += btnBlockWebSite_Click;
@@ -324,7 +324,7 @@
             btnUtilMan.Margin = new Padding(4, 3, 4, 3);
             btnUtilMan.Name = "btnUtilMan";
             btnUtilMan.Size = new Size(125, 35);
-            btnUtilMan.TabIndex = 53;
+            btnUtilMan.TabIndex = 13;
             btnUtilMan.Text = "Add To UtilMan";
             btnUtilMan.UseVisualStyleBackColor = false;
             btnUtilMan.Click += btnUtilMan_Click;
@@ -341,7 +341,7 @@
             btnCmdLine.Margin = new Padding(4, 3, 4, 3);
             btnCmdLine.Name = "btnCmdLine";
             btnCmdLine.Size = new Size(125, 35);
-            btnCmdLine.TabIndex = 54;
+            btnCmdLine.TabIndex = 14;
             btnCmdLine.Text = "Add To CmdLine";
             btnCmdLine.UseVisualStyleBackColor = false;
             btnCmdLine.Click += btnCmdLine_Click;
@@ -358,7 +358,7 @@
             btnMyProgramList.Margin = new Padding(4, 3, 4, 3);
             btnMyProgramList.Name = "btnMyProgramList";
             btnMyProgramList.Size = new Size(100, 25);
-            btnMyProgramList.TabIndex = 55;
+            btnMyProgramList.TabIndex = 16;
             btnMyProgramList.Text = "My programs";
             btnMyProgramList.UseVisualStyleBackColor = false;
             btnMyProgramList.Click += btnMyProgramList_Click;
@@ -375,7 +375,7 @@
             btnWinLogon.Margin = new Padding(4, 3, 4, 3);
             btnWinLogon.Name = "btnWinLogon";
             btnWinLogon.Size = new Size(125, 35);
-            btnWinLogon.TabIndex = 56;
+            btnWinLogon.TabIndex = 15;
             btnWinLogon.Text = "WinLogon";
             btnWinLogon.UseVisualStyleBackColor = false;
             btnWinLogon.Click += btnWinLogon_Click;

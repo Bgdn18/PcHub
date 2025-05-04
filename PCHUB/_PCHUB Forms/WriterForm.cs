@@ -18,9 +18,6 @@ namespace PCHUB
             InitializeComponent();
         }
 
-        private void btnCreateFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.None);
-        private void btnBinaryFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.Binary);
-        private void btn16DigitCodeFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.Hex);
 
         private void CreateFileWithConversion(ConversionType conversionType)
         {
@@ -124,5 +121,8 @@ namespace PCHUB
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+        private void btnCreateFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.None);
+        private void btnBinaryFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.Binary);
+        private void btn16DigitCodeFile_Click(object sender, EventArgs e) => CreateFileWithConversion(ConversionType.Hex);
     }
 }

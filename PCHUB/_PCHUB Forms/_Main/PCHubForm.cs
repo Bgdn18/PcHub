@@ -1,5 +1,4 @@
-﻿using System.Windows.Forms;
-using PCHUB._Main;
+﻿using PCHUB._Main;
 using PCHUB.About;
 using PCHUB.ChoiceSpace;
 using PCHUB.HostsSpace;
@@ -12,35 +11,84 @@ namespace PCHUB._PCHUB_Forms._Main
 {
     public partial class PCHubForm : Form
     {
+        #region PCHubMenuItems
+
+        /// <summary>
+        /// Константы для пунктов меню
+        /// </summary>
+        private static class PCHubMenuItems
+        {
+            public const string AddLocalUser = "Add Local User";
+            public const string AddToCmdLine = "Add To CmdLine";
+            public const string AddToUtilMan = "Add to UtilMan";
+            public const string BlockAnyWebSite = "Block any WebSite";
+            public const string BrowseOrFileExplorer = "Browse Or File Explorer";
+            public const string FileDelete = "File Delete";
+            public const string HostFile = "Host File";
+            public const string PowerShellPolicyManager = "PowerShell Policy Manager";
+            public const string PowerManagement = "Power management";
+            public const string SystemUnlocker = "System Unlocker";
+            public const string TaskKiller = "Taskkiller";
+            public const string Uninstaller = "Uninstaller";
+            public const string WinLogon = "WinLogon";
+            public const string Writer = "Writer";
+        }
+
+        #endregion
+
         public PCHubForm()
         {
             InitializeComponent();
 
-            PCHubItemsListBox.KeyDown += (s, e) =>
-            {
-                switch (e.KeyCode)
-                {
-                    case Keys.Enter:
-                        btnOpen_Click(null!, null!);
-                        break;
-                }
+            SystemCheckSpace.SystemCheckClass.CheckAdminStatus(); // Выдаст ошибку если нет прав админа
 
-                switch (e.KeyCode)
-                {
-                    case Keys.OemPeriod:
-                        OpenClassSpace.OpenClass.ShowForm<HelpForm>();
-                        break;
-                }
-            };
+            InitializeListBoxSorting();
+            SetupEventHandlers();
+        }
 
+        #region Initialization Methods
 
+        #region InitializeListBoxSorting
+
+        /// <summary>
+        /// Сортирует PCHubItemsListBox по алфавиту
+        /// </summary>
+        private void InitializeListBoxSorting()
+        {
             var items = PCHubItemsListBox.Items.Cast<string>().ToList();
             items.Sort();
             PCHubItemsListBox.Items.Clear();
             PCHubItemsListBox.Items.AddRange(items.ToArray());
         }
+        #endregion
 
-        private void btnOpen_Click(object sender, EventArgs e)
+        #region SetupEventHandlers
+
+        /// <summary>
+        /// Обрабатывает нажатие на Enter внутри списка
+        /// </summary>
+        private void SetupEventHandlers()
+        {
+            PCHubItemsListBox.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    HandleSelectedItem();
+                }
+            };
+        }
+        #endregion
+
+        #endregion
+
+        #region Core Logic
+
+        #region HandleSelectedItem
+
+        /// <summary>
+        /// Обрабатывает открытие выбранного предмета в списке засчет ProcessSelectedItem
+        /// </summary>
+        private void HandleSelectedItem()
         {
             if (PCHubItemsListBox.SelectedItem == null)
             {
@@ -49,63 +97,71 @@ namespace PCHUB._PCHUB_Forms._Main
             }
 
             string selectedItem = PCHubItemsListBox.SelectedItem.ToString()!;
+            ProcessSelectedItem(selectedItem);
+        }
 
+        #endregion
+
+        #region ProcessSelectedItem
+
+        private void ProcessSelectedItem(string selectedItem)
+        {
             switch (selectedItem)
             {
-                case "Add Local User":
+                case PCHubMenuItems.AddLocalUser:
                     OpenClassSpace.OpenClass.ShowForm<LocalUserForm>();
                     break;
 
-                case "File Delete":
+                case PCHubMenuItems.FileDelete:
                     OpenClassSpace.OpenClass.ShowForm<Delete_files>();
                     break;
 
-                case "Host File":
+                case PCHubMenuItems.HostFile:
                     OpenClassSpace.OpenClass.ShowForm<HostsFile>();
                     break;
 
-                case "Power management":
+                case PCHubMenuItems.PowerManagement:
                     OpenClassSpace.OpenClass.ShowForm<PowerManagement>();
                     break;
 
-                case "Taskkiller":
+                case PCHubMenuItems.TaskKiller:
                     OpenClassSpace.OpenClass.ShowForm<TaskKiller>();
                     break;
 
-                case "PowerShell Policy Manager":
+                case PCHubMenuItems.PowerShellPolicyManager:
                     OpenClassSpace.OpenClass.ShowForm<PowerShellPolicyReset>();
                     break;
 
-                case "Writer":
+                case PCHubMenuItems.Writer:
                     OpenClassSpace.OpenClass.ShowForm<WriterForm>();
                     break;
 
-                case "Taskmgr Or Resmon":
-                    OpenClassSpace.OpenClass.ShowForm<ResmonOrTaskmgr>();
-                    break;
-
-                case "Browse Or File Explorer":
+                case PCHubMenuItems.BrowseOrFileExplorer:
                     OpenClassSpace.OpenClass.ShowForm<BrowseOrExplorer>();
                     break;
 
-                case "Uninstaller":
+                case PCHubMenuItems.Uninstaller:
                     OpenClassSpace.OpenClass.ShowForm<UnInstaller>();
                     break;
 
-                case "System Unlocker":
+                case PCHubMenuItems.SystemUnlocker:
                     OpenClassSpace.OpenClass.ShowForm<SystemUnlocker>();
                     break;
 
-                case "Block any WebSite":
+                case PCHubMenuItems.BlockAnyWebSite:
                     OpenClassSpace.OpenClass.ShowForm<HostsSpace.BlockWebSite>();
                     break;
 
-                case "Add to UtilMan":
-                    OpenClassSpace.OpenClass.ShowForm<UtilManForm>();
+                case PCHubMenuItems.AddToUtilMan:
+                    OpenClassSpace.OpenClass.ShowForm<UtilManForm>(); // Замена утилиты управления Windows
                     break;
 
-                case "Add To CmdLine WinLogon":
-                    OpenClassSpace.OpenClass.ShowForm<WinLogonEditForm>();
+                case PCHubMenuItems.AddToCmdLine:
+                    OpenClassSpace.OpenClass.ShowForm<CmdLineForm>(); // Добавление в командную строку
+                    break;
+
+                case PCHubMenuItems.WinLogon:
+                    OpenClassSpace.OpenClass.ShowForm<WinLogonEditForm>(); // Редактирование WinLogon
                     break;
 
                 default:
@@ -113,15 +169,24 @@ namespace PCHUB._PCHUB_Forms._Main
                     break;
             }
         }
+        #endregion
 
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+        #endregion
+
+        #region Buttons Event Handlers
+
+        private void btnOpen_Click(object sender, EventArgs e) => HandleSelectedItem();
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e) => Environment.Exit(0);
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e) => AboutClass.ShowAboutDialog();
 
-        private void customProgramsToolStripMenuItem_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<MyProgramListForm>();
-
-        private void winToolsToolStripMenuItem_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<WinToolsForm>();
-
         private void oldMenuToolStripMenuItem_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<PCHubFormOld>();
+
+        private void btnWinTool_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<WinToolsForm>();
+
+        private void btnMyProgramsList_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<MyProgramListForm>();
+
+        #endregion
     }
 }

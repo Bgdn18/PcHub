@@ -33,12 +33,11 @@
             menuStrip1 = new MenuStrip();
             quitToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
-            customProgramsToolStripMenuItem = new ToolStripMenuItem();
-            winToolsToolStripMenuItem = new ToolStripMenuItem();
             oldMenuToolStripMenuItem = new ToolStripMenuItem();
             PCHubItemsListBox = new ListBox();
             btnOpen = new Button();
-            HelpLabel = new Label();
+            btnWinTool = new Button();
+            btnMyProgramsList = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,7 +55,6 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { quitToolStripMenuItem, aboutToolStripMenuItem, openToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.RenderMode = ToolStripRenderMode.System;
             menuStrip1.Size = new Size(484, 24);
             menuStrip1.TabIndex = 58;
             menuStrip1.Text = "menuStrip1";
@@ -71,72 +69,81 @@
             // 
             // openToolStripMenuItem
             // 
-            openToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { customProgramsToolStripMenuItem, winToolsToolStripMenuItem, oldMenuToolStripMenuItem });
+            openToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { oldMenuToolStripMenuItem });
             openToolStripMenuItem.Name = "openToolStripMenuItem";
             openToolStripMenuItem.Size = new Size(48, 20);
             openToolStripMenuItem.Text = "Open";
             // 
-            // customProgramsToolStripMenuItem
-            // 
-            customProgramsToolStripMenuItem.Name = "customProgramsToolStripMenuItem";
-            customProgramsToolStripMenuItem.Size = new Size(170, 22);
-            customProgramsToolStripMenuItem.Text = "Custom programs";
-            customProgramsToolStripMenuItem.Click += customProgramsToolStripMenuItem_Click;
-            // 
-            // winToolsToolStripMenuItem
-            // 
-            winToolsToolStripMenuItem.Name = "winToolsToolStripMenuItem";
-            winToolsToolStripMenuItem.Size = new Size(170, 22);
-            winToolsToolStripMenuItem.Text = "WinTools";
-            winToolsToolStripMenuItem.Click += winToolsToolStripMenuItem_Click;
-            // 
             // oldMenuToolStripMenuItem
             // 
             oldMenuToolStripMenuItem.Name = "oldMenuToolStripMenuItem";
-            oldMenuToolStripMenuItem.Size = new Size(170, 22);
+            oldMenuToolStripMenuItem.Size = new Size(127, 22);
             oldMenuToolStripMenuItem.Text = "Old Menu";
             oldMenuToolStripMenuItem.Click += oldMenuToolStripMenuItem_Click;
             // 
             // PCHubItemsListBox
             // 
             PCHubItemsListBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            PCHubItemsListBox.BackColor = SystemColors.Control;
-            PCHubItemsListBox.BorderStyle = BorderStyle.None;
-            PCHubItemsListBox.Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            PCHubItemsListBox.BackColor = SystemColors.Window;
+            PCHubItemsListBox.Font = new Font("Consolas", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             PCHubItemsListBox.FormattingEnabled = true;
             PCHubItemsListBox.ItemHeight = 18;
-            PCHubItemsListBox.Items.AddRange(new object[] { "Add Local User", "File Delete", "Host File", "Power management", "Taskkiller", "PowerShell Policy Manager", "Writer", "Taskmgr Or Resmon", "Browse Or File Explorer", "Uninstaller", "System Unlocker", "Block any WebSite", "Add to UtilMan", "Add To CmdLine WinLogon" });
+            PCHubItemsListBox.Items.AddRange(new object[] { "Add Local User", "File Delete", "Host File", "Power management", "Taskkiller", "PowerShell Policy Manager", "Writer", "Browse Or File Explorer", "Uninstaller", "System Unlocker", "Block any WebSite", "Add to UtilMan", "Add To CmdLine", "WinLogon" });
             PCHubItemsListBox.Location = new Point(12, 27);
             PCHubItemsListBox.Name = "PCHubItemsListBox";
-            PCHubItemsListBox.Size = new Size(459, 360);
+            PCHubItemsListBox.Size = new Size(459, 400);
             PCHubItemsListBox.TabIndex = 76;
             // 
             // btnOpen
             // 
-            btnOpen.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnOpen.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             btnOpen.BackColor = SystemColors.Control;
             btnOpen.Cursor = Cursors.Hand;
             btnOpen.FlatStyle = FlatStyle.System;
-            btnOpen.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnOpen.Font = new Font("Consolas", 9F);
             btnOpen.ForeColor = Color.Black;
-            btnOpen.Location = new Point(13, 414);
+            btnOpen.Location = new Point(12, 429);
             btnOpen.Margin = new Padding(4, 3, 4, 3);
             btnOpen.Name = "btnOpen";
-            btnOpen.Size = new Size(460, 35);
+            btnOpen.Size = new Size(75, 23);
             btnOpen.TabIndex = 77;
-            btnOpen.Text = "Open (Enter)";
+            btnOpen.Text = "Open";
             btnOpen.UseVisualStyleBackColor = false;
             btnOpen.Click += btnOpen_Click;
             // 
-            // HelpLabel
+            // btnWinTool
             // 
-            HelpLabel.AutoSize = true;
-            HelpLabel.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HelpLabel.Location = new Point(380, 397);
-            HelpLabel.Name = "HelpLabel";
-            HelpLabel.Size = new Size(91, 14);
-            HelpLabel.TabIndex = 78;
-            HelpLabel.Text = "\".\" for help";
+            btnWinTool.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnWinTool.BackColor = SystemColors.Control;
+            btnWinTool.Cursor = Cursors.Hand;
+            btnWinTool.FlatStyle = FlatStyle.System;
+            btnWinTool.Font = new Font("Consolas", 9F);
+            btnWinTool.ForeColor = Color.Black;
+            btnWinTool.Location = new Point(293, 429);
+            btnWinTool.Margin = new Padding(4, 3, 4, 3);
+            btnWinTool.Name = "btnWinTool";
+            btnWinTool.Size = new Size(85, 23);
+            btnWinTool.TabIndex = 78;
+            btnWinTool.Text = "Win...";
+            btnWinTool.UseVisualStyleBackColor = false;
+            btnWinTool.Click += btnWinTool_Click;
+            // 
+            // btnMyProgramsList
+            // 
+            btnMyProgramsList.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnMyProgramsList.BackColor = SystemColors.Control;
+            btnMyProgramsList.Cursor = Cursors.Hand;
+            btnMyProgramsList.FlatStyle = FlatStyle.System;
+            btnMyProgramsList.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMyProgramsList.ForeColor = Color.Black;
+            btnMyProgramsList.Location = new Point(386, 429);
+            btnMyProgramsList.Margin = new Padding(4, 3, 4, 3);
+            btnMyProgramsList.Name = "btnMyProgramsList";
+            btnMyProgramsList.Size = new Size(85, 23);
+            btnMyProgramsList.TabIndex = 79;
+            btnMyProgramsList.Text = "My programs";
+            btnMyProgramsList.UseVisualStyleBackColor = false;
+            btnMyProgramsList.Click += btnMyProgramsList_Click;
             // 
             // PCHubForm
             // 
@@ -144,7 +151,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(484, 461);
-            Controls.Add(HelpLabel);
+            Controls.Add(btnMyProgramsList);
+            Controls.Add(btnWinTool);
             Controls.Add(btnOpen);
             Controls.Add(PCHubItemsListBox);
             Controls.Add(menuStrip1);
@@ -154,7 +162,7 @@
             MinimumSize = new Size(305, 365);
             Name = "PCHubForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "w";
+            Text = "PCHub";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -168,9 +176,8 @@
         private ListBox PCHubItemsListBox;
         private Button btnOpen;
         private ToolStripMenuItem openToolStripMenuItem;
-        private ToolStripMenuItem customProgramsToolStripMenuItem;
-        private ToolStripMenuItem winToolsToolStripMenuItem;
         private ToolStripMenuItem oldMenuToolStripMenuItem;
-        private Label HelpLabel;
+        private Button btnWinTool;
+        private Button btnMyProgramsList;
     }
 }

@@ -34,6 +34,7 @@
             menuStrip1 = new MenuStrip();
             quitToolStripMenuItem = new ToolStripMenuItem();
             system32ToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -86,11 +87,22 @@
             system32ToolStripMenuItem.Text = "System32";
             system32ToolStripMenuItem.Click += system32ToolStripMenuItem_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Corbel", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 84);
+            label1.Name = "label1";
+            label1.Size = new Size(143, 28);
+            label1.TabIndex = 3;
+            label1.Text = "Works only with compilation\r\n to self-contained";
+            // 
             // UtilManForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(226, 89);
+            ClientSize = new Size(226, 119);
+            Controls.Add(label1);
             Controls.Add(btnOff);
             Controls.Add(btnAdd);
             Controls.Add(menuStrip1);
@@ -117,5 +129,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem quitToolStripMenuItem;
         private ToolStripMenuItem system32ToolStripMenuItem;
+        private Label label1;
     }
 }

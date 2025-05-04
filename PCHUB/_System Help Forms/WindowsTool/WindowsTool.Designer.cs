@@ -35,6 +35,7 @@
             quitToolStripMenuItem = new ToolStripMenuItem();
             btnRegedit = new Button();
             btnDeviceMGR = new Button();
+            btnTaskmgrOrResmon = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -105,12 +106,25 @@
             btnDeviceMGR.UseVisualStyleBackColor = true;
             btnDeviceMGR.Click += btnDeviceMGR_Click;
             // 
+            // btnTaskmgrOrResmon
+            // 
+            btnTaskmgrOrResmon.Cursor = Cursors.Hand;
+            btnTaskmgrOrResmon.Font = new Font("Consolas", 9F);
+            btnTaskmgrOrResmon.Location = new Point(146, 100);
+            btnTaskmgrOrResmon.Name = "btnTaskmgrOrResmon";
+            btnTaskmgrOrResmon.Size = new Size(128, 50);
+            btnTaskmgrOrResmon.TabIndex = 32;
+            btnTaskmgrOrResmon.Text = "TaskMgr Or ResMon";
+            btnTaskmgrOrResmon.UseVisualStyleBackColor = true;
+            btnTaskmgrOrResmon.Click += btnTaskmgrOrResmon_Click;
+            // 
             // WinToolsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(423, 256);
+            Controls.Add(btnTaskmgrOrResmon);
             Controls.Add(btnDeviceMGR);
             Controls.Add(btnRegedit);
             Controls.Add(btnCONTROLPANEL);
@@ -140,5 +154,6 @@
         private ToolStripMenuItem quitToolStripMenuItem;
         private Button btnRegedit;
         private Button btnDeviceMGR;
+        private Button btnTaskmgrOrResmon;
     }
 }
