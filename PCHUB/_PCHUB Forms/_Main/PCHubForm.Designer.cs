@@ -102,7 +102,7 @@
             btnOpen.FlatStyle = FlatStyle.System;
             btnOpen.Font = new Font("Consolas", 9F);
             btnOpen.ForeColor = Color.Black;
-            btnOpen.Location = new Point(12, 429);
+            btnOpen.Location = new Point(12, 444);
             btnOpen.Margin = new Padding(4, 3, 4, 3);
             btnOpen.Name = "btnOpen";
             btnOpen.Size = new Size(75, 23);
@@ -119,7 +119,7 @@
             btnWinTool.FlatStyle = FlatStyle.System;
             btnWinTool.Font = new Font("Consolas", 9F);
             btnWinTool.ForeColor = Color.Black;
-            btnWinTool.Location = new Point(293, 429);
+            btnWinTool.Location = new Point(293, 444);
             btnWinTool.Margin = new Padding(4, 3, 4, 3);
             btnWinTool.Name = "btnWinTool";
             btnWinTool.Size = new Size(85, 23);
@@ -136,7 +136,7 @@
             btnMyProgramsList.FlatStyle = FlatStyle.System;
             btnMyProgramsList.Font = new Font("Consolas", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMyProgramsList.ForeColor = Color.Black;
-            btnMyProgramsList.Location = new Point(386, 429);
+            btnMyProgramsList.Location = new Point(386, 444);
             btnMyProgramsList.Margin = new Padding(4, 3, 4, 3);
             btnMyProgramsList.Name = "btnMyProgramsList";
             btnMyProgramsList.Size = new Size(85, 23);
@@ -150,7 +150,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(484, 476);
             Controls.Add(btnMyProgramsList);
             Controls.Add(btnWinTool);
             Controls.Add(btnOpen);

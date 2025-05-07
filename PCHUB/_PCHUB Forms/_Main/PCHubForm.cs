@@ -44,6 +44,20 @@ namespace PCHUB._PCHUB_Forms._Main
 
             InitializeListBoxSorting();
             SetupEventHandlers();
+
+            PCHubItemsListBox.MouseDoubleClick += DoubleClickHandler!;
+        }
+
+        private void DoubleClickHandler(object sender, MouseEventArgs e)
+        {
+            // Получаем индекс элемента под курсором мыши
+            int ListBoxIndex = PCHubItemsListBox.IndexFromPoint(e.Location);
+
+            // Если клик был по элементу (а не по пустому месту)
+            if (ListBoxIndex != ListBox.NoMatches)
+            {
+                HandleSelectedItem();
+            }
         }
 
         #region Initialization Methods
@@ -180,8 +194,6 @@ namespace PCHUB._PCHUB_Forms._Main
         private void quitToolStripMenuItem_Click(object sender, EventArgs e) => Environment.Exit(0);
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e) => AboutClass.ShowAboutDialog();
-
-        private void oldMenuToolStripMenuItem_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<PCHubFormOld>();
 
         private void btnWinTool_Click(object sender, EventArgs e) => OpenClassSpace.OpenClass.ShowForm<WinToolsForm>();
 

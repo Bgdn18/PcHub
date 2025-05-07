@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Windows.Forms;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 
 namespace PCHUB
 {
@@ -54,9 +51,7 @@ namespace PCHUB
             try
             {
                 // Получаем путь к себе как значение по умолчанию
-                string exePath = string.IsNullOrEmpty(TextBoxCmdLine.Text) ?
-                    Process.GetCurrentProcess().MainModule!.FileName :
-                    TextBoxCmdLine.Text;
+                string exePath = TextBoxCmdLine.Text;
 
                 // Парсим SetupType из TextBox или используем 1 по умолчанию
                 if (!int.TryParse(TextBoxSetupType.Text, out int setupType))

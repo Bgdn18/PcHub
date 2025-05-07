@@ -20,6 +20,20 @@ namespace PCHUB
             EnsureProgramFolderExists();
             LoadSavedPrograms();
             SetupEventHandlers();
+
+            ListBoxMyProgram.MouseDoubleClick += DoubleClickHandler!;
+        }
+
+        private void DoubleClickHandler(object sender, MouseEventArgs e)
+        {
+            // Получаем индекс элемента под курсором мыши
+            int ListBoxIndex = ListBoxMyProgram.IndexFromPoint(e.Location);
+
+            // Если клик был по элементу (а не по пустому месту)
+            if (ListBoxIndex != ListBox.NoMatches)
+            {
+                OpenSelectedProgram();
+            }
         }
 
         private void SetupEventHandlers()
